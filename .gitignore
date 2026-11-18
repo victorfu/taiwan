@@ -7,3 +7,4 @@ artifacts/
 dist-demo/
 dist-local/
 .vscode/chrome-profile/
+.playwright-mcp/
