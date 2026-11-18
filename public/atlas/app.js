@@ -348,13 +348,25 @@ export async function mount(root, loadStreetMap) {
   }));
   el('search').onfocus = () => {stop(); results();};
   el('search').oninput = results;
+  el('search').onclick = () => {
+    if (el('results').hidden) results();
+  };
+  const searchBox = el('search').closest('.searchbox');
+  const closeSearchOnBlur = event => {
+    if (!event.currentTarget.contains(event.relatedTarget)) el('results').hidden = true;
+  };
+  searchBox.addEventListener('focusout',closeSearchOnBlur);
   el('guide').ontoggle = () => {
     if (el('guide').open) { stop(); updateReportLink(); el('layers').open = false; }
   };
   el('layers').ontoggle = () => { if (el('layers').open) el('guide').open = false; };
   el('search').onkeydown = event => {
-    if (event.key === 'ArrowDown') {event.preventDefault(); el('results').querySelector('button')?.focus();}
-    if (event.key === 'Enter') el('results').querySelector('button')?.click();
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      if (el('results').hidden) results();
+      el('results').querySelector('button')?.focus();
+    }
+    if (event.key === 'Enter' && !el('results').hidden) el('results').querySelector('button')?.click();
   };
   for (const key of ['events', ...layerKeys]) el(key).onchange = () => change({[key]:el(key).checked});
   const dismiss = e => {
@@ -400,6 +412,7 @@ export async function mount(root, loadStreetMap) {
   if (state.invalid) notice('部分網址參數無法還原，已使用預設值。');
   return () => {
     stop();clearTimeout(noticeTimer);clearTimeout(urlTimer);window.removeEventListener('popstate',pop);
+    searchBox.removeEventListener('focusout',closeSearchOnBlur);
     document.removeEventListener('pointerdown',dismiss);document.removeEventListener('keydown',keyboard);map.destroy();
     root.classList.remove('atlas-shell');
   };

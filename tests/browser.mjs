@@ -156,6 +156,24 @@ try {
     await waitUntil("performance.getEntriesByType('resource').some(e => e.name.endsWith('/terrain-height.bin.gz') && e.responseEnd > 0)");
     await paintedFrame();
     assert.equal(await evaluate("document.documentElement.scrollWidth <= innerWidth"), true, '首屏水平溢出');
+    await key('/');
+    await waitUntil("document.activeElement.id === 'search' && !document.querySelector('#results').hidden");
+    assert.ok(await evaluate(`(() => {
+      const input = document.querySelector('#search');
+      const holder = input.closest('.searchbox');
+      const field = holder.getBoundingClientRect();
+      const panel = document.querySelector('#results').getBoundingClientRect();
+      return getComputedStyle(input).outlineStyle === 'none' &&
+        getComputedStyle(holder).outlineStyle === 'solid' &&
+        Math.abs(panel.left - field.left) < 1 && Math.abs(panel.right - field.right) < 1 &&
+        panel.left >= 0 && panel.right <= innerWidth;
+    })()`), '搜尋欄應有單一外框，結果清單兩側應與外框對齊');
+    await key('\uE00C');
+    await waitUntil("document.activeElement.id === 'search' && document.querySelector('#results').hidden");
+    await key('\uE015');
+    await waitUntil("!!document.activeElement.closest('#results')");
+    await evaluate("document.querySelector('#share').focus()");
+    await waitUntil("document.querySelector('#results').hidden");
     assert.ok(await evaluate(`['#share','#next','#years button:last-child'].every(selector => {
       const box = document.querySelector(selector).getBoundingClientRect();
       return box.left >= 0 && box.right <= innerWidth + 1 && box.bottom <= innerHeight + 1;
