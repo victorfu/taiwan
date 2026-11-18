@@ -1,0 +1,32 @@
+.atlas-map {isolation:isolate;overflow:hidden;color:#2b4137;font:14px/1.4 "Microsoft JhengHei",sans-serif;background:#d7e2d9}
+.atlas-map [hidden] {display:none!important}
+.atlas-map-surface,.atlas-map-base,.atlas-map-geography,.atlas-map-polity,.atlas-map-pins {position:absolute;inset:0;width:100%;height:100%}
+.atlas-map-surface {overflow:hidden;cursor:grab;touch-action:none;user-select:none}
+.atlas-map-surface:active {cursor:grabbing}
+.atlas-map-surface:focus-visible {outline:3px solid #9b5537;outline-offset:-4px}
+.atlas-map-geography,.atlas-map-polity {display:block;pointer-events:none}
+.atlas-map-polity {z-index:2}
+.atlas-map-pins {pointer-events:none;z-index:3}
+.atlas-map .atlas-pin {--ink:#3b5140;position:absolute;z-index:1;display:grid;place-items:center;width:25px;height:25px;min-width:0;min-height:0;padding:0;margin:-12.5px;border:0;background:transparent;color:var(--ink);pointer-events:auto;cursor:pointer}
+.atlas-map .atlas-pin[aria-pressed="true"] {--ink:#994d35;z-index:3;background:transparent}
+.atlas-map .atlas-pin:is(:focus-visible,:hover) {z-index:4}
+.atlas-pin-dot {display:block;width:10px;height:10px;background:var(--ink);border:2px solid #fff9e7;border-radius:50%;box-shadow:0 0 0 1px var(--ink)}
+.atlas-pin-event .atlas-pin-dot {--ink:#9c4c32;border-radius:1px;transform:rotate(45deg)}
+.atlas-pin-label {position:absolute;left:calc(50% + 12px);top:50%;transform:translateY(-50%);white-space:nowrap;font:700 14px/1.45 "Noto Serif TC","PMingLiU",serif;letter-spacing:.02em;color:#283d32;text-shadow:0 1px 2px #fff9dc,1px 0 2px #fff9dc,0 -1px 2px #fff9dc,-1px 0 2px #fff9dc}
+.atlas-pin[aria-pressed="true"] .atlas-pin-label,.atlas-pin:focus-visible .atlas-pin-label {color:#fffaf0;background:#85472d;text-shadow:none;border-radius:2px;padding:2px 6px;box-shadow:0 1px 4px #28362844}
+.atlas-pin:is(:hover,:focus-visible) .atlas-pin-label[hidden] {display:block!important}
+.atlas-map-controls {position:absolute;z-index:5;right:16px;bottom:56px;display:grid;background:#fbf9eedf;border:1px solid #9ea99b;border-radius:4px;overflow:hidden;box-shadow:0 2px 6px #25372b22}
+.atlas-map-controls button {width:38px;height:36px;border:0;border-radius:0;background:transparent;color:#314636;padding:0;cursor:pointer;font:20px/1 "Microsoft JhengHei",sans-serif}
+.atlas-map-controls button + button {border-top:1px solid #bec6b8}
+.atlas-map-controls button:nth-child(n+3) {font-size:12px}
+.atlas-map-controls button:hover,.atlas-map-controls button:focus-visible {background:#e0e5d6}
+.atlas-map-controls button[aria-pressed="true"] {background:#3e5a48;color:#fffef3}
+.atlas-map-north {position:absolute;z-index:4;right:21px;top:15px;display:grid;justify-items:center;gap:2px;font:700 13px/1.1 Georgia,serif;color:#42554c;pointer-events:none}
+.atlas-map-north i {display:block;width:9px;height:22px;background:linear-gradient(90deg,#52675b 50%,#c8cfb8 50%);clip-path:polygon(50% 0,100% 100%,50% 77%,0 100%)}
+.atlas-sheet-controls {position:absolute;z-index:5;right:54px;top:14px;max-width:155px}
+.atlas-sheet-controls>div:not([hidden]) {border:1px solid #aab5a5;border-radius:3px}
+.atlas-map-foot {position:absolute;z-index:4;bottom:12px;left:15px;right:17px;display:flex;align-items:end;justify-content:space-between;gap:8px;pointer-events:none}
+.atlas-map-key {display:flex;gap:5px 8px;flex-wrap:wrap;padding:3px 6px;font-size:10px;letter-spacing:.07em;color:#435f50;background:#eef1dfda}
+.atlas-map-key a {pointer-events:auto;color:inherit}
+.atlas-map-scale {flex:none;border:1px solid #526c5e;border-top:0;color:#39564b;background:#eef1dfb5;text-align:center;font:10px/1.3 ui-monospace,monospace;white-space:nowrap}
+@media(max-width:600px) {.atlas-pin-label{font-size:12px}.atlas-map-controls{right:9px;bottom:39px}.atlas-map-controls button{width:35px;height:33px}.atlas-sheet-controls{top:10px;right:36px;max-width:115px}.atlas-map-north{right:14px;top:12px}.atlas-map-foot{bottom:6px;left:8px;right:9px}}

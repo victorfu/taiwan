@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>史料修正單 · 臺灣時序</title><link rel="stylesheet" href="reader.css"></head>
+<body><header><a href="../index.html">臺灣時序</a><nav><a href="places.html">地方誌</a><a href="method.html">編輯方法</a></nav></header>
+<main><h1>史料修正單</h1><p class="intro">記下需要更正的內容及查考依據，下載文字檔交給編輯者。</p>
+<form id="correction">
+  <label for="entry">地點、年代或條目 ID</label><input id="entry" required maxlength="250">
+  <label for="description">需要更正的內容</label><textarea id="description" rows="5" required maxlength="8000"></textarea>
+  <label for="citation">查考依據（選填）</label><textarea id="citation" rows="2" maxlength="4000" placeholder="史料網址、書名頁碼或檔號"></textarea>
+  <button id="download" type="submit" disabled>下載修正單</button>
+  <output id="status" role="status"></output>
+</form><noscript>啟用 JavaScript 可下載修正單，也可以使用瀏覽器列印此頁。</noscript></main>
+<footer><a id="return-map" href="../index.html">回到地圖</a></footer>
+<script type="module" src="./correction.js"></script></body></html>

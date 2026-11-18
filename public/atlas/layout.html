@@ -1,0 +1,47 @@
+<a class="skip-link" href="./atlas/places.html">跳至地方誌文字版</a>
+<header class="masthead">
+  <div class="brand"><span class="seal" aria-hidden="true">臺</span><div><h1>臺灣時序</h1><small>HISTORICAL ATLAS OF TAIWAN</small></div></div>
+  <div class="searchbox"><label for="search" aria-label="搜尋古今地名">⌕</label><input id="search" type="search" autocomplete="off" placeholder="搜尋古今地名、年代或事件" aria-label="搜尋古今地名、年代或事件"><kbd>/</kbd><div id="results" hidden></div></div>
+  <div class="tools"><details id="guide"><summary>導覽</summary><nav class="menu" aria-label="閱讀與導覽">
+    <button type="button" id="start-story">安平故事導覽</button>
+    <a href="./atlas/anping.html">閱讀安平故事全文</a>
+    <a href="./atlas/places.html">地方誌與事件</a>
+    <a href="./atlas/method.html">編輯方法與圖資</a>
+    <a id="report-link" href="./atlas/correction.html">填寫史料修正單</a>
+  </nav></details><details id="layers"><summary>圖層</summary><div class="menu">
+    <label><input type="checkbox" id="terrain" checked> 山岳地形</label>
+    <label><input type="checkbox" id="polities" checked> 歷史據點</label>
+    <label><input type="checkbox" id="places" checked> 歷史地名</label>
+    <label><input type="checkbox" id="events" checked> 年代事件</label>
+  </div></details><button id="share" title="複製目前視圖網址">分享</button></div>
+</header>
+<main class="workspace">
+  <section class="map-panel" aria-label="臺灣歷史地圖">
+    <div id="map"></div>
+    <div class="map-caption"><span class="overline">臺灣歷史地圖</span><span id="caption-era"></span></div>
+  </section>
+  <aside class="reading" id="reading" aria-label="年代與地方沿革">
+    <button id="reading-toggle" aria-expanded="false" aria-controls="reading-body"><span id="mobile-era"></span><span class="toggle-hint">年代紀事 ▴</span></button>
+    <div id="reading-body">
+      <button id="reading-size" type="button" aria-pressed="false">放大閱讀欄</button>
+      <article id="card" aria-live="polite"></article>
+      <section class="period-story">
+        <div class="era-line"><span class="overline">年代紀事</span><span id="era-tag"></span></div>
+        <h2 id="map-title"></h2><div id="period-year"></div>
+        <p id="period-summary"></p><small id="coverage"></small>
+        <h3>本期事件</h3><div id="event-list"></div>
+        <h3>圖中地名</h3><div id="place-list"></div>
+        <details id="region-note"><summary>歷史據點與出處</summary><div id="region-detail"></div></details>
+      </section>
+      <details id="sources"><summary>圖資與史料</summary><p id="map-source"></p><p>點位對應現代概位。歷史據點依年代收錄，各地史料仍待獨立審閱。</p><ul id="source-list"></ul></details>
+    </div>
+  </aside>
+</main>
+<footer class="timeline">
+  <div class="time-head"><div class="time-display"><strong id="clock-year"></strong><span>年</span><span id="clock-era"></span></div>
+    <div class="transport"><button id="previous" aria-label="上一個年代">‹</button><button id="play">播放</button><button id="next" aria-label="下一個年代">›</button></div>
+  </div>
+  <div class="track"><input id="scrubber" type="range" min="0" step="1" aria-label="拖曳探索歷史年代"><div id="years" role="group" aria-label="選取歷史年代"></div></div>
+  <nav id="eras" aria-label="依時期跳轉"></nav>
+</footer>
+<output id="notice" role="status"></output>

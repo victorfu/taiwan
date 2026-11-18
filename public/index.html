@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#234e42">
+  <title>臺灣時序 · 臺灣歷史地圖</title>
+  <link rel="stylesheet" href="./atlas/style.css">
+</head>
+<body>
+  <div id="root"><p role="status">地圖載入中…</p></div>
+  <noscript><style>#root{display:none}</style><a href="./atlas/places.html">閱讀地方誌與事件</a> · <a href="./atlas/anping.html">安平故事</a></noscript>
+  <script type="module">
+    import('./atlas/app.js')
+      .then(({ mount }) => mount(document.querySelector('#root')))
+      .catch(() => {
+        document.querySelector('#root').innerHTML = '<p role="alert">地圖未能載入。<a href="./atlas/places.html">閱讀地方誌與事件</a></p>';
+      });
+  </script>
+</body>
+</html>
+

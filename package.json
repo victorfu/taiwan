@@ -1,0 +1,37 @@
+{
+  "name": "taiwan-through-time",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "predev": "node scripts/reading-pages.mjs",
+    "prebuild": "node scripts/reading-pages.mjs",
+    "prebuild:demo": "node scripts/reading-pages.mjs",
+    "postbuild": "node scripts/build-manifest.mjs release",
+    "postbuild:demo": "node scripts/build-manifest.mjs demo",
+    "dev": "vite --host 127.0.0.1",
+    "build": "node scripts/validate.mjs --release && tsc -b && vite build",
+    "build:release": "npm run build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test tests/*.test.mjs",
+    "validate": "node scripts/validate.mjs",
+    "validate:release": "node scripts/validate.mjs --release",
+    "build:demo": "node scripts/validate.mjs && tsc -b && vite build --outDir dist-demo",
+    "build:local": "node scripts/build-local.mjs",
+    "test:browser": "node tests/browser.mjs"
+  },
+  "dependencies": {
+    "maplibre-gl": "^5.13.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.1.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.2"
+  }
+}

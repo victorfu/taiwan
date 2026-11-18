@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>底圖來源 · 臺灣時序</title>
+<style>body{margin:3rem auto;max-width:640px;padding:0 1.25rem;background:#f7f5eb;color:#283c31;font:16px/1.8 "Microsoft JhengHei",sans-serif}h1,h2{font-family:"PMingLiU",serif}h2{margin:1.5em 0 .2em;border-bottom:1px solid #b7c0ac}p{margin:.5em 0}a{color:#346650}pre{white-space:pre-wrap;font:12px/1.5 monospace}</style></head><body><main>
+<h1>底圖來源</h1><p>地形、海岸與河川提供跨年代的現代位置參照。歷史地名與據點另按所選年代繪製，圖幅的測繪年標示於各年代對照選單。</p>
+<h2>山岳地形</h2><p>內政部地政司提供 20 公尺網格數值地形模型。此圖取 OsmHackTW 重採樣的第 9 級高程圖磚，拼接為 718 × 1,352 點的離線格網。臺灣本島附近的格距約 280 公尺，畫面依高程與周圍坡度分層設色、計算陰影。離島以海岸向量呈現。</p>
+<p><a href="https://data.gov.tw/dataset/35430">內政部資料集 35430</a>　<a href="https://github.com/OsmHackTW/terrain-rgb">OsmHackTW 圖磚</a>　<a href="https://data.gov.tw/license">政府資料開放授權條款第 1 版</a></p>
+<h2>海岸與離島</h2><p>東亞周邊海岸與臺灣本島取自 Natural Earth 一千萬分之一陸地資料。離島以 g0v 的 2010 年縣市圖資補充，處理時移除內部行政界線。海岸已隨成圖比例尺簡化。</p>
+<p><a href="https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_land.geojson">Natural Earth 陸地幾何</a>　<a href="https://www.naturalearthdata.com/about/terms-of-use/">公有領域說明</a>　<a href="https://github.com/g0v/twgeojson">g0v twgeojson · CC0</a></p>
+<h2>河川水面</h2><p>採用 Terrain Art 臺灣版彙整的現代河川水面多邊形，簡化後繪於陸域。狹窄河段的顯示程度隨比例尺而變。</p>
+<p><a href="https://github.com/ianlkl11234s/mini-taiwan-terrain/blob/main/public/layers/river_surfaces.json">河川水面幾何</a>　<a href="https://github.com/ianlkl11234s/mini-taiwan-terrain">資料處理與授權說明</a></p>
+<details><summary>原專案授權聲明</summary><pre>MIT License
+
+Copyright (c) 2026 kaolti (monolith-terrain, original work)
+Copyright (c) 2026 Migu (Taiwan adaptation + GIS layers)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</pre></details></main></body></html>

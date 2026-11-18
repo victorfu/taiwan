@@ -1,0 +1,23 @@
+:root { color-scheme:light; color:#322f25; background:#f7f1e2; font:16px/1.75 "Microsoft JhengHei",sans-serif; }
+* { box-sizing:border-box; }
+body { margin:0; }
+header,main,footer { max-width:52rem; margin:auto; padding:1rem clamp(1.1rem,5vw,3rem); }
+header { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:.5rem; border-bottom:2px solid #887c5e; }
+header>a,h1,h2,h3 { font-family:"Noto Serif TC","PMingLiU",serif; }
+header>a { font-size:1.55rem; font-weight:700; text-decoration:none; color:#433c2d; }
+header nav { display:flex; flex-wrap:wrap; gap:1rem; }
+h1 { font-size:clamp(2rem,5vw,3rem); line-height:1.25; margin:1rem 0; }
+h2 { margin:.25rem 0 .65rem; line-height:1.4; }
+article,main>h2,#contents { border-top:1px solid #c3b79b; padding-top:1.5rem; margin-top:2rem; }
+article:target { border-color:#89452d; }
+.intro { color:#54503e; font-size:1.12rem; }
+.contents { padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(10rem,1fr)); gap:.35rem 1rem; list-style:none; }
+.region,.source,.event { color:#67543b; font-size:.9rem; }
+.region { margin:0; }
+a { color:#793d23; text-underline-offset:.2em; }
+footer { margin-top:2rem; border-top:1px solid #c3b79b; }
+label { display:block; margin:1.25rem 0 .3rem; font-weight:600; }
+textarea,input,button { font:inherit; }
+textarea,input { display:block; width:100%; padding:.55rem; border:1px solid #a4987b; background:#fffdf5; }
+button { margin-top:1rem; padding:.45rem 1rem; background:#674229; color:#fff; cursor:pointer; border:0; }
+:focus-visible { outline:3px solid #9f5032; outline-offset:3px; }
