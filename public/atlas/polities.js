@@ -233,6 +233,34 @@ export const polityLayers = {
     note: '第 16 任總統及副總統在總統府三樓大禮堂宣誓就職。',
     color: '#365e78',
     centers: [site('總統府・宣誓就職', [121.512, 25.040], 'https://www.president.gov.tw/NEWS/28424')]
+  },
+  2026: {
+    status: 'in_review',
+    title: '直轄市與縣市（115 年）',
+    note: '全國劃分為 6 個直轄市與 16 個縣（市）。圖中標示臺灣本島與澎湖的直轄市、縣市政府所在地，福建省金門縣、連江縣未列入。座標取自 OpenStreetMap，部分為政府大樓附近的概位。',
+    color: '#365e78',
+    centers: [
+      site('臺北市・直轄市政府', [121.564451, 25.037517], 'https://www.gov.taipei'),
+      site('新北市・直轄市政府', [121.465448, 25.012502], 'https://www.ntpc.gov.tw'),
+      site('桃園市・直轄市政府', [121.30168, 24.992799], 'https://www.tycg.gov.tw'),
+      site('臺中市・直轄市政府', [120.647363, 24.163546], 'https://www.taichung.gov.tw'),
+      site('臺南市・直轄市政府', [120.18525, 22.992126], 'https://www.tainan.gov.tw'),
+      site('高雄市・直轄市政府', [120.31185, 22.620868], 'https://www.kcg.gov.tw'),
+      site('基隆市・市政府', [121.744407, 25.131869], 'https://www.klcg.gov.tw'),
+      site('新竹市・市政府', [120.968959, 24.806842], 'https://www.hccg.gov.tw'),
+      site('嘉義市・市政府', [120.453558, 23.481074], 'https://www.chiayi.gov.tw'),
+      site('宜蘭縣・縣政府', [121.763131, 24.730413], 'https://www.e-land.gov.tw'),
+      site('新竹縣・縣政府', [121.013593, 24.827305], 'https://www.hsinchu.gov.tw'),
+      site('苗栗縣・縣政府', [120.821053, 24.563563], 'https://www.miaoli.gov.tw'),
+      site('彰化縣・縣政府', [120.544801, 24.075534], 'https://www.chcg.gov.tw'),
+      site('南投縣・縣政府', [120.690116, 23.902378], 'https://www.nantou.gov.tw/big5/index.php'),
+      site('雲林縣・縣政府', [120.526486, 23.699007], 'https://web.wra.gov.tw/landsubsidence/water_new/File/LevelFile/3754/LJ9032.pdf'),
+      site('嘉義縣・縣政府', [120.292875, 23.45847], 'https://www.cyhg.gov.tw'),
+      site('屏東縣・縣政府', [120.488461, 22.682611], 'https://www.pthg.gov.tw'),
+      site('花蓮縣・縣政府', [121.619297, 23.991485], 'https://www.hl.gov.tw'),
+      site('臺東縣・縣政府', [121.150025, 22.755678], 'https://www.taitung.gov.tw'),
+      site('澎湖縣・縣政府', [119.566463, 23.570101], 'https://www.penghu.gov.tw')
+    ]
   }
 };
 
@@ -250,16 +278,24 @@ export function drawPolities(ctx, year, project, width, height, obstacles = []) 
   ctx.textAlign = 'left';
   ctx.lineJoin = 'round';
 
+  // Draw every mark before any label, and treat marks as obstacles, so a later
+  // mark never lands on top of an earlier label.
+  const visible = [];
   for (const center of layer.centers) {
     const [x, y] = project(center.point);
     if (x < 0 || x > width || y < 0 || y > height) continue;
-    const color = center.color ?? layer.color;
-    ctx.fillStyle = color;
+    ctx.fillStyle = center.color ?? layer.color;
     ctx.strokeStyle = '#fffaf0';
     ctx.lineWidth = 2;
     ctx.fillRect(x - 4, y - 4, 8, 8);
     ctx.strokeRect(x - 5, y - 5, 10, 10);
+    occupied.push({ left: x - 6, right: x + 6, middle: y, height: 12 });
+    visible.push([center, x, y]);
+  }
 
+  ctx.strokeStyle = '#fffaf0';
+  for (const [center, x, y] of visible) {
+    ctx.fillStyle = center.color ?? layer.color;
     const length = ctx.measureText(center.label).width;
     const candidates = [[x + 9, y - 12], [x - length - 9, y - 12], [x + 9, y + 14], [x - length - 9, y + 14]];
     for (const [left, middle] of candidates) {

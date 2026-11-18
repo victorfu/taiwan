@@ -2,7 +2,7 @@
 
 > 本檔由 `node scripts/references.mjs` 依 `public/atlas/` 的資料檔產生，請勿手動編輯。
 
-收錄 26 個年代快照、54 處地點、46 則事件，以及各年代導讀、歷史據點、歷史圖幅與底圖的全部出處。審閱過程與勘誤見 [docs/review/](review/)。
+收錄 27 個年代快照、69 處地點、59 則事件，以及各年代導讀、歷史據點、歷史圖幅與底圖的全部出處。審閱過程與勘誤見 [docs/review/](review/)。
 
 ## 目錄
 
@@ -130,6 +130,16 @@
 - **補充來源**：<https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Object&id=510847>
 - **引用位置**：文化部文化資產局國家文化資產網〈鳳山縣舊城〉「歷史沿革」1684、1704、1722、1826 年條。縣治初選地點的考證見國家文化記憶庫所收張守真〈考證──康熙領臺時期鳳山縣治設置問題探討〉摘要第二至四部分。
 
+### 北港朝天宮
+
+- **地區**：雲林縣北港鎮
+- **識別碼**：`chaotiangong`　**審閱狀態**：in_review
+- **年代記載**：1721 天妃廟；1874 朝天宮（又稱 笨港天后宮）；1908 朝天宮
+- **相關事件**：1908 朝天宮震後重建工程開工
+- **主要來源**：<https://nchdb.boch.gov.tw/assets/advanceSearch/monument/19851127000036>
+- **補充來源**：<https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=23>
+- **引用位置**：文化部文化資產局國家文化資產網〈北港朝天宮〉（國定古蹟）「歷史沿革」。重建開工年見內政部臺灣宗教文化地圖〈北港朝天宮〉「工程於明治41年(公元1908年)開工」；文資局作「工程在四年後展開」。歷代廟名見朝天宮〈大事年表〉1700、1812 年條。
+
 ### 內門
 
 - **地區**：高雄市內門區
@@ -139,6 +149,14 @@
 - **主要來源**：<https://daap.ly.gov.tw/tw/daap/125-5937.html>
 - **引用位置**：立法院民主議政園區〈朱一貴事件 1721年〉，見羅漢門起事及府城失守段。
 
+### 金廣福公館
+
+- **地區**：新竹縣北埔鄉
+- **識別碼**：`jinguangfu`　**審閱狀態**：in_review
+- **年代記載**：1874 金廣福公館
+- **主要來源**：<https://nchdb.boch.gov.tw/assets/advanceSearch/monument/19831228000003>
+- **引用位置**：文化部文化資產局國家文化資產網〈金廣福公館〉（國定古蹟），見「歷史沿革」與「古蹟特色」。
+
 ### 石門古戰場
 
 - **地區**：屏東縣牡丹鄉與車城鄉交界
@@ -147,6 +165,16 @@
 - **相關事件**：1874 牡丹社事件・石門之役
 - **主要來源**：<https://nchdb.boch.gov.tw/assets/overview/historicSite/20230928000001>
 - **引用位置**：文化部文化資產局〈石門古戰場〉「相關事件背景」及登錄理由。
+
+### 新埔褒忠亭義民廟
+
+- **地區**：新竹縣新埔鎮
+- **識別碼**：`yiminmiao`　**審閱狀態**：in_review
+- **年代記載**：1874 褒忠亭（又稱 義民廟）；1895 褒忠亭（又稱 義民廟）；1908 褒忠亭（又稱 義民廟）
+- **相關事件**：1895 義民廟於乙未之役中焚毀
+- **主要來源**：<https://nchdb.boch.gov.tw/assets/advanceSearch/monument/20060724000005>
+- **補充來源**：<https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=253>
+- **引用位置**：文化部文化資產局國家文化資產網〈新埔褒忠亭〉（縣定古蹟）「歷史沿革」建築興建史段，原文「明治二十八（1895）年因乙未戰役盡遭回祿」。燒毀者見內政部臺灣宗教文化地圖〈新埔褒忠亭〉「發展源流」；該頁乾隆年號的西元換算有誤，興建年代以文資局為準。
 
 ### 億載金城
 
@@ -249,6 +277,16 @@
 - **補充來源**：<https://www.pthg.gov.tw/towncgt/cp.aspx?n=A8CD1687885EF825>
 - **引用位置**：國史館臺灣文獻館〈屏東縣長治鄉「火燒庄」舊名與火燒庄之役〉，見「光緒21年火燒庄之役」及「火燒庄出現的歷史年代」二節。另見長治鄉公所〈長治鄉火燒庄〉。
 
+### 臺東天后宮
+
+- **地區**：臺東縣臺東市
+- **識別碼**：`taitungtianhou`　**審閱狀態**：in_review
+- **年代記載**：1895 天后宮；1930 天后宮
+- **相關事件**：1930 地震致天后宮龜裂，議定遷建
+- **主要來源**：<https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=278>
+- **補充來源**：<https://tcmb.culture.tw/zh-tw/detail?id=274810&indexCode=Culture_Object>
+- **引用位置**：內政部臺灣宗教文化地圖〈臺東天后宮〉，見基本資料「創建/起源年代」與「發展源流」。遷建另見國家文化記憶庫〈臺東天后宮日治時期土地資料〉；捐地者兩處分別作吳錦麟、吳錦粦。
+
 ### 鹽寮海濱公園
 
 - **地區**：新北市貢寮區
@@ -295,6 +333,14 @@
 - **主要來源**：<https://www.tchac.taichung.gov.tw/building?pid=15&uid=33>
 - **補充來源**：<https://collections.nmth.gov.tw/CollectionContent.aspx?a=132&rno=2001.008.0876>
 - **引用位置**：臺中市文化資產處〈中山公園湖心亭〉古蹟沿革。臺史博藏品 2001.008.0876 的描述第 2 段列日治時期的池亭及其戰後改名。
+
+### 北門驛（阿里山林業鐵路北門車站舊站）
+
+- **地區**：嘉義市東區
+- **識別碼**：`beimenstation`　**審閱狀態**：in_review
+- **年代記載**：1914 北門驛；1979 北門驛
+- **主要來源**：<https://tcmb.culture.tw/zh-tw/detail?id=251621&indexCode=Culture_Object>
+- **引用位置**：國家文化記憶庫〈嘉義北門驛〉內容描述（嘉義市政府文化局建檔），見 1910 年平地段通車與 1973 年北門新站兩段。
 
 ### 合歡山
 
@@ -388,6 +434,15 @@
 - **主要來源**：<https://art.archives.gov.tw/tw/art/1788-15244.html>
 - **引用位置**：檔案管理局〈台灣光復案專輯〉，檔號 0034/002.6/4010.2/2/045。見 1945 年 10 月 26 日陳儀電文說明。
 
+### 嘉義車站站前廣場
+
+- **地區**：嘉義市西區
+- **識別碼**：`chiayistation`　**審閱狀態**：in_review
+- **年代記載**：1947 嘉義車站
+- **相關事件**：1947 嘉義車站前公開槍決二二八受難者
+- **主要來源**：<https://memory.nhrm.gov.tw/TopicExploration/LocationSpace/Detail/104>
+- **引用位置**：國家人權博物館國家人權記憶庫〈嘉義車站前〉，見「侵害人權事件概述」、「發生地概述」與「公告日期及文號」。
+
 ### 天馬茶房舊址一帶
 
 - **地區**：臺北市大同區
@@ -406,6 +461,16 @@
 - **主要來源**：<https://nchdb.boch.gov.tw/assets/overview/historicalBuilding/20040409000005>
 - **補充來源**：<https://www.drnh.gov.tw/p/404-1003-15330.php?Lang=zh-tw>
 - **引用位置**：文化部文化資產局〈美麗島雜誌社高雄市服務處原址〉，見登錄理由與地址。國史館《美麗島事件史料彙編（四）》出版簡介，見事件日期與後續逮捕。
+
+### 冬山河親水公園
+
+- **地區**：宜蘭縣五結鄉
+- **識別碼**：`dongshanriver`　**審閱狀態**：in_review
+- **年代記載**：1987 冬山河風景區；1996 冬山河親水公園
+- **相關事件**：1996 首屆宜蘭國際童玩藝術節
+- **主要來源**：<https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Place&id=571211>
+- **補充來源**：<https://www.lym.gov.tw/ch/collection/epaper/epaper-detail/7cf11288-ab92-11ea-94d3-2760f1289ae7/>
+- **引用位置**：國家文化記憶庫〈冬山河親水公園〉，見象設計集團 1987 年簽約與 1996 年開辦國際童玩藝術節兩段。另見蘭陽博物館電子報第 30 期〈歡樂一夏：宜蘭國際童玩藝術節〉首屆名稱、參與人數與停辦年份段。
 
 ### 綠島綠洲山莊
 
@@ -453,6 +518,16 @@
 - **補充來源**：<https://etour.cwa.gov.tw/scenery_inpage.php?scn_id=98&stn_id=24>
 - **引用位置**：玉山國家公園管理處〈玉山國家公園什麼時候成立？〉，見 1983 與 1985 年紀錄。主峰位置見中央氣象署玉山景點介紹。
 
+### 台電蘭嶼貯存場
+
+- **地區**：臺東縣蘭嶼鄉
+- **識別碼**：`lanyustorage`　**審閱狀態**：in_review
+- **年代記載**：1996 蘭嶼貯存場；2019 蘭嶼貯存場
+- **相關事件**：1996 蘭嶼貯存場停止接收核廢料
+- **主要來源**：<https://www.nusc.gov.tw/share/file/fcma/7A7z4bkzzFkQnC8e6WzbsA__.pdf>
+- **補充來源**：<https://www.president.gov.tw/NEWS/25051>
+- **引用位置**：原能會放射性物料管理局《蘭嶼貯存場貯存設施十年再評估報告審查報告》（FCMA-98201）營運概況，見「民國 71 年 5 月」至「民國 85 年 2 月」段。2019 年補償要點見總統府 108 年 11 月 22 日新聞稿。
+
 ### 桃園市立綜合體育館
 
 - **地區**：桃園市桃園區
@@ -473,6 +548,16 @@
 - **補充來源**：<https://www.metro.taipei/cp.aspx?n=B27E7BC8CBBCDA61>
 - **引用位置**：臺北市政府捷運工程局〈文山內湖線路線說明〉，見木柵線段落。另見臺北大眾捷運公司〈大事紀〉085.03.28 及 098.10.08 兩條。
 
+### 龜山島
+
+- **地區**：宜蘭縣頭城鎮
+- **識別碼**：`guishandao`　**審閱狀態**：in_review
+- **年代記載**：1999 龜山島；2000 龜山島
+- **相關事件**：2000 龜山島開放觀光登島
+- **主要來源**：<https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Object&id=603164>
+- **補充來源**：<https://www.lym.gov.tw/ch/collection/epaper/epaper-detail/d35699e9-dfb3-11eb-92da-2760f1289ae7/>
+- **引用位置**：國家文化記憶庫〈龜山島生態導覽叢書〉內容描述，見遷村與 2000 年 8 月 1 日開放觀光段。1999 年納入國家風景區見蘭陽博物館電子報第 88 期〈山河顯影系列：龜山島〉；遷村年份兩處記載為 1975 年與 1975–77 年。
+
 ### 九二一地震教育園區
 
 - **地區**：臺中市霧峰區
@@ -482,6 +567,15 @@
 - **主要來源**：<https://www.wufeng.taichung.gov.tw/980992/981034/981044/3403060>
 - **補充來源**：<https://www.wra.gov.tw/epaper/Article_Detail.aspx?n=30173&s=2448>
 - **引用位置**：臺中市霧峰區公所〈介紹本區921地震教育園區〉，見光復國中與斷層通過校區段。水利署電子報，見集集震央與 9 月 25 日總統發布緊急命令。
+
+### 台塑麥寮六輕工業區
+
+- **地區**：雲林縣麥寮鄉
+- **識別碼**：`sixnaphtha`　**審閱狀態**：in_review
+- **年代記載**：1999 六輕工業區；2000 六輕工業區
+- **相關事件**：1999 六輕輕油裂解一廠正式運轉
+- **主要來源**：<https://www.fpcc.com.tw/uploads/images/ir/%E5%8F%B0%E5%A1%91%E7%9F%B3%E5%8C%96112%E5%B9%B4%E8%82%A1%E6%9D%B1%E6%9C%83%E5%B9%B4%E5%A0%B1%E4%B8%8A%E5%82%B3%E7%89%88.pdf>
+- **引用位置**：台塑石化股份有限公司 112 年度年報「壹、公司簡介」之「三、公司沿革」，見 83.07、88.02、88.12、89.03、89.10 各條。
 
 ### 總統府前廣場
 
@@ -493,6 +587,15 @@
 - **補充來源**：<https://art.archives.gov.tw/tw/art/1295.html>
 - **引用位置**：行政院大陸委員會《政府大陸政策重要文件》，見 2000 年 5 月 20 日就職慶祝大會段。國家檔案大事年表，民國 89 年 3 月 18 日總統選舉條。
 
+### 千禧曙光紀念園區
+
+- **地區**：臺東縣太麻里鄉
+- **識別碼**：`taimalisunrise`　**審閱狀態**：in_review
+- **年代記載**：2000 太麻里海灘
+- **相關事件**：2000 太麻里千禧迎曙光音樂會
+- **主要來源**：<https://www.taimali.gov.tw/home/index.php/sightseeing-guide/2020-04-23-04-32-58/60-tourism/2020-06-16-03-45-56/158-2020-06-16-04-39-11.html>
+- **引用位置**：太麻里鄉公所全球資訊網〈千禧曙光紀念園區〉，見景點介紹第二段。
+
 ### 立法院
 
 - **地區**：臺北市中正區
@@ -502,6 +605,16 @@
 - **主要來源**：<https://www.cy.gov.tw/News_Content.aspx?n=124&s=7292>
 - **補充來源**：<https://www.ey.gov.tw/Goals/60F82C802498E92D>
 - **引用位置**：監察院院新聞稿，見立法院服貿審查背景及 3 月 18 日至 4 月 10 日的記載。行政院施政成果，見施行法三讀、公布及施行日期。
+
+### 南方澳跨港大橋
+
+- **地區**：宜蘭縣蘇澳鎮
+- **識別碼**：`nanfangaobridge`　**審閱狀態**：in_review
+- **年代記載**：2019 南方澳跨港大橋
+- **相關事件**：2019 南方澳跨港大橋斷裂崩塌
+- **主要來源**：<https://www.ttsb.gov.tw/1243/22385/23235/post>
+- **補充來源**：<https://www.cy.gov.tw/public/Data/110mo/109%E4%BA%A4%E8%AA%BF0011.pdf>
+- **引用位置**：國家運輸安全調查委員會〈南方澳大橋斷裂重大公路事故〉，見「事故簡介」。興建與完工日期見監察院 109 交調 0011 調查報告，調查意見一之（一）3。
 
 ### 清水隧道一帶
 
@@ -521,6 +634,33 @@
 - **主要來源**：<https://www.president.gov.tw/NEWS/28424>
 - **補充來源**：<https://db.cec.gov.tw/Visual>
 - **引用位置**：總統府〈第16任總統副總統宣誓就職典禮〉，見 5 月 20 日典禮日期、地點及出席者。選舉結果見中選會選舉資料庫第 16 任總統副總統選舉。
+
+### 嘉義市中央噴水圓環
+
+- **地區**：嘉義市西區
+- **識別碼**：`chiayifountain`　**審閱狀態**：in_review
+- **年代記載**：2026 中央噴水圓環
+- **相關事件**：2026 中央噴水圓環重新啟用
+- **主要來源**：<https://www.chiayi.gov.tw/News_Content.aspx?n=455&s=952259>
+- **引用位置**：嘉義市政府〈嘉義市中央噴水圓環重新啟用 保存城市記憶延續KANO精神〉，2026 年 9 月 11 日重新啟用、沿革與工期段。
+
+### 蘭嶼開元港
+
+- **地區**：臺東縣蘭嶼鄉
+- **識別碼**：`kaiyuanport`　**審閱狀態**：in_review
+- **年代記載**：2026 開元港
+- **相關事件**：2026 開元港候船室動土
+- **主要來源**：<https://www.taitung.gov.tw/News_Content.aspx?n=13370&s=148441>
+- **引用位置**：臺東縣政府〈打造人車分流、安心搭船新動線 蘭嶼開元港2.6億元候船室暨聯外道路工程動土〉，民國 115 年 7 月 30 日動土典禮段。
+
+### 臺東縣立圖書館
+
+- **地區**：臺東縣臺東市
+- **識別碼**：`taitunglibrary`　**審閱狀態**：in_review
+- **年代記載**：2026 臺東縣立圖書館
+- **相關事件**：2026 臺東縣立圖書館開幕
+- **主要來源**：<https://www.taitung.gov.tw/News_Content.aspx?n=13370&s=146358>
+- **引用位置**：臺東縣政府〈東岸絕美 臺東新地標藝文活動新據點 縣立圖書館4/22盛大開幕〉，民國 115 年 4 月 22 日開幕儀式與規劃沿革段。
 
 ## 2. 年代導讀
 
@@ -715,6 +855,12 @@
   中選會選舉資料庫，第 16 任總統副總統選舉結果。
 - <https://www.president.gov.tw/NEWS/28424>  
   總統府第 16 任總統、副總統宣誓就職報導，見典禮日期及地點。
+
+### 2026　九合一選舉前夕
+
+- **時期**：民主與公民社會　**審閱狀態**：in_review
+- <https://web.cec.gov.tw/api/file/45d8e965-f63a-46d5-b636-7d81e47cf4d1.pdf>  
+  中央選舉委員會中選務字第 1153150253 號公告（民國 115 年 8 月 20 日），公告事項一、二及三（一）投票日期。
 
 ## 3. 歷史行政據點
 
@@ -1029,6 +1175,35 @@
 |---|---|
 | 總統府・宣誓就職 | <https://www.president.gov.tw/NEWS/28424> |
 
+### 2026　直轄市與縣市（115 年）
+
+全國劃分為 6 個直轄市與 16 個縣（市）。圖中標示臺灣本島與澎湖的直轄市、縣市政府所在地，福建省金門縣、連江縣未列入。座標取自 OpenStreetMap，部分為政府大樓附近的概位。
+
+審閱狀態：in_review
+
+| 據點 | 來源 |
+|---|---|
+| 臺北市・直轄市政府 | <https://www.gov.taipei> |
+| 新北市・直轄市政府 | <https://www.ntpc.gov.tw> |
+| 桃園市・直轄市政府 | <https://www.tycg.gov.tw> |
+| 臺中市・直轄市政府 | <https://www.taichung.gov.tw> |
+| 臺南市・直轄市政府 | <https://www.tainan.gov.tw> |
+| 高雄市・直轄市政府 | <https://www.kcg.gov.tw> |
+| 基隆市・市政府 | <https://www.klcg.gov.tw> |
+| 新竹市・市政府 | <https://www.hccg.gov.tw> |
+| 嘉義市・市政府 | <https://www.chiayi.gov.tw> |
+| 宜蘭縣・縣政府 | <https://www.e-land.gov.tw> |
+| 新竹縣・縣政府 | <https://www.hsinchu.gov.tw> |
+| 苗栗縣・縣政府 | <https://www.miaoli.gov.tw> |
+| 彰化縣・縣政府 | <https://www.chcg.gov.tw> |
+| 南投縣・縣政府 | <https://www.nantou.gov.tw/big5/index.php> |
+| 雲林縣・縣政府 | <https://web.wra.gov.tw/landsubsidence/water_new/File/LevelFile/3754/LJ9032.pdf> |
+| 嘉義縣・縣政府 | <https://www.cyhg.gov.tw> |
+| 屏東縣・縣政府 | <https://www.pthg.gov.tw> |
+| 花蓮縣・縣政府 | <https://www.hl.gov.tw> |
+| 臺東縣・縣政府 | <https://www.taitung.gov.tw> |
+| 澎湖縣・縣政府 | <https://www.penghu.gov.tw> |
+
 ## 4. 歷史圖幅
 
 圖磚由中央研究院人文社會科學研究中心地理資訊科學研究專題中心提供，須連網載入。使用條件：<https://iptt.sinica.edu.tw/shares/1121>
@@ -1056,7 +1231,7 @@
 
 ## 6. 來源索引
 
-共 120 個不重複網址，來自 77 個網站，依網站分組。
+共 163 個不重複網址，來自 95 個網站，依網站分組。
 
 ### afrch.forest.gov.tw
 
@@ -1217,10 +1392,21 @@
 - <https://law.mnd.gov.tw/scp/Query1R.aspx?lawno=2&media=1&no=1A012705604&tblname=FHLAMEND>  
   引用於：1987 年代導讀
 
+### memory.nhrm.gov.tw
+
+- <https://memory.nhrm.gov.tw/TopicExploration/LocationSpace/Detail/104>  
+  引用於：地點 嘉義車站站前廣場
+
 ### nchdb.boch.gov.tw
 
+- <https://nchdb.boch.gov.tw/assets/advanceSearch/monument/19831228000003>  
+  引用於：地點 金廣福公館
 - <https://nchdb.boch.gov.tw/assets/advanceSearch/monument/19850819000083>  
   引用於：地點 左營舊城（鳳山縣舊城）
+- <https://nchdb.boch.gov.tw/assets/advanceSearch/monument/19851127000036>  
+  引用於：地點 北港朝天宮
+- <https://nchdb.boch.gov.tw/assets/advanceSearch/monument/20060724000005>  
+  引用於：地點 新埔褒忠亭義民廟
 - <https://nchdb.boch.gov.tw/assets/overview/historicSite/20230928000001>  
   引用於：地點 石門古戰場、1874 年代導讀、1874 歷史據點
 - <https://nchdb.boch.gov.tw/assets/overview/historicalBuilding/20040409000005>  
@@ -1265,6 +1451,12 @@
   引用於：地點 八卦山、1895 年代導讀
 - <https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=152>  
   引用於：地點 文澳城隍廟
+- <https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=23>  
+  引用於：地點 北港朝天宮
+- <https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=253>  
+  引用於：地點 新埔褒忠亭義民廟
+- <https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=278>  
+  引用於：地點 臺東天后宮
 
 ### takao.kcg.gov.tw
 
@@ -1287,12 +1479,20 @@
   引用於：地點 打狗英國領事館文化園區
 - <https://tcmb.culture.tw/zh-tw/detail?id=20201124000003&indexCode=BOCH_CountryCulture_11>  
   引用於：地點 橋頭糖廠
+- <https://tcmb.culture.tw/zh-tw/detail?id=251621&indexCode=Culture_Object>  
+  引用於：地點 北門驛（阿里山林業鐵路北門車站舊站）
+- <https://tcmb.culture.tw/zh-tw/detail?id=274810&indexCode=Culture_Object>  
+  引用於：地點 臺東天后宮
 - <https://tcmb.culture.tw/zh-tw/detail?indexCode=BOCH_CountryCulture_31&id=20110216000001>  
   引用於：地點 阿里山沼平車站
 - <https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Object&id=510847>  
   引用於：地點 左營舊城（鳳山縣舊城）
+- <https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Object&id=603164>  
+  引用於：地點 龜山島
 - <https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Place&id=475676>  
   引用於：地點 臺北府城北門（承恩門）
+- <https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Place&id=571211>  
+  引用於：地點 冬山河親水公園
 
 ### the.nmth.gov.tw
 
@@ -1316,6 +1516,8 @@
 
 ### web.cec.gov.tw
 
+- <https://web.cec.gov.tw/api/file/45d8e965-f63a-46d5-b636-7d81e47cf4d1.pdf>  
+  引用於：2026 年代導讀
 - <https://web.cec.gov.tw/central/article/19170>  
   引用於：地點 桃園市立綜合體育館
 
@@ -1323,6 +1525,11 @@
 
 - <https://web.tainan.gov.tw/tnanping/cp.aspx?n=20609&s=7242>  
   引用於：地點 原英商德記洋行
+
+### web.wra.gov.tw
+
+- <https://web.wra.gov.tw/landsubsidence/water_new/File/LevelFile/3754/LJ9032.pdf>  
+  引用於：2026 歷史據點
 
 ### women.nmth.gov.tw
 
@@ -1346,6 +1553,18 @@
 - <https://www.archives.gov.tw/wSite/public/Attachment/001/f1736323350806.pdf>  
   引用於：地點 中油高雄煉油廠舊址西門
 
+### www.chcg.gov.tw
+
+- <https://www.chcg.gov.tw>  
+  引用於：2026 歷史據點
+
+### www.chiayi.gov.tw
+
+- <https://www.chiayi.gov.tw>  
+  引用於：2026 歷史據點
+- <https://www.chiayi.gov.tw/News_Content.aspx?n=455&s=952259>  
+  引用於：地點 嘉義市中央噴水圓環
+
 ### www.cip.gov.tw
 
 - <https://www.cip.gov.tw/data/news/202208/T-40369462.pdf?c=3FD58C8AA667F0161C2997999E49C980&fn=14F9D2A98598996F494C73DF3195AA8564F474DD9478577F&s=2AFF5C90ECEA3EC7D0636733C6861689>  
@@ -1355,6 +1574,13 @@
 
 - <https://www.cy.gov.tw/News_Content.aspx?n=124&s=7292>  
   引用於：地點 立法院、2014 年代導讀、2014 歷史據點
+- <https://www.cy.gov.tw/public/Data/110mo/109%E4%BA%A4%E8%AA%BF0011.pdf>  
+  引用於：地點 南方澳跨港大橋
+
+### www.cyhg.gov.tw
+
+- <https://www.cyhg.gov.tw>  
+  引用於：2026 歷史據點
 
 ### www.dorts.gov.taipei
 
@@ -1366,6 +1592,11 @@
 - <https://www.drnh.gov.tw/p/404-1003-15330.php?Lang=zh-tw>  
   引用於：地點 美麗島雜誌社高雄服務處原址、1979 年代導讀
 
+### www.e-land.gov.tw
+
+- <https://www.e-land.gov.tw>  
+  引用於：2026 歷史據點
+
 ### www.ey.gov.tw
 
 - <https://www.ey.gov.tw/Eyvisit/43BB616A2E73BAA8>  
@@ -1375,15 +1606,51 @@
 - <https://www.ey.gov.tw/Goals/60F82C802498E92D>  
   引用於：地點 立法院、2019 年代導讀、2019 歷史據點
 
+### www.fpcc.com.tw
+
+- <https://www.fpcc.com.tw/uploads/images/ir/%E5%8F%B0%E5%A1%91%E7%9F%B3%E5%8C%96112%E5%B9%B4%E8%82%A1%E6%9D%B1%E6%9C%83%E5%B9%B4%E5%A0%B1%E4%B8%8A%E5%82%B3%E7%89%88.pdf>  
+  引用於：地點 台塑麥寮六輕工業區
+
 ### www.gov.taipei
 
+- <https://www.gov.taipei>  
+  引用於：2026 歷史據點
 - <https://www.gov.taipei/cp.aspx?n=14D2637CBC4AAEC2>  
   引用於：1884 歷史據點
 
+### www.hccg.gov.tw
+
+- <https://www.hccg.gov.tw>  
+  引用於：2026 歷史據點
+
+### www.hl.gov.tw
+
+- <https://www.hl.gov.tw>  
+  引用於：2026 歷史據點
+
+### www.hsinchu.gov.tw
+
+- <https://www.hsinchu.gov.tw>  
+  引用於：2026 歷史據點
+
+### www.kcg.gov.tw
+
+- <https://www.kcg.gov.tw>  
+  引用於：2026 歷史據點
+
 ### www.klcg.gov.tw
 
+- <https://www.klcg.gov.tw>  
+  引用於：2026 歷史據點
 - <https://www.klcg.gov.tw/tw/klcg1/3173.html>  
   引用於：地點 基隆港
+
+### www.lym.gov.tw
+
+- <https://www.lym.gov.tw/ch/collection/epaper/epaper-detail/7cf11288-ab92-11ea-94d3-2760f1289ae7/>  
+  引用於：地點 冬山河親水公園
+- <https://www.lym.gov.tw/ch/collection/epaper/epaper-detail/d35699e9-dfb3-11eb-92da-2760f1289ae7/>  
+  引用於：地點 龜山島
 
 ### www.marine.gov.tw
 
@@ -1397,6 +1664,8 @@
 
 ### www.miaoli.gov.tw
 
+- <https://www.miaoli.gov.tw>  
+  引用於：2026 歷史據點
 - <https://www.miaoli.gov.tw/News_Content2.aspx?n=285&s=825993>  
   引用於：地點 龍騰斷橋
 
@@ -1404,6 +1673,11 @@
 
 - <https://www.mnd.gov.tw/en/File/43033>  
   引用於：1930 歷史據點
+
+### www.nantou.gov.tw
+
+- <https://www.nantou.gov.tw/big5/index.php>  
+  引用於：2026 歷史據點
 
 ### www.npm.gov.tw
 
@@ -1422,8 +1696,20 @@
 - <https://www.ntm.gov.tw/cp.aspx?n=5437>  
   引用於：地點 國立臺灣博物館
 
+### www.ntpc.gov.tw
+
+- <https://www.ntpc.gov.tw>  
+  引用於：2026 歷史據點
+
+### www.nusc.gov.tw
+
+- <https://www.nusc.gov.tw/share/file/fcma/7A7z4bkzzFkQnC8e6WzbsA__.pdf>  
+  引用於：地點 台電蘭嶼貯存場
+
 ### www.penghu.gov.tw
 
+- <https://www.penghu.gov.tw>  
+  引用於：2026 歷史據點
 - <https://www.penghu.gov.tw/ch/home.jsp?id=10174>  
   引用於：地點 澎湖媽宮外海、1683 年代導讀、1683 歷史據點
 
@@ -1433,6 +1719,8 @@
   引用於：地點 桃園市立綜合體育館
 - <https://www.president.gov.tw/NEWS/22082>  
   引用於：地點 總統府、1996 年代導讀、1996 歷史據點
+- <https://www.president.gov.tw/NEWS/25051>  
+  引用於：地點 台電蘭嶼貯存場
 - <https://www.president.gov.tw/NEWS/28424>  
   引用於：地點 總統府大禮堂、2024 年代導讀、2024 歷史據點
 - <https://www.president.gov.tw/Page/294/37460>  
@@ -1440,16 +1728,27 @@
 
 ### www.pthg.gov.tw
 
+- <https://www.pthg.gov.tw>  
+  引用於：2026 歷史據點
 - <https://www.pthg.gov.tw/towncgt/cp.aspx?n=A8CD1687885EF825>  
   引用於：地點 六堆客家聯軍抗日紀念公園
 
 ### www.taichung.gov.tw
 
+- <https://www.taichung.gov.tw>  
+  引用於：2026 歷史據點
 - <https://www.taichung.gov.tw/media/270401/551110255171.pdf>  
   引用於：1662 歷史據點
 
+### www.taimali.gov.tw
+
+- <https://www.taimali.gov.tw/home/index.php/sightseeing-guide/2020-04-23-04-32-58/60-tourism/2020-06-16-03-45-56/158-2020-06-16-04-39-11.html>  
+  引用於：地點 千禧曙光紀念園區
+
 ### www.tainan.gov.tw
 
+- <https://www.tainan.gov.tw>  
+  引用於：2026 歷史據點
 - <https://www.tainan.gov.tw/cp.aspx?n=13291>  
   引用於：1662 歷史據點
 
@@ -1457,6 +1756,15 @@
 
 - <https://www.taisugar.com.tw/KOB/history.aspx?n=11629>  
   引用於：地點 橋頭糖廠
+
+### www.taitung.gov.tw
+
+- <https://www.taitung.gov.tw>  
+  引用於：2026 歷史據點
+- <https://www.taitung.gov.tw/News_Content.aspx?n=13370&s=146358>  
+  引用於：地點 臺東縣立圖書館
+- <https://www.taitung.gov.tw/News_Content.aspx?n=13370&s=148441>  
+  引用於：地點 蘭嶼開元港
 
 ### www.taiwan.net.tw
 
@@ -1501,6 +1809,8 @@
 
 - <https://www.ttsb.gov.tw/1133/1134/22557/22559/post>  
   引用於：2021 歷史據點
+- <https://www.ttsb.gov.tw/1243/22385/23235/post>  
+  引用於：地點 南方澳跨港大橋
 - <https://www.ttsb.gov.tw/1243/22450/29476/post>  
   引用於：地點 清水隧道一帶、2021 年代導讀
 
@@ -1513,6 +1823,11 @@
 
 - <https://www.twreporter.org/a/refinery-protesters>  
   引用於：地點 中油高雄煉油廠舊址西門
+
+### www.tycg.gov.tw
+
+- <https://www.tycg.gov.tw>  
+  引用於：2026 歷史據點
 
 ### www.wra.gov.tw
 

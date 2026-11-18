@@ -275,9 +275,18 @@ export const periodNotes = {
       { url: 'https://db.cec.gov.tw/Visual', locator: '中選會選舉資料庫，第 16 任總統副總統選舉結果。' },
       { url: 'https://www.president.gov.tw/NEWS/28424', locator: '總統府第 16 任總統、副總統宣誓就職報導，見典禮日期及地點。' }
     ]
+  },
+  2026: {
+    era: '民主與公民社會',
+    title: '九合一選舉前夕',
+    summary: '中央選舉委員會於 8 月 20 日公告，直轄市長、縣（市）長、直轄市議員及縣（市）議員選舉訂於 11 月 28 日投票。首長選舉涵蓋臺北市等 6 個直轄市，以及臺灣省各縣（市）與福建省金門縣、連江縣共 16 個縣（市）。本快照記至 11 月 18 日，選舉結果尚未產生。',
+    status: 'in_review',
+    citations: [
+      { url: 'https://web.cec.gov.tw/api/file/45d8e965-f63a-46d5-b636-7d81e47cf4d1.pdf', locator: '中央選舉委員會中選務字第 1153150253 號公告（民國 115 年 8 月 20 日），公告事項一、二及三（一）投票日期。' }
+    ]
   }
 };
 
 // Published timeline stops form the catalog against which notes and layers are validated.
-export const years = [1604,1624,1626,1636,1662,1683,1684,1721,1874,1876,1884,1895,1908,1914,1930,1945,1947,1979,1987,1996,1999,2000,2014,2019,2021,2024];
+export const years = [1604,1624,1626,1636,1662,1683,1684,1721,1874,1876,1884,1895,1908,1914,1930,1945,1947,1979,1987,1996,1999,2000,2014,2019,2021,2024,2026];
 export const periods = years.map(year => periodNotes[year]?.title);

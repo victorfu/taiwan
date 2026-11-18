@@ -57,7 +57,7 @@ export function createHistoricalOverlay(surface, controls, navigate, onToggle) {
   const label = document.createElement('label');
   const toggle = document.createElement('input');
   toggle.type = 'checkbox';
-  label.append(toggle, ' 對照歷史圖幅');
+  label.append(toggle, '對照歷史圖幅');
   const info = document.createElement('div');
   const source = document.createElement('a');
   source.target = '_blank';
