@@ -54,5 +54,20 @@ export const points = {
   presidentplaza: [121.5128, 25.0402],
   legislativeyuan: [121.5195, 25.0432],
   qingshuitunnel: [121.68, 24.18],
-  presidenthall: [121.512, 25.040]
+  presidenthall: [121.512, 25.040],
+  jinguangfu: [121.0578, 24.70075],
+  yiminmiao: [121.03623, 24.84358],
+  chaotiangong: [120.30463, 23.56772],
+  dongshanriver: [121.81582, 24.67299],
+  sixnaphtha: [120.19665, 23.79124],
+  guishandao: [121.95015, 24.84237],
+  nanfangaobridge: [121.8682, 24.5857],
+  chiayistation: [120.4412, 23.4792],
+  beimenstation: [120.4547, 23.4876],
+  taitungtianhou: [121.15498, 22.75724],
+  taimalisunrise: [121.0107, 22.6168],
+  lanyustorage: [121.5922, 22.005],
+  taitunglibrary: [121.145258, 22.756676],
+  kaiyuanport: [121.508244, 22.058448],
+  chiayifountain: [120.449594, 23.479914]
 };

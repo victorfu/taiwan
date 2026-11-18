@@ -109,7 +109,20 @@ export const events = [
   [2014, "legislativeyuan", "三一八運動"],
   [2019, "legislativeyuan", "同性婚姻施行法三讀"],
   [2021, 'qingshuitunnel', '臺鐵太魯閣號清水隧道事故'],
-  [2024, 'presidenthall', '第十六任總統、副總統宣誓就職']
+  [2024, 'presidenthall', '第十六任總統、副總統宣誓就職'],
+  [1895, 'yiminmiao', '義民廟於乙未之役中焚毀'],
+  [1908, 'chaotiangong', '朝天宮震後重建工程開工'],
+  [1996, 'dongshanriver', '首屆宜蘭國際童玩藝術節'],
+  [1999, 'sixnaphtha', '六輕輕油裂解一廠正式運轉'],
+  [2000, 'guishandao', '龜山島開放觀光登島'],
+  [2019, 'nanfangaobridge', '南方澳跨港大橋斷裂崩塌'],
+  [1930, 'taitungtianhou', '地震致天后宮龜裂，議定遷建'],
+  [1947, 'chiayistation', '嘉義車站前公開槍決二二八受難者'],
+  [1996, 'lanyustorage', '蘭嶼貯存場停止接收核廢料'],
+  [2000, 'taimalisunrise', '太麻里千禧迎曙光音樂會'],
+  [2026, 'taitunglibrary', '臺東縣立圖書館開幕'],
+  [2026, 'kaiyuanport', '開元港候船室動土'],
+  [2026, 'chiayifountain', '中央噴水圓環重新啟用']
 ];
 
 /** @param {string} text */
