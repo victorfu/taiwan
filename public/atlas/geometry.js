@@ -30,5 +30,14 @@ export const points = {
   hsinchustation: [120.9716, 24.8016],
   hualienoldstation: [121.609, 23.974],
   yushan: [120.957, 23.47],
-  nationaltheater: [121.519, 25.035]
+  nationaltheater: [121.519, 25.035],
+  zuoyingoldcity: [120.29055, 22.67506],
+  grandmazu: [120.20147, 22.99662],
+  northgate: [121.51133, 25.04787],
+  huoshaozhuang: [120.5108, 22.6806],
+  ntm: [121.515, 25.0428],
+  zhaoping: [120.8139, 23.5144],
+  executiveyuan: [121.5209, 25.0462],
+  houjin: [120.3035, 22.7045],
+  zoostation: [121.5794, 24.9983]
 };

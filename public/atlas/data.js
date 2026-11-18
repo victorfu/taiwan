@@ -70,21 +70,30 @@ export const events = [
   [1684, 'jialixing', '諸羅縣初設'],
   [1684, 'wenao', '澎湖設巡檢司'],
   [1684, 'confuciustemple', '周昌與蔣毓英捐資修建孔廟'],
+  [1684, 'zuoyingoldcity', '鳳山縣初設'],
+  [1684, 'grandmazu', '施琅改寧靖王府邸為天妃宮'],
   [1876, 'battery', '二鯤鯓砲臺完工'],
   [1876, 'takao', '英國簽租哨船頭山上官邸用地'],
   [1884, 'keelung', '法國艦隊進攻基隆'],
   [1884, 'tamsui', '清法滬尾戰役'],
+  [1884, 'northgate', '臺北府城竣工'],
   [1895, 'bagua', '八卦山戰役'],
   [1895, 'battery', '乙未戰爭期間劉永福駐守砲臺'],
   [1895, 'yanliao', '近衛師團由澳底海岸登陸'],
   [1895, 'eluanbi', '清軍撤離時毀去鵝鑾鼻燈塔'],
+  [1895, 'huoshaozhuang', '火燒庄之役'],
   [1908, 'taichungpark', '縱貫鐵路通車紀念典禮'],
+  [1908, 'ntm', '臺灣總督府博物館成立'],
   [1914, 'liwu', '太魯閣戰役'],
+  [1914, 'zhaoping', '阿里山鐵路延伸至沼平'],
   [1945, 'taipeihall', '臺北公會堂受降儀式'],
+  [1945, 'executiveyuan', '臺灣省行政長官公署成立'],
   [1987, 'presidentoffice', '臺灣、澎湖解除戒嚴'],
   [1987, 'nationaltheater', '國家戲劇院與音樂廳開幕'],
+  [1987, 'houjin', '後勁反五輕運動'],
   [1996, 'presidentoffice', '首任直選正副總統宣誓就職'],
-  [1996, 'taoyuanarena', '桃園舉行就職慶祝大會']
+  [1996, 'taoyuanarena', '桃園舉行就職慶祝大會'],
+  [1996, 'zoostation', '臺北捷運木柵線通車']
 ];
 
 /** @param {string} text */

@@ -239,5 +239,98 @@ export const regionalPlaces = [
     records: {
       1987: ['國家戲劇院', '戲劇院和廣場對面的音樂廳在 10 月 6 日啟用。10 月 31 日舉行開幕典禮，兩座舞臺同時鳴鑼，戲劇院當晚演出京劇《新文姬歸漢》。']
     }
+  },
+  {
+    id: 'zuoyingoldcity', modern: '左營舊城（鳳山縣舊城）', region: '高雄市左營區',
+    status: 'in_review',
+    source: 'https://nchdb.boch.gov.tw/assets/advanceSearch/monument/19850819000083',
+    extra: 'https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Object&id=510847',
+    locator: '文化部文化資產局國家文化資產網〈鳳山縣舊城〉「歷史沿革」1684、1704、1722、1826 年條。縣治初選地點的考證見國家文化記憶庫所收張守真〈考證──康熙領臺時期鳳山縣治設置問題探討〉摘要第二至四部分。',
+    records: {
+      1684: ['鳳山縣', '清廷設一府三縣，鳳山縣為其一。文資局記載縣署遲至 1704 年才建於興隆莊，當時僅以竹圍土堡；也有研究認為縣治最初擇於鳳山莊，1689 年後才由興隆莊取代。圖釘標示後來的縣城左營舊城，1684 年此地尚無城牆。']
+    }
+  },
+  {
+    id: 'grandmazu', modern: '祀典大天后宮', region: '臺南市中西區',
+    status: 'in_review',
+    source: 'https://tmach-culture.tainan.gov.tw/templemuseums/templepage.asp?mainid=F7334481-FDEC-441D-A976-E6E80CC49272',
+    extra: 'https://dlbs.liberal.ntu.edu.tw/FULLTEXT/JR-BJ010/bj010588398.pdf',
+    locator: '臺南市文化資產管理處「宮廟博物館」〈祀典大天后宮〉「廟宇介紹」首段，原文「康熙23年（1683）」的西元括注應為 1684 年。當時稱天妃宮及捨宅為寺的經過，見闞正宗〈清初臺灣府天后宮與海會寺僧侶〉所引季麒光文。',
+    aliases: { 1684: ['寧靖王府邸', '大天后宮'] },
+    records: {
+      1684: ['天妃宮', '清軍入臺後，施琅將明寧靖王朱術桂的府邸改建為祀奉媽祖的廟宇，當時文獻稱為天妃宮。王府在寧靖王生前已捨為佛寺。媽祖由「天妃」改稱「天后」的確切年代，各方記載不一。']
+    }
+  },
+  {
+    id: 'northgate', modern: '臺北府城北門（承恩門）', region: '臺北市中正區',
+    status: 'in_review',
+    source: 'https://view.boch.gov.tw/NationalHistorical/itemspage.aspx?id=1',
+    extra: 'https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Place&id=475676',
+    locator: '文化部文化資產局「國定古蹟環景導覽」〈臺北府城—東門、南門、小南門、北門〉，見簡介首段及北門說明。另見國家文化記憶庫〈臺北北門〉說明。',
+    aliases: { 1884: ['承恩門'] },
+    records: {
+      1884: ['臺北府城', '臺北府城自 1882 年動工，1884 年竣工，城呈長方形。北門名承恩門，外有甕城，門額「巖疆鎖鑰」。日治時期拆除城牆，今存四門中僅北門保持清代原貌。']
+    }
+  },
+  {
+    id: 'huoshaozhuang', modern: '六堆客家聯軍抗日紀念公園', region: '屏東縣長治鄉',
+    status: 'in_review',
+    source: 'https://www.th.gov.tw/Epaper_Content/238/6568/',
+    extra: 'https://www.pthg.gov.tw/towncgt/cp.aspx?n=A8CD1687885EF825',
+    locator: '國史館臺灣文獻館〈屏東縣長治鄉「火燒庄」舊名與火燒庄之役〉，見「光緒21年火燒庄之役」及「火燒庄出現的歷史年代」二節。另見長治鄉公所〈長治鄉火燒庄〉。',
+    records: {
+      1895: ['火燒庄', '六堆義勇軍在大總理邱鳳揚指揮下退守火燒庄，與南下日軍激戰。日軍以山砲攻擊並放火焚燒村莊，據總督府檔案，庄內三百餘戶僅餘四、五戶，死者約二百四、五十人。總督府檔案記戰事於 11 月 26 日，客委會資料作 12 月下旬，確切日期記載不一。']
+    }
+  },
+  {
+    id: 'ntm', modern: '國立臺灣博物館', region: '臺北市中正區',
+    status: 'in_review',
+    source: 'https://www.ntm.gov.tw/cp.aspx?n=5432',
+    extra: 'https://www.ntm.gov.tw/cp.aspx?n=5437',
+    locator: '國立臺灣博物館〈館史溯源〉，見總督府博物館成立與彩票局館舍段落。另見同館〈本館〉沿革與 1915 年紀念館落成段。',
+    aliases: { 1908: ['臺灣總督府博物館'] },
+    records: {
+      1908: ['臺灣總督府民政部殖產局附屬博物館', '為慶祝縱貫鐵路南北全線通車，總督府成立博物館，借用原為彩票局興建、位於總督府建築基地後方的館舍開館。今日新公園內的館舍於 1915 年落成，圖釘標示今館，並非 1908 年的開館地點。']
+    }
+  },
+  {
+    id: 'zhaoping', modern: '阿里山沼平車站', region: '嘉義縣阿里山鄉',
+    status: 'in_review',
+    source: 'https://afrch.forest.gov.tw/railway',
+    extra: 'https://tcmb.culture.tw/zh-tw/detail?indexCode=BOCH_CountryCulture_31&id=20110216000001',
+    locator: '林業及自然保育署阿里山林業鐵路及文化資產管理處「阿里山大學校」大事紀 1912、1914 年。另見國家文化記憶庫〈阿里山林業暨鐵道文化景觀〉簡介。',
+    records: {
+      1914: ['阿里山（沼平）', '阿里山鐵路於 1912 年底通車至二萬平，其後繼續向山區延伸。1914 年路線抵達沼平，登山本線完工，沼平車站成為終點站。今日站房為 2013 年改建。']
+    }
+  },
+  {
+    id: 'executiveyuan', modern: '行政院', region: '臺北市中正區',
+    status: 'in_review',
+    source: 'https://www.ey.gov.tw/Eyvisit/43BB616A2E73BAA8',
+    extra: 'https://onlinearchives.th.gov.tw/docs/zong/003.pdf',
+    locator: '行政院〈院區開放參觀網路導覽－中央大樓使用歷程〉，見前言及「臺灣省行政長官公署時期」段。成立日期見國史館臺灣文獻館蕭碧珍〈臺灣省行政長官公署檔案〉「壹、沿革」第二段。',
+    records: {
+      1945: ['臺灣省行政長官公署', '原臺北市役所大樓於 1940 年竣工。1945 年 10 月 25 日臺灣省行政長官公署正式成立，以這棟大樓為公署辦公廳。1947 年公署裁撤，大樓改為臺灣省政府辦公廳，今為行政院。']
+    }
+  },
+  {
+    id: 'houjin', modern: '中油高雄煉油廠舊址西門', region: '高雄市楠梓區',
+    status: 'in_review',
+    source: 'https://www.archives.gov.tw/wSite/public/Attachment/001/f1736323350806.pdf',
+    extra: 'https://www.twreporter.org/a/refinery-protesters',
+    locator: '檔案管理局《檔案半年刊》第 22 卷第 1 期張庭榕〈檔案裡看不到的抗爭者―以後勁反五輕運動為例（1987-1990）〉，見「壹、前言」首二段。西門位置另見報導者〈後勁血淚抗爭史〉。',
+    records: {
+      1987: ['中油高雄煉油廠西門', '7 月初，後勁居民反對中油在高雄煉油廠興建第五輕油裂解廠，展開抗議。7 月 24 日經濟部長視察時，居民開始圍堵煉油廠西門，圍堵持續三年兩個月。圖釘為西門一帶的概位。']
+    }
+  },
+  {
+    id: 'zoostation', modern: '捷運動物園站', region: '臺北市文山區',
+    status: 'in_review',
+    source: 'https://www.dorts.gov.taipei/cp.aspx?n=DBAC040496EFAB94',
+    extra: 'https://www.metro.taipei/cp.aspx?n=B27E7BC8CBBCDA61',
+    locator: '臺北市政府捷運工程局〈文山內湖線路線說明〉，見木柵線段落。另見臺北大眾捷運公司〈大事紀〉085.03.28 及 098.10.08 兩條。',
+    records: {
+      1996: ['臺北捷運木柵線', '3 月 28 日，木柵線通車營運，自動物園站至中山國中站，是國內第一條捷運線，採全自動無人駕駛的中運量系統。2009 年與內湖線合併為文湖線。']
+    }
   }
 ];
