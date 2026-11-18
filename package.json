@@ -13,6 +13,7 @@
     "test:unit": "node --test tests/*.test.mjs",
     "validate": "node scripts/validate.mjs",
     "validate:release": "node scripts/validate.mjs --release",
+    "references": "node scripts/references.mjs",
     "build:demo": "node scripts/validate.mjs && node scripts/reading-pages.mjs && tsc -b && vite build --outDir dist-demo && node scripts/build-manifest.mjs demo",
     "build:local": "node scripts/build-local.mjs",
     "test:browser": "node tests/browser.mjs",

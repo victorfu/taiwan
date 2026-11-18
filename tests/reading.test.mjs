@@ -2,11 +2,26 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readLocation, viewUrl } from '../public/atlas/location.js';
 import { prepareReadingPages,readingPages } from '../scripts/reading-pages.mjs';
-import { places,events } from '../public/atlas/data.js';
+import { readFile } from 'node:fs/promises';
+import { referencesMarkdown } from '../scripts/references.mjs';
+import { places,events,periodNotes,years } from '../public/atlas/data.js';
+import { polityLayers } from '../public/atlas/polities.js';
 import { anpingStory } from '../public/atlas/story.js';
 
 test('文字版與地圖使用相同的已收錄史料', async () => {
   await prepareReadingPages({check:true});
+});
+
+test('參考文獻收錄全部出處且與資料同步', async () => {
+  const markdown=referencesMarkdown();
+  const current=(await readFile(new URL('../docs/references.md',import.meta.url),'utf8')).replace(/\r\n/g,'\n');
+  assert.equal(current,markdown,'docs/references.md 需要更新，請執行 node scripts/references.mjs');
+  const sources=[
+    ...places.flatMap(p=>[p.source,p.extra].filter(Boolean)),
+    ...years.flatMap(year=>(periodNotes[year].citations??[]).map(c=>c.url)),
+    ...Object.values(polityLayers).flatMap(layer=>layer.centers.map(c=>c.source))
+  ];
+  for (const url of sources) assert.ok(markdown.includes(`<${url}>`),`缺少來源 ${url}`);
 });
 
 test('地方誌與故事以文字呈現特殊字元，保留該站的年份、地點與引文', () => {
