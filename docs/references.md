@@ -2,7 +2,7 @@
 
 > 本檔由 `node scripts/references.mjs` 依 `public/atlas/` 的資料檔產生，請勿手動編輯。
 
-收錄 11 個年代快照、30 處地點、21 則事件，以及各年代導讀、歷史據點、歷史圖幅與底圖的全部出處。審閱過程與勘誤見 [docs/review/](review/)。
+收錄 11 個年代快照、39 處地點、30 則事件，以及各年代導讀、歷史據點、歷史圖幅與底圖的全部出處。審閱過程與勘誤見 [docs/review/](review/)。
 
 ## 目錄
 
@@ -64,6 +64,16 @@
 - **主要來源**：<https://taiwangods.moi.gov.tw/html/Cultural/3_0011.aspx?i=107>
 - **引用位置**：內政部臺灣宗教文化地圖〈臺南孔子廟〉，見「發展源流」鄭氏建廟與康熙二十三、二十四年段落。
 
+### 祀典大天后宮
+
+- **地區**：臺南市中西區
+- **識別碼**：`grandmazu`　**審閱狀態**：in_review
+- **年代記載**：1684 天妃宮（又稱 寧靖王府邸、大天后宮）
+- **相關事件**：1684 施琅改寧靖王府邸為天妃宮
+- **主要來源**：<https://tmach-culture.tainan.gov.tw/templemuseums/templepage.asp?mainid=F7334481-FDEC-441D-A976-E6E80CC49272>
+- **補充來源**：<https://dlbs.liberal.ntu.edu.tw/FULLTEXT/JR-BJ010/bj010588398.pdf>
+- **引用位置**：臺南市文化資產管理處「宮廟博物館」〈祀典大天后宮〉「廟宇介紹」首段，原文「康熙23年（1683）」的西元括注應為 1684 年。當時稱天妃宮及捨宅為寺的經過，見闞正宗〈清初臺灣府天后宮與海會寺僧侶〉所引季麒光文。
+
 ### 佳里興震興宮前紀念碑
 
 - **地區**：臺南市佳里區
@@ -73,6 +83,16 @@
 - **主要來源**：<https://publications.culture.tainan.gov.tw/index.php?did=650&inter=publication&page=1>
 - **補充來源**：<https://www.npm.gov.tw/NewChineseArtDownload.ashx?bid=5213>
 - **引用位置**：臺南市文化局《佳里興震興宮》，見徵引《諸羅縣志》及廟前紀念碑的段落。
+
+### 左營舊城（鳳山縣舊城）
+
+- **地區**：高雄市左營區
+- **識別碼**：`zuoyingoldcity`　**審閱狀態**：in_review
+- **年代記載**：1684 鳳山縣
+- **相關事件**：1684 鳳山縣初設
+- **主要來源**：<https://nchdb.boch.gov.tw/assets/advanceSearch/monument/19850819000083>
+- **補充來源**：<https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Object&id=510847>
+- **引用位置**：文化部文化資產局國家文化資產網〈鳳山縣舊城〉「歷史沿革」1684、1704、1722、1826 年條。縣治初選地點的考證見國家文化記憶庫所收張守真〈考證──康熙領臺時期鳳山縣治設置問題探討〉摘要第二至四部分。
 
 ### 億載金城
 
@@ -137,6 +157,16 @@
 - **主要來源**：<https://www.taiwan.nps.gov.tw/home/zh-tw/quarterly/7935/6949.html>
 - **引用位置**：國家公園季刊鵝鑾鼻燈塔專文，見光緒九年啟用及光緒二十一年撤軍兩段。
 
+### 臺北府城北門（承恩門）
+
+- **地區**：臺北市中正區
+- **識別碼**：`northgate`　**審閱狀態**：in_review
+- **年代記載**：1884 臺北府城（又稱 承恩門）
+- **相關事件**：1884 臺北府城竣工
+- **主要來源**：<https://view.boch.gov.tw/NationalHistorical/itemspage.aspx?id=1>
+- **補充來源**：<https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Place&id=475676>
+- **引用位置**：文化部文化資產局「國定古蹟環景導覽」〈臺北府城—東門、南門、小南門、北門〉，見簡介首段及北門說明。另見國家文化記憶庫〈臺北北門〉說明。
+
 ### 淡水河口
 
 - **地區**：新北市淡水區
@@ -155,6 +185,16 @@
 - **主要來源**：<https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=127>
 - **引用位置**：內政部臺灣宗教文化地圖〈彰化八卦山大佛〉，見「發展源流」乙未戰爭段落。
 
+### 六堆客家聯軍抗日紀念公園
+
+- **地區**：屏東縣長治鄉
+- **識別碼**：`huoshaozhuang`　**審閱狀態**：in_review
+- **年代記載**：1895 火燒庄
+- **相關事件**：1895 火燒庄之役
+- **主要來源**：<https://www.th.gov.tw/Epaper_Content/238/6568/>
+- **補充來源**：<https://www.pthg.gov.tw/towncgt/cp.aspx?n=A8CD1687885EF825>
+- **引用位置**：國史館臺灣文獻館〈屏東縣長治鄉「火燒庄」舊名與火燒庄之役〉，見「光緒21年火燒庄之役」及「火燒庄出現的歷史年代」二節。另見長治鄉公所〈長治鄉火燒庄〉。
+
 ### 鹽寮海濱公園
 
 - **地區**：新北市貢寮區
@@ -172,6 +212,16 @@
 - **主要來源**：<https://twh.boch.gov.tw/taiwan/intro.aspx?id=3&lang=zh_tw>
 - **補充來源**：<https://www.miaoli.gov.tw/News_Content2.aspx?n=285&s=825993>
 - **引用位置**：文化部文化資產局〈臺鐵舊山線〉，見三義至后里的橋隧及魚藤坪橋之描述。苗栗縣政府另載兩代橋的興建年月。
+
+### 國立臺灣博物館
+
+- **地區**：臺北市中正區
+- **識別碼**：`ntm`　**審閱狀態**：in_review
+- **年代記載**：1908 臺灣總督府民政部殖產局附屬博物館（又稱 臺灣總督府博物館）
+- **相關事件**：1908 臺灣總督府博物館成立
+- **主要來源**：<https://www.ntm.gov.tw/cp.aspx?n=5432>
+- **補充來源**：<https://www.ntm.gov.tw/cp.aspx?n=5437>
+- **引用位置**：國立臺灣博物館〈館史溯源〉，見總督府博物館成立與彩票局館舍段落。另見同館〈本館〉沿革與 1915 年紀念館落成段。
 
 ### 橋頭糖廠
 
@@ -227,6 +277,26 @@
 - **補充來源**：<https://www.cip.gov.tw/data/news/202208/T-40369462.pdf?c=3FD58C8AA667F0161C2997999E49C980&fn=14F9D2A98598996F494C73DF3195AA8564F474DD9478577F&s=2AFF5C90ECEA3EC7D0636733C6861689>
 - **引用位置**：帖喇‧尤道〈從太魯閣族對日戰役看傳統價值面對殖民統治〉，《原住民族文獻》第 21 期。原民會《太魯閣事件》敘述 1914 年 2 月隘勇線時並列得其黎溪與今名立霧溪。
 
+### 阿里山沼平車站
+
+- **地區**：嘉義縣阿里山鄉
+- **識別碼**：`zhaoping`　**審閱狀態**：in_review
+- **年代記載**：1914 阿里山（沼平）
+- **相關事件**：1914 阿里山鐵路延伸至沼平
+- **主要來源**：<https://afrch.forest.gov.tw/railway>
+- **補充來源**：<https://tcmb.culture.tw/zh-tw/detail?indexCode=BOCH_CountryCulture_31&id=20110216000001>
+- **引用位置**：林業及自然保育署阿里山林業鐵路及文化資產管理處「阿里山大學校」大事紀 1912、1914 年。另見國家文化記憶庫〈阿里山林業暨鐵道文化景觀〉簡介。
+
+### 行政院
+
+- **地區**：臺北市中正區
+- **識別碼**：`executiveyuan`　**審閱狀態**：in_review
+- **年代記載**：1945 臺灣省行政長官公署
+- **相關事件**：1945 臺灣省行政長官公署成立
+- **主要來源**：<https://www.ey.gov.tw/Eyvisit/43BB616A2E73BAA8>
+- **補充來源**：<https://onlinearchives.th.gov.tw/docs/zong/003.pdf>
+- **引用位置**：行政院〈院區開放參觀網路導覽－中央大樓使用歷程〉，見前言及「臺灣省行政長官公署時期」段。成立日期見國史館臺灣文獻館蕭碧珍〈臺灣省行政長官公署檔案〉「壹、沿革」第二段。
+
 ### 高雄港
 
 - **地區**：高雄市
@@ -252,6 +322,16 @@
 - **年代記載**：1987 綠洲山莊
 - **主要來源**：<https://tcmb.culture.tw/zh-tw/detail?id=112557&indexCode=Culture_Place>
 - **引用位置**：國家文化記憶庫〈綠島感訓監獄（綠洲山莊）〉，見說明首段、兩座監獄的沿革及將軍岩地址。
+
+### 中油高雄煉油廠舊址西門
+
+- **地區**：高雄市楠梓區
+- **識別碼**：`houjin`　**審閱狀態**：in_review
+- **年代記載**：1987 中油高雄煉油廠西門
+- **相關事件**：1987 後勁反五輕運動
+- **主要來源**：<https://www.archives.gov.tw/wSite/public/Attachment/001/f1736323350806.pdf>
+- **補充來源**：<https://www.twreporter.org/a/refinery-protesters>
+- **引用位置**：檔案管理局《檔案半年刊》第 22 卷第 1 期張庭榕〈檔案裡看不到的抗爭者―以後勁反五輕運動為例（1987-1990）〉，見「壹、前言」首二段。西門位置另見報導者〈後勁血淚抗爭史〉。
 
 ### 國家戲劇院
 
@@ -290,6 +370,16 @@
 - **主要來源**：<https://www.president.gov.tw/NEWS/22071>
 - **補充來源**：<https://web.cec.gov.tw/central/article/19170>
 - **引用位置**：總統府〈總統就職典禮與慶祝活動之時間、地點〉5 月 20 日上午十時項。投票日期及當選人見中選會〈總統、副總統選舉〉第 9 任。
+
+### 捷運動物園站
+
+- **地區**：臺北市文山區
+- **識別碼**：`zoostation`　**審閱狀態**：in_review
+- **年代記載**：1996 臺北捷運木柵線
+- **相關事件**：1996 臺北捷運木柵線通車
+- **主要來源**：<https://www.dorts.gov.taipei/cp.aspx?n=DBAC040496EFAB94>
+- **補充來源**：<https://www.metro.taipei/cp.aspx?n=B27E7BC8CBBCDA61>
+- **引用位置**：臺北市政府捷運工程局〈文山內湖線路線說明〉，見木柵線段落。另見臺北大眾捷運公司〈大事紀〉085.03.28 及 098.10.08 兩條。
 
 ## 2. 年代導讀
 
@@ -575,7 +665,12 @@
 
 ## 6. 來源索引
 
-共 79 個不重複網址，來自 53 個網站，依網站分組。
+共 97 個不重複網址，來自 64 個網站，依網站分組。
+
+### afrch.forest.gov.tw
+
+- <https://afrch.forest.gov.tw/railway>  
+  引用於：地點 阿里山沼平車站
 
 ### archives.ith.sinica.edu.tw
 
@@ -650,6 +745,11 @@
 - <https://dl.ndl.go.jp/pid/974279/1/37>  
   引用於：1914 歷史據點
 
+### dlbs.liberal.ntu.edu.tw
+
+- <https://dlbs.liberal.ntu.edu.tw/FULLTEXT/JR-BJ010/bj010588398.pdf>  
+  引用於：地點 祀典大天后宮
+
 ### etour.cwa.gov.tw
 
 - <https://etour.cwa.gov.tw/scenery_inpage.php?scn_id=98&stn_id=24>  
@@ -710,10 +810,20 @@
 - <https://law.mnd.gov.tw/scp/Query1R.aspx?lawno=2&media=1&no=1A012705604&tblname=FHLAMEND>  
   引用於：1987 年代導讀
 
+### nchdb.boch.gov.tw
+
+- <https://nchdb.boch.gov.tw/assets/advanceSearch/monument/19850819000083>  
+  引用於：地點 左營舊城（鳳山縣舊城）
+
 ### newtaipei.travel
 
 - <https://newtaipei.travel/zh-tw/attractions/detail/110109>  
   引用於：地點 鹽寮海濱公園
+
+### onlinearchives.th.gov.tw
+
+- <https://onlinearchives.th.gov.tw/docs/zong/003.pdf>  
+  引用於：地點 行政院
 
 ### penghu.info
 
@@ -759,11 +869,27 @@
   引用於：地點 打狗英國領事館文化園區
 - <https://tcmb.culture.tw/zh-tw/detail?id=20201124000003&indexCode=BOCH_CountryCulture_11>  
   引用於：地點 橋頭糖廠
+- <https://tcmb.culture.tw/zh-tw/detail?indexCode=BOCH_CountryCulture_31&id=20110216000001>  
+  引用於：地點 阿里山沼平車站
+- <https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Object&id=510847>  
+  引用於：地點 左營舊城（鳳山縣舊城）
+- <https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Place&id=475676>  
+  引用於：地點 臺北府城北門（承恩門）
+
+### tmach-culture.tainan.gov.tw
+
+- <https://tmach-culture.tainan.gov.tw/templemuseums/templepage.asp?mainid=F7334481-FDEC-441D-A976-E6E80CC49272>  
+  引用於：地點 祀典大天后宮
 
 ### twh.boch.gov.tw
 
 - <https://twh.boch.gov.tw/taiwan/intro.aspx?id=3&lang=zh_tw>  
   引用於：地點 龍騰斷橋
+
+### view.boch.gov.tw
+
+- <https://view.boch.gov.tw/NationalHistorical/itemspage.aspx?id=1>  
+  引用於：地點 臺北府城北門（承恩門）
 
 ### web.cec.gov.tw
 
@@ -784,14 +910,23 @@
 
 - <https://www.archives.gov.tw/tw/arctw/69-2011.html>  
   引用於：1908 年代導讀
+- <https://www.archives.gov.tw/wSite/public/Attachment/001/f1736323350806.pdf>  
+  引用於：地點 中油高雄煉油廠舊址西門
 
 ### www.cip.gov.tw
 
 - <https://www.cip.gov.tw/data/news/202208/T-40369462.pdf?c=3FD58C8AA667F0161C2997999E49C980&fn=14F9D2A98598996F494C73DF3195AA8564F474DD9478577F&s=2AFF5C90ECEA3EC7D0636733C6861689>  
   引用於：地點 立霧溪谷
 
+### www.dorts.gov.taipei
+
+- <https://www.dorts.gov.taipei/cp.aspx?n=DBAC040496EFAB94>  
+  引用於：地點 捷運動物園站
+
 ### www.ey.gov.tw
 
+- <https://www.ey.gov.tw/Eyvisit/43BB616A2E73BAA8>  
+  引用於：地點 行政院
 - <https://www.ey.gov.tw/File/DAE5B7972E56AF7C>  
   引用於：地點 新竹火車站
 
@@ -810,6 +945,11 @@
 - <https://www.marine.gov.tw/filesys/107/107%E6%BE%8E%E6%B9%96%E5%8D%97%E6%96%B9%E5%9B%9B%E5%B3%B6%E7%99%BC%E5%B1%95%E6%AD%B7%E5%8F%B2%E8%AA%BF%E6%9F%A5.pdf>  
   引用於：1684 年代導讀
 
+### www.metro.taipei
+
+- <https://www.metro.taipei/cp.aspx?n=B27E7BC8CBBCDA61>  
+  引用於：地點 捷運動物園站
+
 ### www.miaoli.gov.tw
 
 - <https://www.miaoli.gov.tw/News_Content2.aspx?n=285&s=825993>  
@@ -825,6 +965,13 @@
 - <https://www.ntl.edu.tw/public/Attachment/451716533944.pdf>  
   引用於：1624 歷史據點
 
+### www.ntm.gov.tw
+
+- <https://www.ntm.gov.tw/cp.aspx?n=5432>  
+  引用於：地點 國立臺灣博物館
+- <https://www.ntm.gov.tw/cp.aspx?n=5437>  
+  引用於：地點 國立臺灣博物館
+
 ### www.president.gov.tw
 
 - <https://www.president.gov.tw/NEWS/22071>  
@@ -833,6 +980,11 @@
   引用於：地點 總統府、1996 年代導讀、1996 歷史據點
 - <https://www.president.gov.tw/Page/294/37460>  
   引用於：地點 總統府、1987 年代導讀、1987 歷史據點
+
+### www.pthg.gov.tw
+
+- <https://www.pthg.gov.tw/towncgt/cp.aspx?n=A8CD1687885EF825>  
+  引用於：地點 六堆客家聯軍抗日紀念公園
 
 ### www.taichung.gov.tw
 
@@ -871,6 +1023,8 @@
 
 ### www.th.gov.tw
 
+- <https://www.th.gov.tw/Epaper_Content/238/6568/>  
+  引用於：地點 六堆客家聯軍抗日紀念公園
 - <https://www.th.gov.tw/Epaper_Content/238/9126/>  
   引用於：1996 年代導讀、1996 歷史據點
 
@@ -888,6 +1042,11 @@
 
 - <https://www.twport.com.tw/business/PortInfo?a=512>  
   引用於：地點 高雄港
+
+### www.twreporter.org
+
+- <https://www.twreporter.org/a/refinery-protesters>  
+  引用於：地點 中油高雄煉油廠舊址西門
 
 ### www.ysnp.gov.tw
 
