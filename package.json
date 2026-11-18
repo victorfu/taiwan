@@ -5,20 +5,18 @@
   "type": "module",
   "scripts": {
     "predev": "node scripts/reading-pages.mjs",
-    "prebuild": "node scripts/reading-pages.mjs",
-    "prebuild:demo": "node scripts/reading-pages.mjs",
-    "postbuild": "node scripts/build-manifest.mjs release",
-    "postbuild:demo": "node scripts/build-manifest.mjs demo",
     "dev": "vite --host 127.0.0.1",
-    "build": "node scripts/validate.mjs --release && tsc -b && vite build",
+    "build": "node scripts/validate.mjs --release && node scripts/reading-pages.mjs && tsc -b && vite build && node scripts/build-manifest.mjs release",
     "build:release": "npm run build",
     "preview": "vite preview --host 127.0.0.1",
-    "test": "node --test tests/*.test.mjs",
+    "test": "node --test tests/*.test.mjs && node tests/browser.mjs",
+    "test:unit": "node --test tests/*.test.mjs",
     "validate": "node scripts/validate.mjs",
     "validate:release": "node scripts/validate.mjs --release",
-    "build:demo": "node scripts/validate.mjs && tsc -b && vite build --outDir dist-demo",
+    "build:demo": "node scripts/validate.mjs && node scripts/reading-pages.mjs && tsc -b && vite build --outDir dist-demo && node scripts/build-manifest.mjs demo",
     "build:local": "node scripts/build-local.mjs",
-    "test:browser": "node tests/browser.mjs"
+    "test:browser": "node tests/browser.mjs",
+    "test:built": "node tests/browser.mjs --demo && node tests/street-map.mjs"
   },
   "dependencies": {
     "maplibre-gl": "^5.13.0",
@@ -30,6 +28,7 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.1.0",
+    "playwright-core": "^1.65.1",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
     "vite": "^7.2.2"

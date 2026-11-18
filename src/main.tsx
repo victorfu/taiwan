@@ -22,10 +22,13 @@ function Atlas() {
       if (active) dispose = cleanup;
       else cleanup();
     }
-    start().catch(() => { if (active) setFailed(true); });
+    start().catch(error => {
+      console.error('地圖啟動失敗',error);
+      if (active) setFailed(true);
+    });
     return () => { active = false; dispose?.(); };
   }, []);
-  if (failed) return <p role="alert">地圖介面載入失敗。<a href="./index-local.html">開啟免套件版</a></p>;
+  if (failed) return <p role="alert">地圖介面載入失敗。<a href="./atlas/places.html">閱讀地方誌與事件</a></p>;
   return <div ref={root} />;
 }
 createRoot(document.getElementById('root')!).render(<Atlas />);

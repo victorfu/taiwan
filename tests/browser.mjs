@@ -1,49 +1,17 @@
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
-import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
-import { createServer } from 'node:http';
+import { mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { setTimeout as delay } from 'node:timers/promises';
+import { serveAtlas } from './serve-atlas.mjs';
 
-const mime = {
-  '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css',
-  '.json': 'application/json', '.geojson': 'application/geo+json',
-  '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg',
-  '.gz': 'application/gzip', '.bin': 'application/octet-stream',
-};
-
-// Both the source and built entries can be tested without a separate HTTP service.
-async function serveAtlas(rootUrl) {
-  const server = createServer(async (request, response) => {
-    const url = new URL(request.url, 'http://localhost');
-    const pathname = url.pathname;
-    const type = mime[path.extname(pathname)];
-    if (!type || !(/^\/index(?:-local)?\.html$/.test(pathname) || /^\/(?:atlas|assets)\/(?:[\w-]+\/)*[\w.-]+$/.test(pathname))) {
-      response.writeHead(404).end();
-      return;
-    }
-    try {
-      const content = await readFile(new URL('.' + pathname, rootUrl));
-      const headers = { 'Content-Type': type };
-      if (url.searchParams.has('offline-test')) headers['Content-Security-Policy'] = "img-src 'self' data:; connect-src 'self'";
-      response.writeHead(200, headers);
-      response.end(content);
-    } catch {
-      response.writeHead(404).end();
-    }
-  });
-  await new Promise((resolve, reject) => {
-    server.once('error', reject);
-    server.listen(0, '127.0.0.1', resolve);
-  });
-  return server;
-}
+const failOnce = new Set();
 const built = process.argv[2] === '--built';
 const demo = process.argv[2] === '--demo';
 const explicitUrl = built || demo ? null : process.argv[2];
 const rootUrl = new URL(built ? '../dist-local/' : demo ? '../dist-demo/' : '../public/', import.meta.url);
-const server = explicitUrl ? null : await serveAtlas(rootUrl);
+const server = explicitUrl ? null : await serveAtlas(rootUrl,failOnce);
 const target = new URL(explicitUrl || `http://127.0.0.1:${server.address().port}/index.html`);
 const executable = process.env.FIREFOX_BIN || (process.platform === 'win32'
   ? path.join(process.env.ProgramFiles, 'Mozilla Firefox', 'firefox.exe') : 'firefox');
@@ -68,6 +36,19 @@ try {
   socket = new WebSocket(new URL('/session', endpoint));
   await new Promise((resolve, reject) => { socket.onopen = resolve; socket.onerror = reject; });
   let id = 0;
+  const errors = [];
+  let blockedTilesContext;
+  socket.addEventListener('message',event => {
+    const message=JSON.parse(event.data);
+    if (message.method !== 'log.entryAdded') return;
+    const entry=message.params;
+    if (entry.type === 'javascript' && blockedTilesContext && entry.source?.context === blockedTilesContext &&
+      entry.text?.startsWith('Content-Security-Policy:') && entry.text.includes('https://gis.sinica.edu.tw/') &&
+      entry.text.includes('img-src')) return;
+    if (entry.type === 'javascript' || (entry.type === 'console' && entry.level === 'error')) {
+      errors.push(entry.text ?? JSON.stringify(entry));
+    }
+  });
   // The checks are sequential, so only one protocol response is pending at a time.
   function send(method, params = {}) {
     const requestId = ++id;
@@ -84,6 +65,7 @@ try {
     });
   }
   await send('session.new', { capabilities: {} });
+  await send('session.subscribe',{events:['log.entryAdded']});
   const initial = await send('browsingContext.create', {type:'tab'});
   let context = initial.context;
   const navigate = url => send('browsingContext.navigate', { context, url, wait: 'complete' });
@@ -326,6 +308,7 @@ try {
   console.log('安平導覽逐站分享、修正單下載、故事全文與地方誌連結通過');
   if (server) {
     const offline = new URL(target);
+    blockedTilesContext=context;
     offline.search = '?year=1876&place=castle&historic=1&view=120.174,22.996,12&offline-test=1';
     await navigate(offline.href);
     await waitUntil("document.querySelector('.atlas-sheet-controls [role=status]')?.textContent.includes('未取得圖磚')");
@@ -336,6 +319,107 @@ try {
     await waitUntil("document.querySelector('.atlas-sheet-controls input').checked");
     console.log('外部圖磚中斷時仍可讀取地方史料，返回可還原圖幅');
   }
+  await send('browsingContext.setViewport',{context,viewport:{width:1280,height:844}});
+  await navigate(target.href);
+  blockedTilesContext=undefined;
+  await waitUntil(atYear(1624));
+  await evaluate("document.querySelector('#years button').focus()");
+  await key('\uE014');
+  await waitUntil(atYear(1662));
+  await key(' ');
+  assert.equal(await evaluate("document.querySelector('#play').getAttribute('aria-pressed')"),'true');
+  await key(' ');
+  await evaluate("document.querySelector('#region-note').open=true; document.querySelector('#region-detail button').focus()");
+  await key('\uE007');
+  await waitUntil("!!new URL(location.href).searchParams.get('seat')");
+  const oldLength=await evaluate('history.length');
+  await evaluate(`(() => {
+    const s=document.querySelector('#scrubber');
+    for(const n of [3,5,6,7]) { s.value=n; s.dispatchEvent(new Event('input')); }
+    s.dispatchEvent(new Event('change'));
+  })()`);
+  await waitUntil(atYear(1914));
+  assert.equal(await evaluate('history.length'),oldLength+1);
+  await evaluate('history.back()');
+  await waitUntil(atYear(1662));
+  const fallback=await evaluate(`(async()=>{
+    Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async()=>{throw Error('clipboard unavailable')}}});
+    let copied; window.prompt=(_,url)=>{copied=url};
+    await document.querySelector('#share').onclick();
+    return copied;
+  })()`);
+  assert.equal(new URL(fallback).searchParams.get('year'),'1662');
+  if (server) {
+    for (const [asset,label] of [['river-surfaces.json','河川'],['coastlines.json','海岸線']]) {
+      failOnce.add('/atlas/'+asset);
+      await navigate(target.href+'?missing='+asset);
+      await waitUntil(`document.querySelector('.atlas-data-warning')?.textContent.includes('${label}暫未載入')`);
+      assert.equal(await evaluate(atYear(1624)),true);
+      if (asset==='coastlines.json') {
+        await waitUntil("performance.getEntriesByType('resource').some(r=>r.name.endsWith('terrain-height.bin.gz') && r.responseEnd>0)");
+        await paintedFrame();
+        const state=new URL(await copyUrl()).searchParams.get('view').split(',').map(Number);
+        await checkCoastline(state);
+      }
+      await click('.atlas-data-warning button');
+      await waitUntil(`performance.getEntriesByType('resource').filter(r=>r.name.endsWith('/${asset}') && r.responseEnd>0).length>=2`);
+      await waitUntil("document.querySelector('.atlas-data-warning').hidden");
+    }
+  }
+  // Exercise the same injected Map API as the React entry without depending on a GPU or external tiles.
+  const streetResult=await evaluate(`(async()=>{
+    const {createAtlasMap}=await import('./atlas/map.js');
+    const handlers={};
+    class StreetMap {
+      on(type,fn){ handlers[type]=fn; }
+      once(type,fn){ this.on(type,fn); }
+      resize(){} remove(){} jumpTo(){}
+    }
+    const host=document.createElement('div'); document.body.append(host);
+    let failures=0;
+    const adapter=createAtlasMap(host,async()=>({Map:StreetMap}),{
+      onModernFailure(){failures++;adapter.setLayers({modern:false})}
+    });
+    try {
+      adapter.setLayers({modern:true}); await Promise.resolve();
+      handlers.load();
+      handlers.error({tile:{},error:Error('tile 429')}); await Promise.resolve();
+      const partial=host.querySelector('.atlas-modern-control').getAttribute('aria-pressed')==='true' &&
+        host.querySelector('.atlas-map-key').textContent.includes('圖磚暫缺') && failures===0;
+      handlers.error({sourceId:'osm',error:Error('source unavailable')}); await Promise.resolve();
+      return partial && failures===1 && host.querySelector('.atlas-modern-control').getAttribute('aria-pressed')==='false';
+    } finally {adapter.destroy();host.remove()}
+  })()`);
+  assert.equal(streetResult,true,'單張圖磚失敗應保留街圖，致命錯誤應回復本機圖層');
+  await navigate(target.href+'?year=1945');
+  await waitUntil(atYear(1945));
+  const historyDelta=await evaluate(`(() => {
+    const start=history.length;
+    const original=window.setInterval;
+    let advance;
+    window.setInterval=fn=>{advance=fn;return -1};
+    try { document.querySelector('#play').click(); advance(); advance(); }
+    finally {window.setInterval=original}
+    return history.length-start;
+  })()`);
+  assert.equal(historyDelta,1,'播放兩次換頁僅建立一筆瀏覽紀錄');
+  await waitUntil(atYear(1996));
+  await evaluate('history.back()');
+  await waitUntil(atYear(1945));
+  const zoomBefore=Number(new URL(await copyUrl()).searchParams.get('view').split(',')[2]);
+  await evaluate(`(() => {
+    const surface=document.querySelector('.atlas-map-surface');
+    window.replaceCalls=0;
+    const replace=history.replaceState.bind(history);
+    history.replaceState=(...args)=>{window.replaceCalls++;return replace(...args)};
+    for(let i=0;i<40;i++)surface.dispatchEvent(new WheelEvent('wheel',{deltaY:-1,cancelable:true}));
+  })()`);
+  await waitUntil('window.replaceCalls>=1');
+  assert.equal(await evaluate('window.replaceCalls'),1);
+  const zoomAfter=Number(new URL(await evaluate('location.href')).searchParams.get('view').split(',')[2]);
+  assert.ok(Math.abs(zoomAfter-zoomBefore-.1)<.00002,'40 個 1px 捲動應放大 0.1 級');
+  assert.deepEqual(errors,[],'瀏覽器出現未捕捉例外或 console.error');
+  console.log('時間軸歷史紀錄、鍵盤據點、剪貼簿備援、圖資重試與街圖錯誤處理通過');
   await send('browser.close');
 } finally {
   server?.close();

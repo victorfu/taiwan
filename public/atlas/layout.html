@@ -24,16 +24,17 @@
     <button id="reading-toggle" aria-expanded="false" aria-controls="reading-body"><span id="mobile-era"></span><span class="toggle-hint">年代紀事 ▴</span></button>
     <div id="reading-body">
       <button id="reading-size" type="button" aria-pressed="false">放大閱讀欄</button>
-      <article id="card" aria-live="polite"></article>
+      <article id="card"></article>
       <section class="period-story">
         <div class="era-line"><span class="overline">年代紀事</span><span id="era-tag"></span></div>
         <h2 id="map-title"></h2><div id="period-year"></div>
         <p id="period-summary"></p><small id="coverage"></small>
+        <details><summary>年代導讀出處</summary><ul id="period-citations"></ul></details>
         <h3>本期事件</h3><div id="event-list"></div>
         <h3>圖中地名</h3><div id="place-list"></div>
         <details id="region-note"><summary>歷史據點與出處</summary><div id="region-detail"></div></details>
       </section>
-      <details id="sources"><summary>圖資與史料</summary><p id="map-source"></p><p>點位對應現代概位。歷史據點依年代收錄，各地史料仍待獨立審閱。</p><ul id="source-list"></ul></details>
+      <details id="sources"><summary>圖資與史料</summary><p id="map-source"></p><p>點位對應現代概位。地方記錄及年代導讀附核讀出處，史料有分歧處列於條目。</p><ul id="source-list"></ul></details>
     </div>
   </aside>
 </main>

@@ -1,5 +1,5 @@
 import { readFile, writeFile } from 'node:fs/promises';
-import { pathToFileURL } from 'node:url';
+import { isMain } from './is-main.mjs';
 import { places, points, events, years } from '../public/atlas/data.js';
 import { anpingStory } from '../public/atlas/story.js';
 
@@ -16,7 +16,7 @@ function mapLink(place, year, story = false) {
 function page(title, description, body) {
   return `<!doctype html>
 <html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${escape(title)} · 臺灣時序</title><meta name="description" content="${escape(description)}"><link rel="stylesheet" href="reader.css"></head>
+<title>${escape(title)} · 臺灣時序</title><meta name="description" content="${escape(description)}"><link rel="icon" href="../favicon.ico"><link rel="apple-touch-icon" href="favicon.png"><link rel="stylesheet" href="reader.css"></head>
 <body><header><a href="../index.html">臺灣時序</a><nav aria-label="閱讀導覽"><a href="anping.html">安平故事</a><a href="places.html">地方誌</a><a href="method.html">編輯方法</a></nav></header>
 <main><h1>${escape(title)}</h1><p class="intro">${escape(description)}</p>${body}</main>
 <footer><a href="../index.html">返回互動地圖</a> · <a href="correction.html">填寫史料修正單</a></footer></body></html>\n`;
@@ -55,7 +55,7 @@ ${mapLink(place, year, true)}${citation(place)}</article>`;
 <h2>年代快照</h2><p>全圖收錄 ${years.join('、')} 年。每筆名稱與摘要屬於指定快照，兩個快照之間的沿革仍可能有缺口。</p>
 <h2>位置與圖層</h2><p>地標使用現代地點概位。歷史據點以點位呈現，海岸、河流與高程提供現代定位參照。開啟歷史圖幅時，請以圖幅標題標示的測繪年代判讀。</p>
 <p>${anchor('map-sources.html','底圖出處與使用條件')}</p>
-<h2>查證與修正</h2><p>地方誌的每個條目均列出引用位置，相關事件隨當年地點列出。試閱資料仍待獨立審閱。若發現日期、名稱或地點有疑義，可在地圖的導覽選單開啟修正單，附上所見條目與史料。</p>
+<h2>查證與修正</h2><p>2026 年 11 月 18 日，Codex AI 分組核讀地方誌、事件、年代導讀與歷史據點，對照檔案、館藏、地方志及研究文獻。地點卡列出引用位置，各年代可展開「年代導讀出處」。例如 1684 年澎湖設巡檢司，署址的不同記載保留在文澳條目。若發現疑義，可在導覽選單開啟修正單，附上條目及查考依據。</p>
 <p>${anchor('places.html','閱讀各地記錄與出處')}</p>`)
   };
 }
@@ -64,11 +64,12 @@ export async function prepareReadingPages({ check = false } = {}) {
   for (const [name, html] of Object.entries(readingPages())) {
     const file = new URL('../public/atlas/' + name, import.meta.url);
     if (check) {
-      if (await readFile(file, 'utf8') !== html) throw new Error(name + ' 需要更新，請執行 node scripts/reading-pages.mjs');
+      const existing = (await readFile(file,'utf8')).replace(/\r\n/g,'\n');
+      if (existing !== html) throw new Error(name + ' 需要更新，請執行 node scripts/reading-pages.mjs');
     } else await writeFile(file, html);
   }
 }
 
-if (process.argv[1] && pathToFileURL(process.argv[1]).href === import.meta.url) {
+if (isMain(import.meta)) {
   await prepareReadingPages({ check: process.argv.includes('--check') });
 }

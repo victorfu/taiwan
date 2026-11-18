@@ -10,9 +10,9 @@ export interface AtlasPlace {
   source: string;
   locator: string;
   extra?: string;
-  aliases?: Partial<Record<number, string[]>>;
+  aliases?: Record<number, string[]>;
   status: ReviewStatus;
-  records: Partial<Record<number, SnapshotRecord>>;
+  records: Record<number, SnapshotRecord>;
 }
 
 export interface AtlasData {
@@ -21,4 +21,13 @@ export interface AtlasData {
   places: AtlasPlace[];
   points: Record<string, Coordinates>;
   events: AtlasEvent[];
+}
+
+export type PlaceInput = Omit<AtlasPlace,'status'> & {status?: ReviewStatus};
+export interface PeriodNote {
+  era: string;
+  title: string;
+  summary: string;
+  status?: ReviewStatus;
+  citations?: {url:string;locator:string}[];
 }

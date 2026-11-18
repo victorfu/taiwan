@@ -2,11 +2,11 @@ import { createGeography } from './geography.js';
 import { drawPolities, polityLayers } from './polities.js';
 import { createHistoricalOverlay } from './historical-map.js';
 
-const DEFAULT_VIEW = [120.95, 23.68, 6.65];
+import { initialView } from './location.js';
 export function nationalView(width, height) {
-  if (!width || !height) return DEFAULT_VIEW.slice();
+  if (!width || !height) return initialView.slice();
   const fit=Math.min((height-64)/537, (width-46)/449);
-  return [DEFAULT_VIEW[0],DEFAULT_VIEW[1], DEFAULT_VIEW[2]+Math.log2(Math.max(.35,Math.min(1.75,fit)))];
+  return [initialView[0],initialView[1], initialView[2]+Math.log2(Math.max(.35,Math.min(1.75,fit)))];
 }
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 const radians = Math.PI / 180;
@@ -58,9 +58,19 @@ export function createAtlasMap(container, loadStreetMap, { onSelect, onViewChang
   credit.href='https://www.openstreetmap.org/copyright';
   credit.target='_blank';credit.rel='noreferrer';credit.hidden=true;
   const scale = node('div', 'atlas-map-scale', footer);
-  const geography = createGeography(redraw, key => {
-    mode.textContent=key==='relief'?'現代海岸參照 · 地形暫缺':'地理資料未完整載入';
+  const warning=node('div','atlas-data-warning',container);
+  warning.hidden=true;
+  const message=node('span','',warning);
+  message.setAttribute('role','status');
+  const retry=node('button','',warning,'重新載入');
+  retry.type='button';
+  const names={coast:'海岸線',rivers:'河川',relief:'地形'};
+  const geography = createGeography(redraw, (keys,loading) => {
+    message.textContent=keys.length ? keys.map(key=>names[key]).join('、')+'暫未載入。' : '重新載入中…';
+    retry.disabled=loading;
+    warning.hidden=!keys.length && !loading;
   });
+  retry.onclick=()=>geography.retry();
   const historical = createHistoricalOverlay(surface,sheetControls,update,enabled => onLayerChange({historic:enabled}));
   const layers = {terrain:true,polities:true,places:true,events:true,year:1624};
   let view = nationalView(surface.clientWidth,surface.clientHeight);
@@ -92,10 +102,11 @@ export function createAtlasMap(container, loadStreetMap, { onSelect, onViewChang
   function redraw() {
     width=surface.clientWidth; height=surface.clientHeight;
     if (!width || !height || destroyed) return;
+    container.classList.toggle('is-compact',height <= 230);
     size=512*2**view[2];
     center=project(view,size);
     const viewport={width,height,size,center,view,zoom:view[2],project:position};
-    if (!map) {
+    if (!geographyCanvas.hidden) {
       const ctx=prepareCanvas(geographyCanvas);
       if (ctx) geography.draw(ctx,viewport,layers.terrain);
     }
@@ -143,16 +154,16 @@ export function createAtlasMap(container, loadStreetMap, { onSelect, onViewChang
     redraw();
   }
 
-  function update(next) {
+  function update(next, continuous = false) {
     setView(next);
-    onViewChange(view.slice());
+    onViewChange(view.slice(),continuous);
   }
 
-  function zoom(delta, dx = 0, dy = 0) {
+  function zoom(delta, dx = 0, dy = 0, continuous = false) {
     const nextZoom = clamp(view[2] + delta, 1, 19);
     const ratio = 2 ** (nextZoom - view[2]);
     const origin = [center[0] + dx * (1 - 1 / ratio), center[1] + dy * (1 - 1 / ratio)];
-    update([...unproject(origin, size), nextZoom]);
+    update([...unproject(origin, size), nextZoom],continuous);
   }
 
   function pan(dx, dy) {
@@ -176,6 +187,12 @@ export function createAtlasMap(container, loadStreetMap, { onSelect, onViewChang
 
   const pointers=new Map();
   let gestureMoved=false;
+  // Android Chrome can otherwise consume a drag after the on-screen keyboard closes.
+  // Let marker buttons retain their native activation.
+  function claimMapTouch(event) {
+    if (event.cancelable && !event.target.closest('button,a,input,label')) event.preventDefault();
+  }
+  surface.addEventListener('touchstart',claimMapTouch,{passive:false});
   function gesture() {
     const [a,b]=pointers.values();
     if (!b) return {x:a.x,y:a.y,distance:0};
@@ -224,7 +241,7 @@ export function createAtlasMap(container, loadStreetMap, { onSelect, onViewChang
     const actions = {ArrowUp:() => pan(0,-64), ArrowDown:() => pan(0,64),
       ArrowLeft:() => pan(-64,0), ArrowRight:() => pan(64,0),
       '+':() => zoom(1), '=':() => zoom(1), '-':() => zoom(-1), Home:showAll};
-    if (Object.hasOwn(actions,event.key)) {
+    if (Object.prototype.hasOwnProperty.call(actions,event.key)) {
       event.preventDefault();
       actions[event.key]();
     }
@@ -233,8 +250,9 @@ export function createAtlasMap(container, loadStreetMap, { onSelect, onViewChang
     if (!size || event.deltaY === 0) return;
     event.preventDefault();
     const box = surface.getBoundingClientRect();
-    zoom(-Math.sign(event.deltaY) * .25, event.clientX - box.left - width / 2,
-      event.clientY - box.top - height / 2);
+    const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? height : 1;
+    zoom(clamp(-event.deltaY * unit / 400,-1,1), event.clientX - box.left - width / 2,
+      event.clientY - box.top - height / 2,true);
   }
   surface.addEventListener('wheel', wheel, {passive:false});
 
@@ -262,18 +280,34 @@ export function createAtlasMap(container, loadStreetMap, { onSelect, onViewChang
           style:{version:8,sources:{osm:{type:'raster',tiles:['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],tileSize:256}},
             layers:[{id:'streets',type:'raster',source:'osm',paint:{'raster-saturation':-.72}}]}});
         const current=map;
+        let partial=false;
+        let loaded=false;
         map.once('load',() => {
           if (map !== current || destroyed) return;
-          geographyCanvas.hidden=true;
+          loaded=true;
+          geographyCanvas.hidden=!partial;
           credit.hidden=false;
-          mode.textContent='現代街道底圖';
+          mode.textContent=partial?'現代街道底圖 · 部分圖磚暫缺':'現代街道底圖';
         });
-        map.on('error',()=>queueMicrotask(()=>{
+        map.on('error',event=>queueMicrotask(()=>{
           if (map===current&&!destroyed) {
-            onModernFailure();
+            if (event.tile) {
+              partial=true;
+              geographyCanvas.hidden=false;
+              mode.textContent='現代街道底圖 · 部分圖磚暫缺';
+              redraw();
+            } else if (!loaded || event.sourceId === 'osm') {
+              console.warn('街道底圖載入失敗',event.error);
+              onModernFailure();
+            } else console.warn('街道地圖錯誤',event.error);
           }
         }));
-      } catch { if (!destroyed && request === streetRequest) onModernFailure(); }
+      } catch (error) {
+        if (!destroyed && request === streetRequest) {
+          console.warn('街道底圖啟動失敗',error);
+          onModernFailure();
+        }
+      }
     }
     redraw();
   }
@@ -320,6 +354,7 @@ export function createAtlasMap(container, loadStreetMap, { onSelect, onViewChang
       historical.destroy();
       map?.remove();
       surface.removeEventListener('wheel', wheel);
+      surface.removeEventListener('touchstart',claimMapTouch);
       container.replaceChildren();
       container.classList.remove('atlas-map');
     }

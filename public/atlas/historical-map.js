@@ -30,13 +30,14 @@ export function visibleTiles(sheet, { width, height, size, center }) {
   const left = center[0] - width / 2;
   const top = center[1] - height / 2;
   const [west, south, east, north] = sheet.bounds;
-  const minX = Math.floor(Math.max(left / side, (west + 180) / 360 * count));
-  const maxX = Math.floor(Math.min((left + width) / side, (east + 180) / 360 * count));
-  const minY = Math.floor(Math.max(top / side, mercatorY(north) * count));
-  const maxY = Math.floor(Math.min((top + height) / side, mercatorY(south) * count));
+  const x0 = Math.max(left / side, (west + 180) / 360 * count, 0);
+  const x1 = Math.min((left + width) / side, (east + 180) / 360 * count, count);
+  const y0 = Math.max(top / side, mercatorY(north) * count, 0);
+  const y1 = Math.min((top + height) / side, mercatorY(south) * count, count);
+  if (x0 >= x1 || y0 >= y1) return [];
   const tiles = [];
-  for (let y = minY; y <= maxY; y++) {
-    for (let x = minX; x <= maxX; x++) {
+  for (let y = Math.floor(y0); y < y1; y++) {
+    for (let x = Math.floor(x0); x < x1; x++) {
       const format = sheet.format === 'jpeg' ? 'jpg' : 'png';
       const tileId = [sheet.id,format,z,x,y].join('-');
       tiles.push({ key: z + '/' + x + '/' + y, left: x * side - left, top: y * side - top, side,

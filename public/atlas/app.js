@@ -1,4 +1,4 @@
-import { years, periodNotes, places, points, events, search, matchingRecords } from './data.js';
+import { years, periodNotes, places, points, events, search, matchingRecords, normalize } from './data.js';
 import { readLocation, viewUrl, layerKeys } from './location.js';
 import { createAtlasMap, nationalView } from './map.js';
 import { polityLayers } from './polities.js';
@@ -29,6 +29,7 @@ export async function mount(root, loadStreetMap) {
   const response = await fetch(new URL('./layout.html', import.meta.url));
   if (!response.ok) throw new Error('無法載入地圖介面。');
   root.innerHTML = await response.text();
+  root.classList.add('atlas-shell');
   const el = id => root.querySelector('#' + id);
   const read = () => {
     const params = new URLSearchParams(location.search);
@@ -38,7 +39,9 @@ export async function mount(root, loadStreetMap) {
     return restored;
   };
   let state = read();
-  let timer, noticeTimer;
+  let timer, noticeTimer, urlTimer, pendingUrl;
+  let playingEntry = false;
+  let scrubbing = false;
   function notice(message) {
     clearTimeout(noticeTimer);
     el('notice').textContent = message;
@@ -47,6 +50,7 @@ export async function mount(root, loadStreetMap) {
   function stop() {
     clearInterval(timer);
     timer = undefined;
+    playingEntry = false;
     el('play').textContent = '▶ 播放';
     el('play').setAttribute('aria-pressed', 'false');
   }
@@ -55,17 +59,32 @@ export async function mount(root, loadStreetMap) {
     report.searchParams.set('map',viewUrl(location.href,state).href);
     el('report-link').href = report.href;
   }
-  function updateUrl(method) {
-    history[method](null, '', viewUrl(location.href, state));
+  function updateUrl(method, url = viewUrl(location.href,state)) {
+    clearTimeout(urlTimer);
+    pendingUrl = undefined;
+    if (url.href !== location.href) {
+      try { history[method](null, '', url); }
+      catch (error) {
+        if (error.name !== 'SecurityError') throw error;
+        notice('瀏覽器暫緩更新網址，可用「分享」複製目前視圖。');
+      }
+    }
     updateReportLink();
   }
-  function change(patch, automatic = false) {
+  function scheduleUrl() {
+    clearTimeout(urlTimer);
+    pendingUrl = viewUrl(location.href,state);
+    urlTimer = setTimeout(() => updateUrl('replaceState',pendingUrl),400);
+  }
+  function change(patch, automatic = false, method = 'pushState') {
+    if (pendingUrl && method === 'pushState') updateUrl('replaceState',pendingUrl);
     if (!automatic) stop();
     if (('year' in patch || 'id' in patch) && !('story' in patch)) delete state.story;
     state = { ...state, ...patch };
     if (!historicalSheets[state.year]) delete state.historic;
     if (state.seat && !polityLayers[state.year]?.centers.some(c => c.label === state.seat)) delete state.seat;
-    if (viewUrl(location.href, state).href !== location.href) updateUrl('pushState');
+    if (method === 'defer') scheduleUrl();
+    else updateUrl(method);
     render();
   }
   function reading(open) {
@@ -113,7 +132,11 @@ export async function mount(root, loadStreetMap) {
       updateUrl('replaceState'); render();
       notice('街道底圖未能載入，已回到現代地形參照。');
     },
-    onViewChange(view) { state.view = view; updateUrl('replaceState'); }
+    onViewChange(view, continuous) {
+      state.view = view;
+      if (continuous) scheduleUrl();
+      else updateUrl('replaceState');
+    }
   });
   map.setView(state.view);
   const yearButtons = years.map(year => {
@@ -134,15 +157,32 @@ export async function mount(root, loadStreetMap) {
   });
   el('eras').append(...eraButtons);
   el('scrubber').max = String(years.length - 1);
-  el('scrubber').oninput = e => change({year:years[Number(e.target.value)]});
+  el('scrubber').oninput = e => {
+    const year = years[Number(e.target.value)];
+    if (year === state.year) return;
+    change({year},false,scrubbing ? 'defer' : 'pushState');
+    scrubbing = true;
+  };
+  function finishScrub() {
+    if (scrubbing) updateUrl('replaceState');
+    scrubbing = false;
+  }
+  el('scrubber').onchange = finishScrub;
+  el('scrubber').onblur = finishScrub;
   function step(direction, automatic = false) {
     const year = years[years.indexOf(state.year) + direction];
-    if (year !== undefined) change({year},automatic);
-    if (automatic && state.year === years.at(-1)) stop();
+    if (year !== undefined) {
+      change({year},automatic,automatic && playingEntry ? 'replaceState' : 'pushState');
+      playingEntry = automatic;
+    }
+    if (automatic && state.year === years[years.length - 1]) stop();
   }
   function play() {
     if (timer) return stop();
-    if (state.year === years.at(-1)) change({ year:years[0] });
+    if (state.year === years[years.length - 1]) {
+      change({ year:years[0] });
+      playingEntry = true;
+    }
     el('play').textContent = 'Ⅱ 暫停';
     el('play').setAttribute('aria-pressed','true');
     timer = setInterval(() => step(1,true),3000);
@@ -175,7 +215,6 @@ export async function mount(root, loadStreetMap) {
       return choices;
     });
     if (term) {
-      const normalize = value => value.toLowerCase().replaceAll('台','臺');
       const query = normalize(term);
       for (const year of years.filter(y => normalize(y + periodNotes[y].title + periodNotes[y].era).includes(query))) {
         rows.push(button(year + ' 年　' + periodNotes[year].title, () => {
@@ -200,7 +239,7 @@ export async function mount(root, loadStreetMap) {
   }
   function closeCard() {
     change({id:null,seat:null});
-    if (innerWidth <= 740) { reading(false); el('reading-toggle').focus(); }
+    if (el('reading-toggle').getClientRects().length) { reading(false); el('reading-toggle').focus(); }
     else { el('map').querySelector('[tabindex]')?.focus({preventScroll:true}); }
   }
   function card() {
@@ -278,6 +317,9 @@ export async function mount(root, loadStreetMap) {
     el('caption-era').textContent = state.year + ' 年';
     el('mobile-era').textContent = state.year + '　' + period.title;
     el('period-summary').textContent = period.summary;
+    el('period-citations').replaceChildren(...(period.citations ?? []).map(({url,locator}) => {
+      const item = node('li'); item.append(link(locator,url)); return item;
+    }));
     el('coverage').textContent = '本年收錄 ' + current.length + ' 處地點、' + yearEvents.length + ' 則事件';
     el('event-list').replaceChildren(...yearEvents.map(([,id,text]) => button(text + '　›',() => findPlace(id))));
     el('place-list').replaceChildren(...current.map(p => button(p.records[state.year][0], () => findPlace(p.id))));
@@ -287,7 +329,9 @@ export async function mount(root, loadStreetMap) {
       el('region-detail').append(node('p',layer.title),node('p',layer.note));
       const list = node('ul');
       for (const c of layer.centers) {
-        const li = node('li'); li.append(link(c.label,c.source)); list.append(li);
+        const li = node('li');
+        li.append(button(c.label,() => selectCenter(c.label,state.year,true)),document.createTextNode('　'),link('出處 ↗',c.source));
+        list.append(li);
       }
       el('region-detail').append(list);
     }
@@ -333,12 +377,14 @@ export async function mount(root, loadStreetMap) {
     if ((e.key === '/' || ((e.ctrlKey || e.metaKey) && e.key === 'k')) && document.activeElement !== el('search')) {
       e.preventDefault();el('search').focus();return;
     }
-    if (e.target.closest('input,button,summary,a,.atlas-map-surface')) return;
+    if (e.altKey || e.metaKey || e.ctrlKey || e.defaultPrevented) return;
+    if (!e.target.closest('.timeline button') && e.target.closest('input,button,summary,a,.atlas-map-surface')) return;
     if (e.key === 'ArrowLeft') { e.preventDefault(); step(-1); }
     if (e.key === 'ArrowRight') { e.preventDefault(); step(1); }
     if (e.code === 'Space') { e.preventDefault(); play(); }
   };
   const pop = () => {
+    clearTimeout(urlTimer); pendingUrl = undefined; scrubbing = false;
     stop(); state = read(); map.setView(state.view); render(); reading(Boolean(state.id || state.seat));
     if (state.invalid) notice('部分網址參數無法還原，已使用預設值。');
   };
@@ -353,8 +399,9 @@ export async function mount(root, loadStreetMap) {
   stop();render();reading(Boolean(state.id || state.seat));
   if (state.invalid) notice('部分網址參數無法還原，已使用預設值。');
   return () => {
-    stop();clearTimeout(noticeTimer);window.removeEventListener('popstate',pop);
+    stop();clearTimeout(noticeTimer);clearTimeout(urlTimer);window.removeEventListener('popstate',pop);
     document.removeEventListener('pointerdown',dismiss);document.removeEventListener('keydown',keyboard);map.destroy();
+    root.classList.remove('atlas-shell');
   };
 }
 

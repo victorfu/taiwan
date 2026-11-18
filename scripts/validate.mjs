@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { pathToFileURL } from 'node:url';
+import { isMain } from './is-main.mjs';
 import * as atlas from '../public/atlas/data.js';
 import { polityLayers } from '../public/atlas/polities.js';
 
@@ -66,6 +66,13 @@ export function validatePeriodNotes(years, notes, { release = false } = {}) {
     const note = notes[year];
     assert.ok([note.era, note.title, note.summary].every(hasText), `${year}：年代導讀缺少時期、標題或摘要`);
     validateSnapshotReview(note, `${year} 年代導讀`, release);
+    if (publicStatuses.has(note.status) || note.citations !== undefined) {
+      assert.ok(Array.isArray(note.citations) && note.citations.length, `${year}：年代導讀缺少引用`);
+      for (const {url,locator} of note.citations) {
+        validateSource(url, `${year} 年代導讀`);
+        assert.ok(hasText(locator), `${year}：年代導讀缺少引用位置`);
+      }
+    }
   }
 }
 
@@ -93,7 +100,7 @@ export function validatePolities(years, layers, { release = false } = {}) {
   }
 }
 
-if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+if (isMain(import.meta)) {
   try {
     const options = { release: process.argv.includes('--release') };
     validateAtlas(atlas, options);

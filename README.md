@@ -25,15 +25,18 @@ python -m http.server 8076 --bind 127.0.0.1 --directory public
 
 ## 資料與驗證
 
-`public/atlas/data.js` 與 `regional-places.js` 保存歷史地名、摘要及事件，`periods.js` 提供年代導讀，`geometry.js` 保存地點概位。`polities.js` 的歷史據點各附來源與快照時點。現代地貌作為各年代共用參照。地方史料保留待獨立審閱的狀態。
+`public/atlas/data.js` 與 `regional-places.js` 保存歷史地名、摘要及事件，`periods.js` 提供年代導讀，`geometry.js` 保存地點概位。`polities.js` 的歷史據點各附來源與快照時點。現代地貌作為各年代共用參照。
 
-- `npm test` 驗證搜尋、分享網址、年代據點與資料規則。
+2026 年 11 月 18 日，Codex AI 分組獨立核讀 30 處地點的 43 筆年代記錄、21 則事件、11 篇導讀及 60 筆分年據點。各組記下原始來源、引用位置、勘誤與概位取捨。地方記錄見[安平與赤崁](docs/review/anping.md)、[地方誌上篇](docs/review/regions-early.md)與[地方誌下篇](docs/review/regions-late.md)。跨區內容見[年代導讀](docs/review/snapshots.md)與[歷史據點](docs/review/polities.md)。
+
+- `npm test` 執行單元、建置入口及 Firefox 端到端測試。只執行前兩項可用 `npm run test:unit`。Firefox 可透過 `FIREFOX_BIN` 指定。
 - `npm run validate` 檢查年代、來源、點位及事件關聯。
 - `npm run test:browser` 使用本機 Firefox 驗證介面與地圖。
 - `npm run build:local` 建置免套件試閱版。建置後可執行 `node tests/browser.mjs --built` 驗證輸出網站。
 - React 入口可用 Node.js 24 與 `npm ci` 安裝相依套件，再用 `npm run dev` 啟動。現代街道底圖在開啟時才載入 MapLibre。
-- `npm run build:demo` 建置 React 試閱版到 `dist-demo/`，可用 `node tests/browser.mjs --demo` 驗收。更新史料後，執行 `node scripts/reading-pages.mjs` 同步文字版，建置時也會自動同步。
-- `npm run build` 在正式建置前檢查審核狀態。地方條目連同所屬事件一起審閱，年代導讀與歷史據點按快照年審閱。審閱完成後在相應物件記錄 `status: 'approved'`。草稿會阻止產生正式版。史料獨立審閱、實機及使用者試用仍待完成。
+- `npm run build:demo` 建置 React 試閱版到 `dist-demo/`，再執行 `npm run test:built`。Firefox 驗證互動與離線流程，Chrome 使用實際 MapLibre 渲染器驗證單張圖磚 HTTP 429 及啟動失敗備援。測試使用本機安裝的瀏覽器。更新史料後，執行 `node scripts/reading-pages.mjs` 同步文字版，建置時也會自動同步。
+- `npm run build` 在正式建置前檢查審核狀態。地方條目連同所屬事件一起審閱，年代導讀與歷史據點按快照年審閱。審閱完成後在相應物件記錄 `status: 'approved'`。草稿會阻止產生正式版。
+- 行動環境的版本、操作與實測界線分別記於 [Android 手機驗收](docs/review/mobile-android.md)與 [iPhone 尺寸 WebKit 驗收](docs/review/mobile-webkit.md)。實體手機與五位使用者試用另行記錄。
 
 ## 版本與回復
 

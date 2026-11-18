@@ -31,7 +31,7 @@ function pathFrom(rings) {
 // The input is MOI elevation in integer meters, resampled by OsmHackTW at XYZ z9.
 // The ink color is computed from measured elevation and local slope.
 // No historical shoreline or surveyed relief is inferred from the selected year.
-async function loadRelief() {
+async function loadHeights() {
   const response = await fetch(media('./terrain-height.bin.gz'));
   if (!response.ok) throw Error('高程資料讀取失敗');
   let buffer = await response.arrayBuffer();
@@ -43,6 +43,11 @@ async function loadRelief() {
   const heights = new Uint16Array(buffer);
   const {width,height} = terrain;
   if (heights.length !== width*height) throw Error('高程格網尺寸不符');
+  return heights;
+}
+
+function renderRelief(heights) {
+  const {width,height} = terrain;
   const canvas = document.createElement('canvas');
   canvas.width = width;
   canvas.height = height;
@@ -79,25 +84,50 @@ function loadJSON(name) {
   });
 }
 
-let assets;
-function start() {
-  if (!assets) {
-    assets = {
-      coast:loadJSON('./coastlines.json').then(g => ({land:pathFrom(g.land),islands:pathFrom(g.islands)})),
-      rivers:loadJSON('./river-surfaces.json').then(pathFrom),
-      relief:loadRelief()
-    };
-  }
-  return assets;
-}
+const loaders = {
+  coast:() => loadJSON('./coastlines.json'),
+  rivers:() => loadJSON('./river-surfaces.json'),
+  relief:loadHeights
+};
+const prepare = {
+  coast:g => ({land:pathFrom(g.land),islands:pathFrom(g.islands)}),
+  rivers:pathFrom,
+  relief:renderRelief
+};
+const cached = {};
 
-export function createGeography(onLoad, onError) {
-  const data={};
+export function createGeography(onLoad, onStatus) {
+  const data={...cached};
+  const failed=new Set();
+  const retrying=new Set();
   let active=true;
-  for (const [key,loading] of Object.entries(start())) {
-    loading.then(value => {
-      if (active) {data[key]=value;onLoad();}
-    }).catch(() => {if(active) onError(key);});
+  function status() {
+    onStatus([...failed],retrying.size > 0);
+  }
+  function load(key) {
+    loaders[key]().then(value => {
+      if (!active) return;
+      data[key]=cached[key]=prepare[key](value);
+      if (retrying.delete(key)) status();
+      onLoad();
+    },error => {
+      if (!active) return;
+      console.warn('地理資料載入失敗',key,error);
+      retrying.delete(key);
+      failed.add(key);
+      status();
+    });
+  }
+  for (const key of Object.keys(loaders)) if (!data[key]) load(key);
+
+  function retry() {
+    const keys=[...failed];
+    failed.clear();
+    for (const key of keys) {
+      retrying.add(key);
+      load(key);
+    }
+    status();
   }
 
   function draw(ctx, viewport, showTerrain) {
@@ -125,36 +155,38 @@ export function createGeography(onLoad, onError) {
       ctx.fill(data.coast.land);
       ctx.fillStyle='#dfd8b3';
       ctx.fill(data.coast.islands);
-      if (showTerrain && data.relief) {
-        ctx.save();
-        ctx.clip(data.coast.islands);
-        const scale=size/terrain.size;
-        const left=terrain.x*scale+ox,top=terrain.y*scale+oy;
-        // Crop the source before scaling so close-up views remain inexpensive.
-        const sx=Math.max(0,-left/scale),sy=Math.max(0,-top/scale);
-        const sw=Math.min(terrain.width,(width-left)/scale)-sx;
-        const sh=Math.min(terrain.height,(height-top)/scale)-sy;
-        if (sw>0 && sh>0) {
-          ctx.imageSmoothingEnabled=true;
-          ctx.drawImage(data.relief,sx,sy,sw,sh,(terrain.x+sx)/256,(terrain.y+sy)/256,sw/256,sh/256);
-        }
-        ctx.restore();
+    }
+    if (showTerrain && data.relief) {
+      ctx.save();
+      if (data.coast) ctx.clip(data.coast.islands);
+      const scale=size/terrain.size;
+      const left=terrain.x*scale+ox,top=terrain.y*scale+oy;
+      // Crop the source before scaling so close-up views remain inexpensive.
+      const sx=Math.max(0,-left/scale),sy=Math.max(0,-top/scale);
+      const sw=Math.min(terrain.width,(width-left)/scale)-sx;
+      const sh=Math.min(terrain.height,(height-top)/scale)-sy;
+      if (sw>0 && sh>0) {
+        ctx.imageSmoothingEnabled=true;
+        ctx.drawImage(data.relief,sx,sy,sw,sh,(terrain.x+sx)/256,(terrain.y+sy)/256,sw/256,sh/256);
       }
-      if (data.rivers) {
-        ctx.save();
-        ctx.clip(data.coast.islands);
-        ctx.fillStyle='#9ebdb6';
-        ctx.fill(data.rivers);
-        if (zoom>8) {
-          ctx.strokeStyle='#a4c1bb';
-          ctx.lineWidth=.45/factor;
-          ctx.stroke(data.rivers);
-        }
-        ctx.restore();
+      ctx.restore();
+    }
+    if (data.rivers) {
+      ctx.save();
+      if (data.coast) ctx.clip(data.coast.islands);
+      ctx.fillStyle='#9ebdb6';
+      ctx.fill(data.rivers);
+      if (zoom>8) {
+        ctx.strokeStyle='#a4c1bb';
+        ctx.lineWidth=.45/factor;
+        ctx.stroke(data.rivers);
       }
+      ctx.restore();
+    }
+    if (data.coast) {
       ctx.lineWidth=.9/factor;
       ctx.strokeStyle='#7d9487';
-      for (const p of paths) ctx.stroke(p);
+      for (const p of [data.coast.land,data.coast.islands]) ctx.stroke(p);
     }
     ctx.restore();
     drawGraticule(ctx,viewport);
@@ -178,7 +210,7 @@ export function createGeography(onLoad, onError) {
     }
     ctx.restore();
   }
-  return {draw,destroy(){active=false;}};
+  return {draw,retry,destroy(){active=false;}};
 }
 
 function drawGraticule(ctx,{width,height,center,size,project,view}) {

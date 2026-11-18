@@ -1,7 +1,8 @@
 import { createHash } from 'node:crypto';
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import { join, relative, sep } from 'node:path';
-import { fileURLToPath, pathToFileURL } from 'node:url';
+import { fileURLToPath } from 'node:url';
+import { isMain } from './is-main.mjs';
 import { years, places, events } from '../public/atlas/data.js';
 
 const sha256 = data => createHash('sha256').update(data).digest('hex');
@@ -21,7 +22,7 @@ export async function writeManifest(directory, edition) {
   await writeFile(new URL('manifest.json',directory), JSON.stringify(manifest,null,2) + '\n');
 }
 
-if (process.argv[1] && pathToFileURL(process.argv[1]).href === import.meta.url) {
+if (isMain(import.meta)) {
   const edition = process.argv[2];
   if (!['demo','release'].includes(edition)) throw new Error('請指定 demo 或 release');
   await writeManifest(new URL(edition === 'demo' ? '../dist-demo/' : '../dist/',import.meta.url),edition);
