@@ -67,7 +67,7 @@
 ### 祀典大天后宮
 
 - **地區**：臺南市中西區
-- **識別碼**：`grandmazu`　**審閱狀態**：in_review
+- **識別碼**：`grandmazu`　**審閱狀態**：approved
 - **年代記載**：1684 天妃宮（又稱 寧靖王府邸、大天后宮）
 - **相關事件**：1684 施琅改寧靖王府邸為天妃宮
 - **主要來源**：<https://tmach-culture.tainan.gov.tw/templemuseums/templepage.asp?mainid=F7334481-FDEC-441D-A976-E6E80CC49272>
@@ -87,7 +87,7 @@
 ### 左營舊城（鳳山縣舊城）
 
 - **地區**：高雄市左營區
-- **識別碼**：`zuoyingoldcity`　**審閱狀態**：in_review
+- **識別碼**：`zuoyingoldcity`　**審閱狀態**：approved
 - **年代記載**：1684 鳳山縣
 - **相關事件**：1684 鳳山縣初設
 - **主要來源**：<https://nchdb.boch.gov.tw/assets/advanceSearch/monument/19850819000083>
@@ -160,7 +160,7 @@
 ### 臺北府城北門（承恩門）
 
 - **地區**：臺北市中正區
-- **識別碼**：`northgate`　**審閱狀態**：in_review
+- **識別碼**：`northgate`　**審閱狀態**：approved
 - **年代記載**：1884 臺北府城（又稱 承恩門）
 - **相關事件**：1884 臺北府城竣工
 - **主要來源**：<https://view.boch.gov.tw/NationalHistorical/itemspage.aspx?id=1>
@@ -188,7 +188,7 @@
 ### 六堆客家聯軍抗日紀念公園
 
 - **地區**：屏東縣長治鄉
-- **識別碼**：`huoshaozhuang`　**審閱狀態**：in_review
+- **識別碼**：`huoshaozhuang`　**審閱狀態**：approved
 - **年代記載**：1895 火燒庄
 - **相關事件**：1895 火燒庄之役
 - **主要來源**：<https://www.th.gov.tw/Epaper_Content/238/6568/>
@@ -216,7 +216,7 @@
 ### 國立臺灣博物館
 
 - **地區**：臺北市中正區
-- **識別碼**：`ntm`　**審閱狀態**：in_review
+- **識別碼**：`ntm`　**審閱狀態**：approved
 - **年代記載**：1908 臺灣總督府民政部殖產局附屬博物館（又稱 臺灣總督府博物館）
 - **相關事件**：1908 臺灣總督府博物館成立
 - **主要來源**：<https://www.ntm.gov.tw/cp.aspx?n=5432>
@@ -280,7 +280,7 @@
 ### 阿里山沼平車站
 
 - **地區**：嘉義縣阿里山鄉
-- **識別碼**：`zhaoping`　**審閱狀態**：in_review
+- **識別碼**：`zhaoping`　**審閱狀態**：approved
 - **年代記載**：1914 阿里山（沼平）
 - **相關事件**：1914 阿里山鐵路延伸至沼平
 - **主要來源**：<https://afrch.forest.gov.tw/railway>
@@ -290,7 +290,7 @@
 ### 行政院
 
 - **地區**：臺北市中正區
-- **識別碼**：`executiveyuan`　**審閱狀態**：in_review
+- **識別碼**：`executiveyuan`　**審閱狀態**：approved
 - **年代記載**：1945 臺灣省行政長官公署
 - **相關事件**：1945 臺灣省行政長官公署成立
 - **主要來源**：<https://www.ey.gov.tw/Eyvisit/43BB616A2E73BAA8>
@@ -326,12 +326,12 @@
 ### 中油高雄煉油廠舊址西門
 
 - **地區**：高雄市楠梓區
-- **識別碼**：`houjin`　**審閱狀態**：in_review
+- **識別碼**：`houjin`　**審閱狀態**：approved
 - **年代記載**：1987 中油高雄煉油廠西門
 - **相關事件**：1987 後勁反五輕運動
 - **主要來源**：<https://www.archives.gov.tw/wSite/public/Attachment/001/f1736323350806.pdf>
 - **補充來源**：<https://www.twreporter.org/a/refinery-protesters>
-- **引用位置**：檔案管理局《檔案半年刊》第 22 卷第 1 期張庭榕〈檔案裡看不到的抗爭者―以後勁反五輕運動為例（1987-1990）〉，見「壹、前言」首二段。西門位置另見報導者〈後勁血淚抗爭史〉。
+- **引用位置**：檔案管理局《檔案半年刊》第 22 卷第 1 期張庭榕〈檔案裡看不到的抗爭者―以後勁反五輕運動為例（1987-1990）〉，見「貳、後勁反五輕事件」的事件始末。西門位置另見報導者〈後勁血淚抗爭史〉。
 
 ### 國家戲劇院
 
@@ -374,10 +374,10 @@
 ### 捷運動物園站
 
 - **地區**：臺北市文山區
-- **識別碼**：`zoostation`　**審閱狀態**：in_review
+- **識別碼**：`zoostation`　**審閱狀態**：approved
 - **年代記載**：1996 臺北捷運木柵線
 - **相關事件**：1996 臺北捷運木柵線通車
-- **主要來源**：<https://www.dorts.gov.taipei/cp.aspx?n=DBAC040496EFAB94>
+- **主要來源**：<https://www.dorts.gov.taipei/cp.aspx?n=DBAC040496EFAB94&s=864CDD262C4C443D>
 - **補充來源**：<https://www.metro.taipei/cp.aspx?n=B27E7BC8CBBCDA61>
 - **引用位置**：臺北市政府捷運工程局〈文山內湖線路線說明〉，見木柵線段落。另見臺北大眾捷運公司〈大事紀〉085.03.28 及 098.10.08 兩條。
 
@@ -920,7 +920,7 @@
 
 ### www.dorts.gov.taipei
 
-- <https://www.dorts.gov.taipei/cp.aspx?n=DBAC040496EFAB94>  
+- <https://www.dorts.gov.taipei/cp.aspx?n=DBAC040496EFAB94&s=864CDD262C4C443D>  
   引用於：地點 捷運動物園站
 
 ### www.ey.gov.tw
