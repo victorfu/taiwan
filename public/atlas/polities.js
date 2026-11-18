@@ -235,7 +235,7 @@ export const polityLayers = {
     centers: [site('總統府・宣誓就職', [121.512, 25.040], 'https://www.president.gov.tw/NEWS/28424')]
   },
   2026: {
-    status: 'in_review',
+    status: 'approved',
     title: '直轄市與縣市（115 年）',
     note: '全國劃分為 6 個直轄市與 16 個縣（市）。圖中標示臺灣本島與澎湖的直轄市、縣市政府所在地，福建省金門縣、連江縣未列入。座標取自 OpenStreetMap，部分為政府大樓附近的概位。',
     color: '#365e78',

@@ -133,7 +133,7 @@
 ### 北港朝天宮
 
 - **地區**：雲林縣北港鎮
-- **識別碼**：`chaotiangong`　**審閱狀態**：in_review
+- **識別碼**：`chaotiangong`　**審閱狀態**：approved
 - **年代記載**：1721 天妃廟；1874 朝天宮（又稱 笨港天后宮）；1908 朝天宮
 - **相關事件**：1908 朝天宮震後重建工程開工
 - **主要來源**：<https://nchdb.boch.gov.tw/assets/advanceSearch/monument/19851127000036>
@@ -152,7 +152,7 @@
 ### 金廣福公館
 
 - **地區**：新竹縣北埔鄉
-- **識別碼**：`jinguangfu`　**審閱狀態**：in_review
+- **識別碼**：`jinguangfu`　**審閱狀態**：approved
 - **年代記載**：1874 金廣福公館
 - **主要來源**：<https://nchdb.boch.gov.tw/assets/advanceSearch/monument/19831228000003>
 - **引用位置**：文化部文化資產局國家文化資產網〈金廣福公館〉（國定古蹟），見「歷史沿革」與「古蹟特色」。
@@ -169,7 +169,7 @@
 ### 新埔褒忠亭義民廟
 
 - **地區**：新竹縣新埔鎮
-- **識別碼**：`yiminmiao`　**審閱狀態**：in_review
+- **識別碼**：`yiminmiao`　**審閱狀態**：approved
 - **年代記載**：1874 褒忠亭（又稱 義民廟）；1895 褒忠亭（又稱 義民廟）；1908 褒忠亭（又稱 義民廟）
 - **相關事件**：1895 義民廟於乙未之役中焚毀
 - **主要來源**：<https://nchdb.boch.gov.tw/assets/advanceSearch/monument/20060724000005>
@@ -280,7 +280,7 @@
 ### 臺東天后宮
 
 - **地區**：臺東縣臺東市
-- **識別碼**：`taitungtianhou`　**審閱狀態**：in_review
+- **識別碼**：`taitungtianhou`　**審閱狀態**：approved
 - **年代記載**：1895 天后宮；1930 天后宮
 - **相關事件**：1930 地震致天后宮龜裂，議定遷建
 - **主要來源**：<https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=278>
@@ -337,7 +337,7 @@
 ### 北門驛（阿里山林業鐵路北門車站舊站）
 
 - **地區**：嘉義市東區
-- **識別碼**：`beimenstation`　**審閱狀態**：in_review
+- **識別碼**：`beimenstation`　**審閱狀態**：approved
 - **年代記載**：1914 北門驛；1979 北門驛
 - **主要來源**：<https://tcmb.culture.tw/zh-tw/detail?id=251621&indexCode=Culture_Object>
 - **引用位置**：國家文化記憶庫〈嘉義北門驛〉內容描述（嘉義市政府文化局建檔），見 1910 年平地段通車與 1973 年北門新站兩段。
@@ -437,7 +437,7 @@
 ### 嘉義車站站前廣場
 
 - **地區**：嘉義市西區
-- **識別碼**：`chiayistation`　**審閱狀態**：in_review
+- **識別碼**：`chiayistation`　**審閱狀態**：approved
 - **年代記載**：1947 嘉義車站
 - **相關事件**：1947 嘉義車站前公開槍決二二八受難者
 - **主要來源**：<https://memory.nhrm.gov.tw/TopicExploration/LocationSpace/Detail/104>
@@ -465,7 +465,7 @@
 ### 冬山河親水公園
 
 - **地區**：宜蘭縣五結鄉
-- **識別碼**：`dongshanriver`　**審閱狀態**：in_review
+- **識別碼**：`dongshanriver`　**審閱狀態**：approved
 - **年代記載**：1987 冬山河風景區；1996 冬山河親水公園
 - **相關事件**：1996 首屆宜蘭國際童玩藝術節
 - **主要來源**：<https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Place&id=571211>
@@ -521,7 +521,7 @@
 ### 台電蘭嶼貯存場
 
 - **地區**：臺東縣蘭嶼鄉
-- **識別碼**：`lanyustorage`　**審閱狀態**：in_review
+- **識別碼**：`lanyustorage`　**審閱狀態**：approved
 - **年代記載**：1996 蘭嶼貯存場；2019 蘭嶼貯存場
 - **相關事件**：1996 蘭嶼貯存場停止接收核廢料
 - **主要來源**：<https://www.nusc.gov.tw/share/file/fcma/7A7z4bkzzFkQnC8e6WzbsA__.pdf>
@@ -551,7 +551,7 @@
 ### 龜山島
 
 - **地區**：宜蘭縣頭城鎮
-- **識別碼**：`guishandao`　**審閱狀態**：in_review
+- **識別碼**：`guishandao`　**審閱狀態**：approved
 - **年代記載**：1999 龜山島；2000 龜山島
 - **相關事件**：2000 龜山島開放觀光登島
 - **主要來源**：<https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Object&id=603164>
@@ -571,7 +571,7 @@
 ### 台塑麥寮六輕工業區
 
 - **地區**：雲林縣麥寮鄉
-- **識別碼**：`sixnaphtha`　**審閱狀態**：in_review
+- **識別碼**：`sixnaphtha`　**審閱狀態**：approved
 - **年代記載**：1999 六輕工業區；2000 六輕工業區
 - **相關事件**：1999 六輕輕油裂解一廠正式運轉
 - **主要來源**：<https://www.fpcc.com.tw/uploads/images/ir/%E5%8F%B0%E5%A1%91%E7%9F%B3%E5%8C%96112%E5%B9%B4%E8%82%A1%E6%9D%B1%E6%9C%83%E5%B9%B4%E5%A0%B1%E4%B8%8A%E5%82%B3%E7%89%88.pdf>
@@ -590,7 +590,7 @@
 ### 千禧曙光紀念園區
 
 - **地區**：臺東縣太麻里鄉
-- **識別碼**：`taimalisunrise`　**審閱狀態**：in_review
+- **識別碼**：`taimalisunrise`　**審閱狀態**：approved
 - **年代記載**：2000 太麻里海灘
 - **相關事件**：2000 太麻里千禧迎曙光音樂會
 - **主要來源**：<https://www.taimali.gov.tw/home/index.php/sightseeing-guide/2020-04-23-04-32-58/60-tourism/2020-06-16-03-45-56/158-2020-06-16-04-39-11.html>
@@ -609,7 +609,7 @@
 ### 南方澳跨港大橋
 
 - **地區**：宜蘭縣蘇澳鎮
-- **識別碼**：`nanfangaobridge`　**審閱狀態**：in_review
+- **識別碼**：`nanfangaobridge`　**審閱狀態**：approved
 - **年代記載**：2019 南方澳跨港大橋
 - **相關事件**：2019 南方澳跨港大橋斷裂崩塌
 - **主要來源**：<https://www.ttsb.gov.tw/1243/22385/23235/post>
@@ -638,7 +638,7 @@
 ### 嘉義市中央噴水圓環
 
 - **地區**：嘉義市西區
-- **識別碼**：`chiayifountain`　**審閱狀態**：in_review
+- **識別碼**：`chiayifountain`　**審閱狀態**：approved
 - **年代記載**：2026 中央噴水圓環
 - **相關事件**：2026 中央噴水圓環重新啟用
 - **主要來源**：<https://www.chiayi.gov.tw/News_Content.aspx?n=455&s=952259>
@@ -647,7 +647,7 @@
 ### 蘭嶼開元港
 
 - **地區**：臺東縣蘭嶼鄉
-- **識別碼**：`kaiyuanport`　**審閱狀態**：in_review
+- **識別碼**：`kaiyuanport`　**審閱狀態**：approved
 - **年代記載**：2026 開元港
 - **相關事件**：2026 開元港候船室動土
 - **主要來源**：<https://www.taitung.gov.tw/News_Content.aspx?n=13370&s=148441>
@@ -656,7 +656,7 @@
 ### 臺東縣立圖書館
 
 - **地區**：臺東縣臺東市
-- **識別碼**：`taitunglibrary`　**審閱狀態**：in_review
+- **識別碼**：`taitunglibrary`　**審閱狀態**：approved
 - **年代記載**：2026 臺東縣立圖書館
 - **相關事件**：2026 臺東縣立圖書館開幕
 - **主要來源**：<https://www.taitung.gov.tw/News_Content.aspx?n=13370&s=146358>
@@ -858,7 +858,7 @@
 
 ### 2026　九合一選舉前夕
 
-- **時期**：民主與公民社會　**審閱狀態**：in_review
+- **時期**：民主與公民社會　**審閱狀態**：approved
 - <https://web.cec.gov.tw/api/file/45d8e965-f63a-46d5-b636-7d81e47cf4d1.pdf>  
   中央選舉委員會中選務字第 1153150253 號公告（民國 115 年 8 月 20 日），公告事項一、二及三（一）投票日期。
 
@@ -1179,7 +1179,7 @@
 
 全國劃分為 6 個直轄市與 16 個縣（市）。圖中標示臺灣本島與澎湖的直轄市、縣市政府所在地，福建省金門縣、連江縣未列入。座標取自 OpenStreetMap，部分為政府大樓附近的概位。
 
-審閱狀態：in_review
+審閱狀態：approved
 
 | 據點 | 來源 |
 |---|---|

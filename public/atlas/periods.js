@@ -280,7 +280,7 @@ export const periodNotes = {
     era: '民主與公民社會',
     title: '九合一選舉前夕',
     summary: '中央選舉委員會於 8 月 20 日公告，直轄市長、縣（市）長、直轄市議員及縣（市）議員選舉訂於 11 月 28 日投票。首長選舉涵蓋臺北市等 6 個直轄市，以及臺灣省各縣（市）與福建省金門縣、連江縣共 16 個縣（市）。本快照記至 11 月 18 日，選舉結果尚未產生。',
-    status: 'in_review',
+    status: 'approved',
     citations: [
       { url: 'https://web.cec.gov.tw/api/file/45d8e965-f63a-46d5-b636-7d81e47cf4d1.pdf', locator: '中央選舉委員會中選務字第 1153150253 號公告（民國 115 年 8 月 20 日），公告事項一、二及三（一）投票日期。' }
     ]

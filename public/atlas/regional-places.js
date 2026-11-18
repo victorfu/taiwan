@@ -485,7 +485,7 @@ export const regionalPlaces = [
   },
   {
     id: 'jinguangfu', modern: '金廣福公館', region: '新竹縣北埔鄉',
-    status: 'in_review',
+    status: 'approved',
     source: 'https://nchdb.boch.gov.tw/assets/advanceSearch/monument/19831228000003',
     locator: '文化部文化資產局國家文化資產網〈金廣福公館〉（國定古蹟），見「歷史沿革」與「古蹟特色」。',
     records: {
@@ -494,7 +494,7 @@ export const regionalPlaces = [
   },
   {
     id: 'yiminmiao', modern: '新埔褒忠亭義民廟', region: '新竹縣新埔鎮',
-    status: 'in_review',
+    status: 'approved',
     source: 'https://nchdb.boch.gov.tw/assets/advanceSearch/monument/20060724000005',
     extra: 'https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=253',
     locator: '文化部文化資產局國家文化資產網〈新埔褒忠亭〉（縣定古蹟）「歷史沿革」建築興建史段，原文「明治二十八（1895）年因乙未戰役盡遭回祿」。燒毀者見內政部臺灣宗教文化地圖〈新埔褒忠亭〉「發展源流」；該頁乾隆年號的西元換算有誤，興建年代以文資局為準。',
@@ -507,7 +507,7 @@ export const regionalPlaces = [
   },
   {
     id: 'chaotiangong', modern: '北港朝天宮', region: '雲林縣北港鎮',
-    status: 'in_review',
+    status: 'approved',
     source: 'https://nchdb.boch.gov.tw/assets/advanceSearch/monument/19851127000036',
     extra: 'https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=23',
     locator: '文化部文化資產局國家文化資產網〈北港朝天宮〉（國定古蹟）「歷史沿革」。重建開工年見內政部臺灣宗教文化地圖〈北港朝天宮〉「工程於明治41年(公元1908年)開工」；文資局作「工程在四年後展開」。歷代廟名見朝天宮〈大事年表〉1700、1812 年條。',
@@ -520,7 +520,7 @@ export const regionalPlaces = [
   },
   {
     id: 'dongshanriver', modern: '冬山河親水公園', region: '宜蘭縣五結鄉',
-    status: 'in_review',
+    status: 'approved',
     source: 'https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Place&id=571211',
     extra: 'https://www.lym.gov.tw/ch/collection/epaper/epaper-detail/7cf11288-ab92-11ea-94d3-2760f1289ae7/',
     locator: '國家文化記憶庫〈冬山河親水公園〉，見象設計集團 1987 年簽約與 1996 年開辦國際童玩藝術節兩段。另見蘭陽博物館電子報第 30 期〈歡樂一夏：宜蘭國際童玩藝術節〉首屆名稱、參與人數與停辦年份段。',
@@ -531,7 +531,7 @@ export const regionalPlaces = [
   },
   {
     id: 'sixnaphtha', modern: '台塑麥寮六輕工業區', region: '雲林縣麥寮鄉',
-    status: 'in_review',
+    status: 'approved',
     source: 'https://www.fpcc.com.tw/uploads/images/ir/%E5%8F%B0%E5%A1%91%E7%9F%B3%E5%8C%96112%E5%B9%B4%E8%82%A1%E6%9D%B1%E6%9C%83%E5%B9%B4%E5%A0%B1%E4%B8%8A%E5%82%B3%E7%89%88.pdf',
     locator: '台塑石化股份有限公司 112 年度年報「壹、公司簡介」之「三、公司沿革」，見 83.07、88.02、88.12、89.03、89.10 各條。',
     records: {
@@ -541,7 +541,7 @@ export const regionalPlaces = [
   },
   {
     id: 'guishandao', modern: '龜山島', region: '宜蘭縣頭城鎮',
-    status: 'in_review',
+    status: 'approved',
     source: 'https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Object&id=603164',
     extra: 'https://www.lym.gov.tw/ch/collection/epaper/epaper-detail/d35699e9-dfb3-11eb-92da-2760f1289ae7/',
     locator: '國家文化記憶庫〈龜山島生態導覽叢書〉內容描述，見遷村與 2000 年 8 月 1 日開放觀光段。1999 年納入國家風景區見蘭陽博物館電子報第 88 期〈山河顯影系列：龜山島〉；遷村年份兩處記載為 1975 年與 1975–77 年。',
@@ -552,7 +552,7 @@ export const regionalPlaces = [
   },
   {
     id: 'nanfangaobridge', modern: '南方澳跨港大橋', region: '宜蘭縣蘇澳鎮',
-    status: 'in_review',
+    status: 'approved',
     source: 'https://www.ttsb.gov.tw/1243/22385/23235/post',
     extra: 'https://www.cy.gov.tw/public/Data/110mo/109%E4%BA%A4%E8%AA%BF0011.pdf',
     locator: '國家運輸安全調查委員會〈南方澳大橋斷裂重大公路事故〉，見「事故簡介」。興建與完工日期見監察院 109 交調 0011 調查報告，調查意見一之（一）3。',
@@ -562,7 +562,7 @@ export const regionalPlaces = [
   },
   {
     id: 'chiayistation', modern: '嘉義車站站前廣場', region: '嘉義市西區',
-    status: 'in_review',
+    status: 'approved',
     source: 'https://memory.nhrm.gov.tw/TopicExploration/LocationSpace/Detail/104',
     locator: '國家人權博物館國家人權記憶庫〈嘉義車站前〉，見「侵害人權事件概述」、「發生地概述」與「公告日期及文號」。',
     records: {
@@ -571,7 +571,7 @@ export const regionalPlaces = [
   },
   {
     id: 'beimenstation', modern: '北門驛（阿里山林業鐵路北門車站舊站）', region: '嘉義市東區',
-    status: 'in_review',
+    status: 'approved',
     source: 'https://tcmb.culture.tw/zh-tw/detail?id=251621&indexCode=Culture_Object',
     locator: '國家文化記憶庫〈嘉義北門驛〉內容描述（嘉義市政府文化局建檔），見 1910 年平地段通車與 1973 年北門新站兩段。',
     records: {
@@ -581,7 +581,7 @@ export const regionalPlaces = [
   },
   {
     id: 'taitungtianhou', modern: '臺東天后宮', region: '臺東縣臺東市',
-    status: 'in_review',
+    status: 'approved',
     source: 'https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=278',
     extra: 'https://tcmb.culture.tw/zh-tw/detail?id=274810&indexCode=Culture_Object',
     locator: '內政部臺灣宗教文化地圖〈臺東天后宮〉，見基本資料「創建/起源年代」與「發展源流」。遷建另見國家文化記憶庫〈臺東天后宮日治時期土地資料〉；捐地者兩處分別作吳錦麟、吳錦粦。',
@@ -592,7 +592,7 @@ export const regionalPlaces = [
   },
   {
     id: 'taimalisunrise', modern: '千禧曙光紀念園區', region: '臺東縣太麻里鄉',
-    status: 'in_review',
+    status: 'approved',
     source: 'https://www.taimali.gov.tw/home/index.php/sightseeing-guide/2020-04-23-04-32-58/60-tourism/2020-06-16-03-45-56/158-2020-06-16-04-39-11.html',
     locator: '太麻里鄉公所全球資訊網〈千禧曙光紀念園區〉，見景點介紹第二段。',
     records: {
@@ -601,7 +601,7 @@ export const regionalPlaces = [
   },
   {
     id: 'lanyustorage', modern: '台電蘭嶼貯存場', region: '臺東縣蘭嶼鄉',
-    status: 'in_review',
+    status: 'approved',
     source: 'https://www.nusc.gov.tw/share/file/fcma/7A7z4bkzzFkQnC8e6WzbsA__.pdf',
     extra: 'https://www.president.gov.tw/NEWS/25051',
     locator: '原能會放射性物料管理局《蘭嶼貯存場貯存設施十年再評估報告審查報告》（FCMA-98201）營運概況，見「民國 71 年 5 月」至「民國 85 年 2 月」段。2019 年補償要點見總統府 108 年 11 月 22 日新聞稿。',
@@ -612,7 +612,7 @@ export const regionalPlaces = [
   },
   {
     id: 'taitunglibrary', modern: '臺東縣立圖書館', region: '臺東縣臺東市',
-    status: 'in_review',
+    status: 'approved',
     source: 'https://www.taitung.gov.tw/News_Content.aspx?n=13370&s=146358',
     locator: '臺東縣政府〈東岸絕美 臺東新地標藝文活動新據點 縣立圖書館4/22盛大開幕〉，民國 115 年 4 月 22 日開幕儀式與規劃沿革段。',
     records: {
@@ -621,7 +621,7 @@ export const regionalPlaces = [
   },
   {
     id: 'kaiyuanport', modern: '蘭嶼開元港', region: '臺東縣蘭嶼鄉',
-    status: 'in_review',
+    status: 'approved',
     source: 'https://www.taitung.gov.tw/News_Content.aspx?n=13370&s=148441',
     locator: '臺東縣政府〈打造人車分流、安心搭船新動線 蘭嶼開元港2.6億元候船室暨聯外道路工程動土〉，民國 115 年 7 月 30 日動土典禮段。',
     records: {
@@ -630,7 +630,7 @@ export const regionalPlaces = [
   },
   {
     id: 'chiayifountain', modern: '嘉義市中央噴水圓環', region: '嘉義市西區',
-    status: 'in_review',
+    status: 'approved',
     source: 'https://www.chiayi.gov.tw/News_Content.aspx?n=455&s=952259',
     locator: '嘉義市政府〈嘉義市中央噴水圓環重新啟用 保存城市記憶延續KANO精神〉，2026 年 9 月 11 日重新啟用、沿革與工期段。',
     records: {
