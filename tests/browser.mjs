@@ -222,8 +222,8 @@ try {
 
     await evaluate("document.querySelector('#scrubber').focus()");
     await key('\uE014');
-    await waitUntil(atYear(1662));
-    assert.match(await evaluate("document.querySelector('#scrubber').getAttribute('aria-valuetext')"), /1662/);
+    await waitUntil(atYear(1626));
+    assert.match(await evaluate("document.querySelector('#scrubber').getAttribute('aria-valuetext')"), /1626/);
     assert.ok(await evaluate('[...document.querySelectorAll("#years button")].length >= 8'));
     await evaluate(yearButton(1876) + '.focus()');
     await key('\uE007');
@@ -343,7 +343,7 @@ try {
   await waitUntil(atYear(1624));
   await evaluate("document.querySelector('#years button').focus()");
   await key('\uE014');
-  await waitUntil(atYear(1662));
+  await waitUntil(atYear(1626));
   await key(' ');
   assert.equal(await evaluate("document.querySelector('#play').getAttribute('aria-pressed')"),'true');
   await key(' ');
@@ -353,20 +353,24 @@ try {
   const oldLength=await evaluate('history.length');
   await evaluate(`(() => {
     const s=document.querySelector('#scrubber');
-    for(const n of [3,5,6,7]) { s.value=n; s.dispatchEvent(new Event('input')); }
+    const years=[...document.querySelectorAll('#years button')].map(b=>Number(b.textContent));
+    for(const year of [1876,1895,1908,1914]) {
+      s.value=years.indexOf(year);
+      s.dispatchEvent(new Event('input'));
+    }
     s.dispatchEvent(new Event('change'));
   })()`);
   await waitUntil(atYear(1914));
   assert.equal(await evaluate('history.length'),oldLength+1);
   await evaluate('history.back()');
-  await waitUntil(atYear(1662));
+  await waitUntil(atYear(1626));
   const fallback=await evaluate(`(async()=>{
     Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async()=>{throw Error('clipboard unavailable')}}});
     let copied; window.prompt=(_,url)=>{copied=url};
     await document.querySelector('#share').onclick();
     return copied;
   })()`);
-  assert.equal(new URL(fallback).searchParams.get('year'),'1662');
+  assert.equal(new URL(fallback).searchParams.get('year'),'1626');
   if (server) {
     for (const [asset,label] of [['river-surfaces.json','河川'],['coastlines.json','海岸線']]) {
       failOnce.add('/atlas/'+asset);
@@ -421,7 +425,7 @@ try {
     return history.length-start;
   })()`);
   assert.equal(historyDelta,1,'播放兩次換頁僅建立一筆瀏覽紀錄');
-  await waitUntil(atYear(1996));
+  await waitUntil(atYear(1979));
   await evaluate('history.back()');
   await waitUntil(atYear(1945));
   const zoomBefore=Number(new URL(await copyUrl()).searchParams.get('view').split(',')[2]);
@@ -436,6 +440,13 @@ try {
   assert.equal(await evaluate('window.replaceCalls'),1);
   const zoomAfter=Number(new URL(await evaluate('location.href')).searchParams.get('view').split(',')[2]);
   assert.ok(Math.abs(zoomAfter-zoomBefore-.1)<.00002,'40 個 1px 捲動應放大 0.1 級');
+  await navigate(target.href+'?year=2019&place=legislativeyuan');
+  await waitUntil(atYear(2019));
+  assert.match(await evaluate("document.querySelector('#card').textContent"),/5 月 24 日/);
+  await click('#guide summary');
+  await click('#guide a[href$="prehistory.html"]');
+  await waitUntil("document.querySelector('h1')?.textContent === '史前臺灣'");
+  assert.equal(await evaluate("document.querySelectorAll('main article .source a').length"),4);
   assert.deepEqual(errors,[],'瀏覽器出現未捕捉例外或 console.error');
   console.log('時間軸歷史紀錄、鍵盤據點、剪貼簿備援、圖資重試與街圖錯誤處理通過');
   await send('browser.close');

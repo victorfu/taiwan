@@ -128,6 +128,111 @@ export const polityLayers = {
       site('臺北・總統府宣誓就職', [121.512, 25.040], 'https://www.president.gov.tw/NEWS/22082'),
       site('桃園・就職慶祝會場', [121.3243, 24.9953], 'https://www.th.gov.tw/Epaper_Content/238/9126/')
     ]
+  },
+  1604: {
+    status: 'approved',
+    title: "沈有容赴澎湖",
+    note: "1604 年，荷蘭東印度公司船隊抵達澎湖，尋求通商。明廷派沈有容前往交涉，船隊其後撤離。",
+    color: "#79503b",
+    centers: [site("明・沈有容赴澎湖", [119.5641, 23.5657], "https://taiwangods.moi.gov.tw/html/Cultural/3_0011.aspx?i=22")]
+  },
+  1626: {
+    status: 'approved',
+    title: "西班牙人抵達社寮島",
+    note: "西班牙遠征隊自呂宋出發，抵達今基隆和平島。北部出現西班牙的築城據點。",
+    color: "#79503b",
+    centers: [site("西班牙・聖薩爾瓦多城", [121.765, 25.1577], "https://klgreat.klcg.gov.tw/News_Photo_Content.aspx?n=8105&s=8711")]
+  },
+  1636: {
+    status: 'approved',
+    title: "新港的教會學校",
+    note: "傳教士在西拉雅的新港社辦學，以羅馬字拼寫當地語言，作為讀寫與傳教的一部分。",
+    color: "#79503b",
+    centers: [site("西拉雅・新港社", [120.28, 23.08], "https://women.nmth.gov.tw/?p=1957")]
+  },
+  1683: {
+    status: 'approved',
+    title: "澎湖之戰與鄭氏投降",
+    note: "清軍水師在澎湖擊敗鄭軍。鄭克塽其後投降，臺灣的鄭氏政權告終。",
+    color: "#79503b",
+    centers: [site("鄭軍・澎湖防守區", [119.55, 23.56], "https://www.penghu.gov.tw/ch/home.jsp?id=10174")]
+  },
+  1721: {
+    status: 'approved',
+    title: "朱一貴事件",
+    note: "羅漢門起事後，朱一貴及杜君英等人的隊伍攻入臺灣府城，官員一度退往澎湖。",
+    color: "#79503b",
+    centers: [site("臺灣府城・一度失守", [120.2, 22.99], "https://daap.ly.gov.tw/tw/daap/125-5937.html")]
+  },
+  1874: {
+    status: 'approved',
+    title: "石門之役",
+    note: "日本藉琉球漂民事件出兵恆春半島。在石門，牡丹社及高士佛社排灣族人抵抗日軍入侵。",
+    color: "#79503b",
+    centers: [site("牡丹社、高士佛社・石門抵抗", [120.773, 22.122], "https://nchdb.boch.gov.tw/assets/overview/historicSite/20230928000001")]
+  },
+  1930: {
+    status: 'approved',
+    title: "嘉南大圳與霧社事件",
+    note: "嘉南大圳工程在這年完成。同年 10 月，霧社的賽德克族六社發動抗日行動，殖民政府隨後派軍警鎮壓。",
+    color: "#91465a",
+    centers: [site("能高郡・霧社", [121.132, 24.023], "https://www.mnd.gov.tw/en/File/43033")]
+  },
+  1947: {
+    status: 'approved',
+    title: "二二八事件",
+    note: "臺北大稻埕的緝菸衝突引發抗議。翌日，群眾前往專賣局及行政長官公署等處，事件隨後擴及各地。",
+    color: "#365e78",
+    centers: [site("臺灣省行政長官公署", [121.521, 25.046], "https://the.nmth.gov.tw/nmth/zh-tw/Special/SpecialItemDetail/42f8ed69-c17c-4528-9f0c-e83c84a07c2a?exhibitionId=cb023922-dac6-479e-ba8c-0078b8ae86a4")]
+  },
+  1979: {
+    status: 'approved',
+    title: "高雄的人權日集會",
+    note: "12 月 10 日，黨外人士在高雄舉行世界人權日活動，與軍警發生衝突。當局其後逮捕並審判多名相關人士。",
+    color: "#365e78",
+    centers: [site("高雄・人權日集會區", [120.301, 22.631], "https://takao.kcg.gov.tw/article/1777")]
+  },
+  1999: {
+    status: 'approved',
+    title: "九二一地震",
+    note: "9 月 21 日凌晨，集集地震造成臺灣中部嚴重災害。霧峰光復國中保存了車籠埔斷層通過校園的地貌及損壞校舍。",
+    color: "#365e78",
+    centers: [site("總統府・震災緊急命令", [121.512, 25.04], "https://www.wra.gov.tw/epaper/Article_Detail.aspx?n=30173&s=2448")]
+  },
+  2000: {
+    status: 'approved',
+    title: "首次政黨輪替",
+    note: "3 月 18 日，陳水扁與呂秀蓮當選總統、副總統。兩人在 5 月 20 日就職，完成首次政黨輪替。",
+    color: "#365e78",
+    centers: [site("總統府・政權交接", [121.512, 25.04], "https://ws.mac.gov.tw/001/Upload/OldFile/public/Attachment/971393304.pdf")]
+  },
+  2014: {
+    status: 'approved',
+    title: "三一八運動",
+    note: "立法院審查兩岸服務貿易協議引發爭議。學生與民間團體自 3 月 18 日起在立法院內外行動，至 4 月 10 日退出議場。",
+    color: "#365e78",
+    centers: [site("立法院・服貿審查", [121.5195, 25.0432], "https://www.cy.gov.tw/News_Content.aspx?n=124&s=7292")]
+  },
+  2019: {
+    status: 'approved',
+    title: "同性婚姻法制上路",
+    note: "立法院於 5 月 17 日三讀通過司法院釋字第七四八號解釋施行法，5 月 24 日起依法辦理同性結婚登記。",
+    color: "#365e78",
+    centers: [site("立法院・施行法三讀", [121.5195, 25.0432], "https://www.ey.gov.tw/Goals/60F82C802498E92D")]
+  },
+  2021: {
+    status: 'approved',
+    title: '事故調查',
+    note: '運安會調查太魯閣號事故並公布報告。點位標示運安會在新店大坪林的機關概位，事故位置另見清水隧道地點卡。',
+    color: '#365e78',
+    centers: [site('新店・國家運輸安全調查委員會', [121.541, 24.9829], 'https://www.ttsb.gov.tw/1133/1134/22557/22559/post')]
+  },
+  2024: {
+    status: 'approved',
+    title: '總統府就職典禮',
+    note: '第 16 任總統及副總統在總統府三樓大禮堂宣誓就職。',
+    color: '#365e78',
+    centers: [site('總統府・宣誓就職', [121.512, 25.040], 'https://www.president.gov.tw/NEWS/28424')]
   }
 };
 

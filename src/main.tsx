@@ -2,10 +2,13 @@ import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 
 async function loadStreetMap() {
-  const [library] = await Promise.all([
-    import('maplibre-gl'), import('maplibre-gl/dist/maplibre-gl.css')
+  const [library, { default: workerUrl }] = await Promise.all([
+    import('maplibre-gl'),
+    import('maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'),
+    import('maplibre-gl/dist/maplibre-gl.css')
   ]);
-  return library.default;
+  library.setWorkerUrl(workerUrl);
+  return library;
 }
 
 function Atlas() {

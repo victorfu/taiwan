@@ -39,5 +39,20 @@ export const points = {
   zhaoping: [120.8139, 23.5144],
   executiveyuan: [121.5209, 25.0462],
   houjin: [120.3035, 22.7045],
-  zoostation: [121.5794, 24.9983]
+  zoostation: [121.5794, 24.9983],
+  mazutemple: [119.5641, 23.5657],
+  hepingisland: [121.765, 25.1577],
+  sinkang: [120.28, 23.08],
+  penghubattle: [119.54, 23.54],
+  neimen: [120.462, 22.938],
+  shimenbattlefield: [120.773, 22.122],
+  wushe: [121.132, 24.023],
+  wushantou: [120.373, 23.201],
+  tianmacafe: [121.512, 25.054],
+  formosaoffice: [120.301, 22.629],
+  quake921: [120.697, 24.043],
+  presidentplaza: [121.5128, 25.0402],
+  legislativeyuan: [121.5195, 25.0432],
+  qingshuitunnel: [121.68, 24.18],
+  presidenthall: [121.512, 25.040]
 };

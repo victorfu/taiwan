@@ -17,7 +17,7 @@ function page(title, description, body) {
   return `<!doctype html>
 <html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${escape(title)} · 臺灣時序</title><meta name="description" content="${escape(description)}"><link rel="icon" href="../favicon.ico"><link rel="apple-touch-icon" href="favicon.png"><link rel="stylesheet" href="reader.css"></head>
-<body><header><a href="../index.html">臺灣時序</a><nav aria-label="閱讀導覽"><a href="anping.html">安平故事</a><a href="places.html">地方誌</a><a href="method.html">編輯方法</a></nav></header>
+<body><header><a href="../index.html">臺灣時序</a><nav aria-label="閱讀導覽"><a href="anping.html">安平故事</a><a href="places.html">地方誌</a><a href="prehistory.html">史前遺址</a><a href="method.html">編輯方法</a></nav></header>
 <main><h1>${escape(title)}</h1><p class="intro">${escape(description)}</p>${body}</main>
 <footer><a href="../index.html">返回互動地圖</a> · <a href="correction.html">填寫史料修正單</a></footer></body></html>\n`;
 }

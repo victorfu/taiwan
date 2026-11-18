@@ -332,5 +332,155 @@ export const regionalPlaces = [
     records: {
       1996: ['臺北捷運木柵線', '3 月 28 日，木柵線通車營運，自動物園站至中山國中站，是國內第一條捷運線，採全自動無人駕駛的中運量系統。2009 年與內湖線合併為文湖線。']
     }
+  },
+  {
+    id: "mazutemple", modern: "澎湖天后宮", region: "澎湖縣馬公市",
+    status: 'approved',
+    source: "https://taiwangods.moi.gov.tw/html/Cultural/3_0011.aspx?i=22",
+    locator: "內政部臺灣宗教文化地圖〈澎湖天后宮〉「發展源流」1604 年段。",
+    records: {
+      1604: ["娘媽宮", "天后宮所藏石碑記下沈有容與荷蘭船隊交涉的歷史。碑上所稱的韋麻郎，是率船隊抵澎的荷蘭東印度公司指揮官。"]
+    }
+  },
+  {
+    id: "hepingisland", modern: "基隆和平島", region: "基隆市中正區",
+    status: 'approved',
+    source: "https://klgreat.klcg.gov.tw/News_Photo_Content.aspx?n=8105&s=8711",
+    locator: "基隆市文化觀光局〈聖薩爾瓦多城暨修道院考古發掘計畫〉，見 1626 年始建和諸聖教堂相關段落。",
+    aliases: { 1626: ["聖薩爾瓦多城","諸聖教堂"] },
+    records: {
+      1626: ["社寮島", "西班牙人在社寮島建立聖薩爾瓦多城。今日和平島的考古工作也發掘出與西班牙時期相關的諸聖教堂遺構。"]
+    }
+  },
+  {
+    id: "sinkang", modern: "新港社舊址一帶", region: "臺南市新市區",
+    status: 'approved',
+    source: "https://women.nmth.gov.tw/?p=1957",
+    locator: "國立臺灣歷史博物館「臺灣女人」〈清代以前的女子教育〉荷蘭時期教育段。",
+    records: {
+      1636: ["新港社", "國立臺灣歷史博物館整理的教育史資料記載，新港在 1636 年已有教會學校。圖釘標示新港社的聚落概位。"]
+    }
+  },
+  {
+    id: "penghubattle", modern: "澎湖媽宮外海", region: "澎湖縣馬公市外海",
+    status: 'approved',
+    source: "https://www.penghu.gov.tw/ch/home.jsp?id=10174",
+    locator: "澎湖縣政府〈歷史沿革〉鄭氏時期，見永曆三十七年（1683）段。",
+    records: {
+      1683: ["澎湖海域", "澎湖是鄭軍的海防前線。這年施琅率清軍與劉國軒所領鄭軍交戰。圖釘是在媽宮外海標示的區域概位。"]
+    }
+  },
+  {
+    id: "neimen", modern: "內門", region: "高雄市內門區",
+    status: 'approved',
+    source: "https://daap.ly.gov.tw/tw/daap/125-5937.html",
+    locator: "立法院民主議政園區〈朱一貴事件 1721年〉，見羅漢門起事及府城失守段。",
+    aliases: { 1721: ["鴨母王"] },
+    records: {
+      1721: ["羅漢門", "羅漢門是起事地之一，約在今天的高雄市內門區。後來事態擴及府城，清軍渡臺平定。"]
+    }
+  },
+  {
+    id: "shimenbattlefield", modern: "石門古戰場", region: "屏東縣牡丹鄉與車城鄉交界",
+    status: 'approved',
+    source: "https://nchdb.boch.gov.tw/assets/overview/historicSite/20230928000001",
+    locator: "文化部文化資產局〈石門古戰場〉「相關事件背景」及登錄理由。",
+    records: {
+      1874: ["石門", "石門位於車城通往牡丹的峽谷，也是石門之役所在地。這處古戰場後來被登錄為史蹟。"]
+    }
+  },
+  {
+    id: "wushe", modern: "霧社", region: "南投縣仁愛鄉",
+    status: 'approved',
+    source: "https://collections.nmth.gov.tw/CollectionContent.aspx?RNO=2017.025.0168&a=132",
+    extra: "https://www.th.gov.tw/CP/218/243/",
+    locator: "國立臺灣歷史博物館，館藏號 2017.025.0168，見藏品描述的事件日期、六社與軍警鎮壓。國史館臺灣文獻館〈嘉南大圳之父〉，見烏山頭水庫 1930 年完工記錄。",
+    aliases: { 1930: ["莫那魯道"] },
+    records: {
+      1930: ["霧社", "10 月 27 日，莫那魯道等人率領六社行動，攻入正在舉辦運動會的霧社公學校。後續鎮壓造成賽德克族人重大傷亡。圖釘標示霧社市街概位。"]
+    }
+  },
+  {
+    id: "wushantou", modern: "烏山頭水庫", region: "臺南市官田區",
+    status: 'approved',
+    source: "https://www.th.gov.tw/CP/218/243/",
+    locator: "國史館臺灣文獻館〈嘉南大圳之父〉，見灌溉範圍及 1930 年完工段。",
+    records: {
+      1930: ["烏山頭水庫", "烏山頭水庫是嘉南大圳灌溉系統的重要水源。由八田與一參與督建的水庫在這年完成，水利設施服務今日雲林、嘉義、臺南一帶的農業。"]
+    }
+  },
+  {
+    id: "tianmacafe", modern: "天馬茶房舊址一帶", region: "臺北市大同區",
+    status: 'approved',
+    source: "https://the.nmth.gov.tw/nmth/zh-tw/Special/SpecialItemDetail/42f8ed69-c17c-4528-9f0c-e83c84a07c2a?exhibitionId=cb023922-dac6-479e-ba8c-0078b8ae86a4",
+    locator: "國立臺灣歷史博物館〈中央通訊社發刊電報稿（1947年2月28日）〉，見 27 日緝菸及 28 日遊行、公署衛兵開槍段。",
+    aliases: { 1947: ["二二八事件"] },
+    records: {
+      1947: ["天馬茶房", "2 月 27 日，專賣局緝私員在天馬茶房附近取締煙販林江邁。查緝及後續開槍造成民眾傷亡。次日的抗議與公署前的槍擊，可從當時的電報稿追查。"]
+    }
+  },
+  {
+    id: "formosaoffice", modern: "美麗島雜誌社高雄服務處原址", region: "高雄市新興區",
+    status: 'approved',
+    source: "https://nchdb.boch.gov.tw/assets/overview/historicalBuilding/20040409000005",
+    extra: "https://www.drnh.gov.tw/p/404-1003-15330.php?Lang=zh-tw",
+    locator: "文化部文化資產局〈美麗島雜誌社高雄市服務處原址〉，見登錄理由與地址。國史館《美麗島事件史料彙編（四）》出版簡介，見事件日期與後續逮捕。",
+    aliases: { 1979: ["高雄事件"] },
+    records: {
+      1979: ["美麗島雜誌社高雄服務處", "雜誌社的高雄服務處位於中山一路與大同二路一帶。圖釘標示服務處概位，集會與衝突也涉及附近中山路與中正路口。"]
+    }
+  },
+  {
+    id: "quake921", modern: "九二一地震教育園區", region: "臺中市霧峰區",
+    status: 'approved',
+    source: "https://www.wufeng.taichung.gov.tw/980992/981034/981044/3403060",
+    extra: "https://www.wra.gov.tw/epaper/Article_Detail.aspx?n=30173&s=2448",
+    locator: "臺中市霧峰區公所〈介紹本區921地震教育園區〉，見光復國中與斷層通過校區段。水利署電子報，見集集震央與 9 月 25 日總統發布緊急命令。",
+    aliases: { 1999: ["集集地震","車籠埔斷層"] },
+    records: {
+      1999: ["霧峰光復國中", "園區保留原光復國中災後的地表隆起與校舍遺構。圖釘標示的是斷層經過的保存現場，震央位於南投集集一帶。"]
+    }
+  },
+  {
+    id: "presidentplaza", modern: "總統府前廣場", region: "臺北市中正區",
+    status: 'approved',
+    source: "https://ws.mac.gov.tw/001/Upload/OldFile/public/Attachment/971393304.pdf",
+    extra: "https://art.archives.gov.tw/tw/art/1295.html",
+    locator: "行政院大陸委員會《政府大陸政策重要文件》，見 2000 年 5 月 20 日就職慶祝大會段。國家檔案大事年表，民國 89 年 3 月 18 日總統選舉條。",
+    records: {
+      2000: ["總統府前廣場", "就職當天，慶祝大會在總統府前廣場舉行。圖釘標示慶祝大會的位置。"]
+    }
+  },
+  {
+    id: "legislativeyuan", modern: "立法院", region: "臺北市中正區",
+    status: 'approved',
+    source: "https://www.cy.gov.tw/News_Content.aspx?n=124&s=7292",
+    extra: "https://www.ey.gov.tw/Goals/60F82C802498E92D",
+    locator: "監察院院新聞稿，見立法院服貿審查背景及 3 月 18 日至 4 月 10 日的記載。行政院施政成果，見施行法三讀、公布及施行日期。",
+    aliases: { 2014: ["太陽花學運","318學運"], 2019: ["同婚","婚姻平權","釋字748"] },
+    records: {
+      2014: ["立法院", "行動圍繞服貿協議的審查程序和監督機制。圖釘標示立法院院區，周邊街道也是集會及討論的場所。"],
+      2019: ["立法院", "圖釘標示法律在立法院三讀的地點。符合規定的同性伴侶自 5 月 24 日起可在戶政機關辦理結婚登記。"]
+    }
+  },
+  {
+    id: 'qingshuitunnel', modern: '清水隧道一帶', region: '花蓮縣秀林鄉',
+    status: 'approved',
+    source: 'https://www.ttsb.gov.tw/1243/22450/29476/post',
+    locator: '國家運輸安全調查委員會〈0402臺鐵第408次車清水隧道重大鐵道事故〉，見事故日期與位置、事故調查報告。',
+    aliases: { 2021: ['太魯閣號', '0402鐵道事故'] },
+    records: {
+      2021: ['臺鐵清水隧道', '4 月 2 日，由樹林開往臺東的太魯閣號第 408 次車，在臺鐵和仁至崇德間、清水隧道北口附近發生重大出軌事故。圖釘標示沿線區域概位。']
+    }
+  },
+  {
+    id: 'presidenthall', modern: '總統府大禮堂', region: '臺北市中正區',
+    status: 'approved',
+    source: 'https://www.president.gov.tw/NEWS/28424',
+    extra: 'https://db.cec.gov.tw/Visual',
+    locator: '總統府〈第16任總統副總統宣誓就職典禮〉，見 5 月 20 日典禮日期、地點及出席者。選舉結果見中選會選舉資料庫第 16 任總統副總統選舉。',
+    records: {
+      2024: ['總統府大禮堂', '第 16 任總統、副總統選舉由賴清德與蕭美琴當選。兩人於 5 月 20 日在總統府大禮堂宣誓就職。']
+    }
   }
 ];

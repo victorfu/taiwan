@@ -135,9 +135,149 @@ export const periodNotes = {
       { url: 'https://www.th.gov.tw/Epaper_Content/238/9126/',
         locator: '國史館臺灣文獻館〈臺灣首次總統就職典禮〉，1996 年為擴大民眾參與而至桃園舉行慶祝大會段。' }
     ]
+  },
+  1604: {
+    era: "明代海上交流",
+    title: "沈有容赴澎湖",
+    summary: "1604 年，荷蘭東印度公司船隊抵達澎湖，尋求通商。明廷派沈有容前往交涉，船隊其後撤離。",
+    status: 'approved',
+    citations: [
+      { url: "https://taiwangods.moi.gov.tw/html/Cultural/3_0011.aspx?i=22", locator: "內政部臺灣宗教文化地圖〈澎湖天后宮〉「發展源流」1604 年段。" }
+    ]
+  },
+  1626: {
+    era: "西班牙據點",
+    title: "西班牙人抵達社寮島",
+    summary: "西班牙遠征隊自呂宋出發，抵達今基隆和平島。北部出現西班牙的築城據點。",
+    status: 'approved',
+    citations: [
+      { url: "https://klgreat.klcg.gov.tw/News_Photo_Content.aspx?n=8105&s=8711", locator: "基隆市文化觀光局〈聖薩爾瓦多城暨修道院考古發掘計畫〉，見 1626 年始建和諸聖教堂相關段落。" }
+    ]
+  },
+  1636: {
+    era: "荷蘭時期",
+    title: "新港的教會學校",
+    summary: "傳教士在西拉雅的新港社辦學，以羅馬字拼寫當地語言，作為讀寫與傳教的一部分。",
+    status: 'approved',
+    citations: [
+      { url: "https://women.nmth.gov.tw/?p=1957", locator: "國立臺灣歷史博物館「臺灣女人」〈清代以前的女子教育〉荷蘭時期教育段。" }
+    ]
+  },
+  1683: {
+    era: "鄭氏政權末期",
+    title: "澎湖之戰與鄭氏投降",
+    summary: "清軍水師在澎湖擊敗鄭軍。鄭克塽其後投降，臺灣的鄭氏政權告終。",
+    status: 'approved',
+    citations: [
+      { url: "https://www.penghu.gov.tw/ch/home.jsp?id=10174", locator: "澎湖縣政府〈歷史沿革〉鄭氏時期，見永曆三十七年（1683）段。" }
+    ]
+  },
+  1721: {
+    era: "清領時期",
+    title: "朱一貴事件",
+    summary: "羅漢門起事後，朱一貴及杜君英等人的隊伍攻入臺灣府城，官員一度退往澎湖。",
+    status: 'approved',
+    citations: [
+      { url: "https://daap.ly.gov.tw/tw/daap/125-5937.html", locator: "立法院民主議政園區〈朱一貴事件 1721年〉，見羅漢門起事及府城失守段。" }
+    ]
+  },
+  1874: {
+    era: "清領時期",
+    title: "石門之役",
+    summary: "日本藉琉球漂民事件出兵恆春半島。在石門，牡丹社及高士佛社排灣族人抵抗日軍入侵。",
+    status: 'approved',
+    citations: [
+      { url: "https://nchdb.boch.gov.tw/assets/overview/historicSite/20230928000001", locator: "文化部文化資產局〈石門古戰場〉「相關事件背景」及登錄理由。" }
+    ]
+  },
+  1930: {
+    era: "日治時期",
+    title: "嘉南大圳與霧社事件",
+    summary: "嘉南大圳工程在這年完成。同年 10 月，霧社的賽德克族六社發動抗日行動，殖民政府隨後派軍警鎮壓。",
+    status: 'approved',
+    citations: [
+      { url: "https://collections.nmth.gov.tw/CollectionContent.aspx?RNO=2017.025.0168&a=132", locator: "國立臺灣歷史博物館，館藏號 2017.025.0168，見藏品描述的事件日期、六社與軍警鎮壓。" },
+      { url: "https://www.th.gov.tw/CP/218/243/", locator: "國史館臺灣文獻館〈嘉南大圳之父〉，見烏山頭水庫 1930 年完工記錄。" }
+    ]
+  },
+  1947: {
+    era: "戰後臺灣",
+    title: "二二八事件",
+    summary: "臺北大稻埕的緝菸衝突引發抗議。翌日，群眾前往專賣局及行政長官公署等處，事件隨後擴及各地。",
+    status: 'approved',
+    citations: [
+      { url: "https://the.nmth.gov.tw/nmth/zh-tw/Special/SpecialItemDetail/42f8ed69-c17c-4528-9f0c-e83c84a07c2a?exhibitionId=cb023922-dac6-479e-ba8c-0078b8ae86a4", locator: "國立臺灣歷史博物館〈中央通訊社發刊電報稿（1947年2月28日）〉，見 27 日緝菸及 28 日遊行、公署衛兵開槍段。" }
+    ]
+  },
+  1979: {
+    era: "戰後臺灣",
+    title: "高雄的人權日集會",
+    summary: "12 月 10 日，黨外人士在高雄舉行世界人權日活動，與軍警發生衝突。當局其後逮捕並審判多名相關人士。",
+    status: 'approved',
+    citations: [
+      { url: "https://nchdb.boch.gov.tw/assets/overview/historicalBuilding/20040409000005", locator: "文化部文化資產局〈美麗島雜誌社高雄市服務處原址〉，見登錄理由與地址。" },
+      { url: "https://www.drnh.gov.tw/p/404-1003-15330.php?Lang=zh-tw", locator: "國史館《美麗島事件史料彙編（四）》出版簡介，見事件日期與後續逮捕。" }
+    ]
+  },
+  1999: {
+    era: "戰後臺灣",
+    title: "九二一地震",
+    summary: "9 月 21 日凌晨，集集地震造成臺灣中部嚴重災害。霧峰光復國中保存了車籠埔斷層通過校園的地貌及損壞校舍。",
+    status: 'approved',
+    citations: [
+      { url: "https://www.wufeng.taichung.gov.tw/980992/981034/981044/3403060", locator: "臺中市霧峰區公所〈介紹本區921地震教育園區〉，見光復國中與斷層通過校區段。" },
+      { url: "https://www.wra.gov.tw/epaper/Article_Detail.aspx?n=30173&s=2448", locator: "水利署電子報，見集集震央與 9 月 25 日總統發布緊急命令。" }
+    ]
+  },
+  2000: {
+    era: "民主與公民社會",
+    title: "首次政黨輪替",
+    summary: "3 月 18 日，陳水扁與呂秀蓮當選總統、副總統。兩人在 5 月 20 日就職，完成首次政黨輪替。",
+    status: 'approved',
+    citations: [
+      { url: "https://ws.mac.gov.tw/001/Upload/OldFile/public/Attachment/971393304.pdf", locator: "行政院大陸委員會《政府大陸政策重要文件》，見 2000 年 5 月 20 日就職慶祝大會段。" },
+      { url: "https://art.archives.gov.tw/tw/art/1295.html", locator: "國家檔案大事年表，民國 89 年 3 月 18 日總統選舉條。" }
+    ]
+  },
+  2014: {
+    era: "民主與公民社會",
+    title: "三一八運動",
+    summary: "立法院審查兩岸服務貿易協議引發爭議。學生與民間團體自 3 月 18 日起在立法院內外行動，至 4 月 10 日退出議場。",
+    status: 'approved',
+    citations: [
+      { url: "https://www.cy.gov.tw/News_Content.aspx?n=124&s=7292", locator: "監察院院新聞稿，見立法院服貿審查背景及 3 月 18 日至 4 月 10 日的記載。" }
+    ]
+  },
+  2019: {
+    era: "民主與公民社會",
+    title: "同性婚姻法制上路",
+    summary: "立法院於 5 月 17 日三讀通過司法院釋字第七四八號解釋施行法，5 月 24 日起依法辦理同性結婚登記。",
+    status: 'approved',
+    citations: [
+      { url: "https://www.ey.gov.tw/Goals/60F82C802498E92D", locator: "行政院施政成果，見施行法三讀、公布及施行日期。" }
+    ]
+  },
+  2021: {
+    era: '當代臺灣',
+    title: '太魯閣號事故',
+    summary: '4 月 2 日，太魯閣號在花蓮清水隧道北口附近出軌。運安會事後公布事故調查報告與改善建議。',
+    status: 'approved',
+    citations: [
+      { url: 'https://www.ttsb.gov.tw/1243/22450/29476/post', locator: '運安會事故個案頁，見事故日期、位置、調查結果與改善建議。' }
+    ]
+  },
+  2024: {
+    era: '民主與公民社會',
+    title: '第十六任總統、副總統就職',
+    summary: '賴清德與蕭美琴當選第 16 任總統及副總統，於 5 月 20 日在總統府宣誓就職。',
+    status: 'approved',
+    citations: [
+      { url: 'https://db.cec.gov.tw/Visual', locator: '中選會選舉資料庫，第 16 任總統副總統選舉結果。' },
+      { url: 'https://www.president.gov.tw/NEWS/28424', locator: '總統府第 16 任總統、副總統宣誓就職報導，見典禮日期及地點。' }
+    ]
   }
 };
 
 // Published timeline stops form the catalog against which notes and layers are validated.
-export const years = [1624,1662,1684,1876,1884,1895,1908,1914,1945,1987,1996];
+export const years = [1604,1624,1626,1636,1662,1683,1684,1721,1874,1876,1884,1895,1908,1914,1930,1945,1947,1979,1987,1996,1999,2000,2014,2019,2021,2024];
 export const periods = years.map(year => periodNotes[year]?.title);

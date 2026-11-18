@@ -146,13 +146,13 @@ export async function mount(root, loadStreetMap) {
   });
   el('years').append(...yearButtons);
   const eraStops = [
-    [1624,'荷蘭時期'],[1662,'鄭氏時期'],[1684,'清領時期'],
-    [1895,'日治時期'],[1945,'戰後臺灣']
+    [1604,'海上交流'],[1624,'荷西'],[1662,'鄭氏'],[1684,'清領'],
+    [1895,'日治'],[1945,'戰後'],[2000,'當代']
   ];
   const eraButtons = eraStops.map(([start,label],index) => {
     const b = button(label, () => change({year:start}));
     const end = eraStops[index + 1]?.[0] ?? Infinity;
-    b.style.flexGrow = String(years.filter(y => y >= start && y < end).length);
+    b.style.setProperty('--era-weight',String(years.filter(y => y >= start && y < end).length));
     return b;
   });
   el('eras').append(...eraButtons);

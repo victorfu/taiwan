@@ -2,7 +2,7 @@
 
 > 本檔由 `node scripts/references.mjs` 依 `public/atlas/` 的資料檔產生，請勿手動編輯。
 
-收錄 11 個年代快照、39 處地點、30 則事件，以及各年代導讀、歷史據點、歷史圖幅與底圖的全部出處。審閱過程與勘誤見 [docs/review/](review/)。
+收錄 26 個年代快照、54 處地點、46 則事件，以及各年代導讀、歷史據點、歷史圖幅與底圖的全部出處。審閱過程與勘誤見 [docs/review/](review/)。
 
 ## 目錄
 
@@ -16,6 +16,15 @@
 ## 1. 地方記錄
 
 依最早收錄年代排序。每處地點列出各年代記載名稱、相關事件、主要來源、補充來源與引用位置。
+
+### 澎湖天后宮
+
+- **地區**：澎湖縣馬公市
+- **識別碼**：`mazutemple`　**審閱狀態**：approved
+- **年代記載**：1604 娘媽宮
+- **相關事件**：1604 沈有容諭退荷蘭船隊
+- **主要來源**：<https://taiwangods.moi.gov.tw/html/Cultural/3_0011.aspx?i=22>
+- **引用位置**：內政部臺灣宗教文化地圖〈澎湖天后宮〉「發展源流」1604 年段。
 
 ### 安平古堡
 
@@ -46,6 +55,24 @@
 - **補充來源**：<https://penghu.info/OB3A3F364BA357F73353>
 - **引用位置**：內政部〈文澳城隍廟〉「發展源流」記暗澳。另見〈青螺與紅羅─巡檢之地乎？〉所引蔣毓英、高拱乾兩部《臺灣府志》。
 
+### 基隆和平島
+
+- **地區**：基隆市中正區
+- **識別碼**：`hepingisland`　**審閱狀態**：approved
+- **年代記載**：1626 社寮島（又稱 聖薩爾瓦多城、諸聖教堂）
+- **相關事件**：1626 西班牙人在社寮島築城
+- **主要來源**：<https://klgreat.klcg.gov.tw/News_Photo_Content.aspx?n=8105&s=8711>
+- **引用位置**：基隆市文化觀光局〈聖薩爾瓦多城暨修道院考古發掘計畫〉，見 1626 年始建和諸聖教堂相關段落。
+
+### 新港社舊址一帶
+
+- **地區**：臺南市新市區
+- **識別碼**：`sinkang`　**審閱狀態**：approved
+- **年代記載**：1636 新港社
+- **相關事件**：1636 新港社設立教會學校
+- **主要來源**：<https://women.nmth.gov.tw/?p=1957>
+- **引用位置**：國立臺灣歷史博物館「臺灣女人」〈清代以前的女子教育〉荷蘭時期教育段。
+
 ### 赤崁樓
 
 - **地區**：臺南市中西區
@@ -54,6 +81,15 @@
 - **主要來源**：<https://daap.ly.gov.tw/tw/daap/125-4003.html>
 - **補充來源**：<https://ws.moi.gov.tw/Download.ashx?icon=..pdf&n=MjAxMzExMjYxNTU2NTIxMDUyMDIucGRm&u=LzAwMS9VcGxvYWQvT2xkRmlsZV9USk5QL0ZpbGVVcGxvYWRMaXN0LzIwMTMxMTI2MTU1NjUyMTA1MjAyLnBkZg%3D%3D>
 - **引用位置**：立法院〈赤崁樓 1936–1961年〉1653、1661 年沿革。台江國家公園調查報告第 3-7 頁圖 3-1-3，可比較兩城位置與交城時間。
+
+### 澎湖媽宮外海
+
+- **地區**：澎湖縣馬公市外海
+- **識別碼**：`penghubattle`　**審閱狀態**：approved
+- **年代記載**：1683 澎湖海域
+- **相關事件**：1683 澎湖海戰
+- **主要來源**：<https://www.penghu.gov.tw/ch/home.jsp?id=10174>
+- **引用位置**：澎湖縣政府〈歷史沿革〉鄭氏時期，見永曆三十七年（1683）段。
 
 ### 臺南孔子廟
 
@@ -93,6 +129,24 @@
 - **主要來源**：<https://nchdb.boch.gov.tw/assets/advanceSearch/monument/19850819000083>
 - **補充來源**：<https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Object&id=510847>
 - **引用位置**：文化部文化資產局國家文化資產網〈鳳山縣舊城〉「歷史沿革」1684、1704、1722、1826 年條。縣治初選地點的考證見國家文化記憶庫所收張守真〈考證──康熙領臺時期鳳山縣治設置問題探討〉摘要第二至四部分。
+
+### 內門
+
+- **地區**：高雄市內門區
+- **識別碼**：`neimen`　**審閱狀態**：approved
+- **年代記載**：1721 羅漢門（又稱 鴨母王）
+- **相關事件**：1721 朱一貴於羅漢門起事
+- **主要來源**：<https://daap.ly.gov.tw/tw/daap/125-5937.html>
+- **引用位置**：立法院民主議政園區〈朱一貴事件 1721年〉，見羅漢門起事及府城失守段。
+
+### 石門古戰場
+
+- **地區**：屏東縣牡丹鄉與車城鄉交界
+- **識別碼**：`shimenbattlefield`　**審閱狀態**：approved
+- **年代記載**：1874 石門
+- **相關事件**：1874 牡丹社事件・石門之役
+- **主要來源**：<https://nchdb.boch.gov.tw/assets/overview/historicSite/20230928000001>
+- **引用位置**：文化部文化資產局〈石門古戰場〉「相關事件背景」及登錄理由。
 
 ### 億載金城
 
@@ -287,6 +341,25 @@
 - **補充來源**：<https://tcmb.culture.tw/zh-tw/detail?indexCode=BOCH_CountryCulture_31&id=20110216000001>
 - **引用位置**：林業及自然保育署阿里山林業鐵路及文化資產管理處「阿里山大學校」大事紀 1912、1914 年。另見國家文化記憶庫〈阿里山林業暨鐵道文化景觀〉簡介。
 
+### 烏山頭水庫
+
+- **地區**：臺南市官田區
+- **識別碼**：`wushantou`　**審閱狀態**：approved
+- **年代記載**：1930 烏山頭水庫
+- **相關事件**：1930 嘉南大圳完工
+- **主要來源**：<https://www.th.gov.tw/CP/218/243/>
+- **引用位置**：國史館臺灣文獻館〈嘉南大圳之父〉，見灌溉範圍及 1930 年完工段。
+
+### 霧社
+
+- **地區**：南投縣仁愛鄉
+- **識別碼**：`wushe`　**審閱狀態**：approved
+- **年代記載**：1930 霧社（又稱 莫那魯道）
+- **相關事件**：1930 霧社事件
+- **主要來源**：<https://collections.nmth.gov.tw/CollectionContent.aspx?RNO=2017.025.0168&a=132>
+- **補充來源**：<https://www.th.gov.tw/CP/218/243/>
+- **引用位置**：國立臺灣歷史博物館，館藏號 2017.025.0168，見藏品描述的事件日期、六社與軍警鎮壓。國史館臺灣文獻館〈嘉南大圳之父〉，見烏山頭水庫 1930 年完工記錄。
+
 ### 行政院
 
 - **地區**：臺北市中正區
@@ -314,6 +387,25 @@
 - **相關事件**：1945 臺北公會堂受降儀式
 - **主要來源**：<https://art.archives.gov.tw/tw/art/1788-15244.html>
 - **引用位置**：檔案管理局〈台灣光復案專輯〉，檔號 0034/002.6/4010.2/2/045。見 1945 年 10 月 26 日陳儀電文說明。
+
+### 天馬茶房舊址一帶
+
+- **地區**：臺北市大同區
+- **識別碼**：`tianmacafe`　**審閱狀態**：approved
+- **年代記載**：1947 天馬茶房（又稱 二二八事件）
+- **相關事件**：1947 天馬茶房前的緝菸事件
+- **主要來源**：<https://the.nmth.gov.tw/nmth/zh-tw/Special/SpecialItemDetail/42f8ed69-c17c-4528-9f0c-e83c84a07c2a?exhibitionId=cb023922-dac6-479e-ba8c-0078b8ae86a4>
+- **引用位置**：國立臺灣歷史博物館〈中央通訊社發刊電報稿（1947年2月28日）〉，見 27 日緝菸及 28 日遊行、公署衛兵開槍段。
+
+### 美麗島雜誌社高雄服務處原址
+
+- **地區**：高雄市新興區
+- **識別碼**：`formosaoffice`　**審閱狀態**：approved
+- **年代記載**：1979 美麗島雜誌社高雄服務處（又稱 高雄事件）
+- **相關事件**：1979 美麗島事件
+- **主要來源**：<https://nchdb.boch.gov.tw/assets/overview/historicalBuilding/20040409000005>
+- **補充來源**：<https://www.drnh.gov.tw/p/404-1003-15330.php?Lang=zh-tw>
+- **引用位置**：文化部文化資產局〈美麗島雜誌社高雄市服務處原址〉，見登錄理由與地址。國史館《美麗島事件史料彙編（四）》出版簡介，見事件日期與後續逮捕。
 
 ### 綠島綠洲山莊
 
@@ -381,7 +473,62 @@
 - **補充來源**：<https://www.metro.taipei/cp.aspx?n=B27E7BC8CBBCDA61>
 - **引用位置**：臺北市政府捷運工程局〈文山內湖線路線說明〉，見木柵線段落。另見臺北大眾捷運公司〈大事紀〉085.03.28 及 098.10.08 兩條。
 
+### 九二一地震教育園區
+
+- **地區**：臺中市霧峰區
+- **識別碼**：`quake921`　**審閱狀態**：approved
+- **年代記載**：1999 霧峰光復國中（又稱 集集地震、車籠埔斷層）
+- **相關事件**：1999 九二一大地震
+- **主要來源**：<https://www.wufeng.taichung.gov.tw/980992/981034/981044/3403060>
+- **補充來源**：<https://www.wra.gov.tw/epaper/Article_Detail.aspx?n=30173&s=2448>
+- **引用位置**：臺中市霧峰區公所〈介紹本區921地震教育園區〉，見光復國中與斷層通過校區段。水利署電子報，見集集震央與 9 月 25 日總統發布緊急命令。
+
+### 總統府前廣場
+
+- **地區**：臺北市中正區
+- **識別碼**：`presidentplaza`　**審閱狀態**：approved
+- **年代記載**：2000 總統府前廣場
+- **相關事件**：2000 首次政黨輪替
+- **主要來源**：<https://ws.mac.gov.tw/001/Upload/OldFile/public/Attachment/971393304.pdf>
+- **補充來源**：<https://art.archives.gov.tw/tw/art/1295.html>
+- **引用位置**：行政院大陸委員會《政府大陸政策重要文件》，見 2000 年 5 月 20 日就職慶祝大會段。國家檔案大事年表，民國 89 年 3 月 18 日總統選舉條。
+
+### 立法院
+
+- **地區**：臺北市中正區
+- **識別碼**：`legislativeyuan`　**審閱狀態**：approved
+- **年代記載**：2014 立法院（又稱 太陽花學運、318學運）；2019 立法院（又稱 同婚、婚姻平權、釋字748）
+- **相關事件**：2014 三一八運動；2019 同性婚姻施行法三讀
+- **主要來源**：<https://www.cy.gov.tw/News_Content.aspx?n=124&s=7292>
+- **補充來源**：<https://www.ey.gov.tw/Goals/60F82C802498E92D>
+- **引用位置**：監察院院新聞稿，見立法院服貿審查背景及 3 月 18 日至 4 月 10 日的記載。行政院施政成果，見施行法三讀、公布及施行日期。
+
+### 清水隧道一帶
+
+- **地區**：花蓮縣秀林鄉
+- **識別碼**：`qingshuitunnel`　**審閱狀態**：approved
+- **年代記載**：2021 臺鐵清水隧道（又稱 太魯閣號、0402鐵道事故）
+- **相關事件**：2021 臺鐵太魯閣號清水隧道事故
+- **主要來源**：<https://www.ttsb.gov.tw/1243/22450/29476/post>
+- **引用位置**：國家運輸安全調查委員會〈0402臺鐵第408次車清水隧道重大鐵道事故〉，見事故日期與位置、事故調查報告。
+
+### 總統府大禮堂
+
+- **地區**：臺北市中正區
+- **識別碼**：`presidenthall`　**審閱狀態**：approved
+- **年代記載**：2024 總統府大禮堂
+- **相關事件**：2024 第十六任總統、副總統宣誓就職
+- **主要來源**：<https://www.president.gov.tw/NEWS/28424>
+- **補充來源**：<https://db.cec.gov.tw/Visual>
+- **引用位置**：總統府〈第16任總統副總統宣誓就職典禮〉，見 5 月 20 日典禮日期、地點及出席者。選舉結果見中選會選舉資料庫第 16 任總統副總統選舉。
+
 ## 2. 年代導讀
+
+### 1604　沈有容赴澎湖
+
+- **時期**：明代海上交流　**審閱狀態**：approved
+- <https://taiwangods.moi.gov.tw/html/Cultural/3_0011.aspx?i=22>  
+  內政部臺灣宗教文化地圖〈澎湖天后宮〉「發展源流」1604 年段。
 
 ### 1624　從澎湖到大員
 
@@ -391,6 +538,18 @@
 - <https://publications.culture.tainan.gov.tw/index.php?did=1022&inter=publication&page=2>  
   臺南市文化局《我們的安平古堡》「安平古堡大事記」1623、1624、1627 年條。
 
+### 1626　西班牙人抵達社寮島
+
+- **時期**：西班牙據點　**審閱狀態**：approved
+- <https://klgreat.klcg.gov.tw/News_Photo_Content.aspx?n=8105&s=8711>  
+  基隆市文化觀光局〈聖薩爾瓦多城暨修道院考古發掘計畫〉，見 1626 年始建和諸聖教堂相關段落。
+
+### 1636　新港的教會學校
+
+- **時期**：荷蘭時期　**審閱狀態**：approved
+- <https://women.nmth.gov.tw/?p=1957>  
+  國立臺灣歷史博物館「臺灣女人」〈清代以前的女子教育〉荷蘭時期教育段。
+
 ### 1662　熱蘭遮城易手
 
 - **時期**：鄭氏時期　**審閱狀態**：approved
@@ -399,6 +558,12 @@
 - <https://publications.culture.tainan.gov.tw/index.php?did=1022&inter=publication&page=2>  
   臺南市文化局《我們的安平古堡》「安平古堡大事記」1662 年條。
 
+### 1683　澎湖之戰與鄭氏投降
+
+- **時期**：鄭氏政權末期　**審閱狀態**：approved
+- <https://www.penghu.gov.tw/ch/home.jsp?id=10174>  
+  澎湖縣政府〈歷史沿革〉鄭氏時期，見永曆三十七年（1683）段。
+
 ### 1684　府縣初設
 
 - **時期**：清領初期　**審閱狀態**：approved
@@ -406,6 +571,18 @@
   《澎湖南方四島發展歷史調查》第二章第一節「壹、建置」，康熙二十三年條。
 - <https://publications.culture.tainan.gov.tw/index.php?did=650&inter=publication&page=1>  
   臺南市文化局《佳里興震興宮》，引《諸羅縣志》與〈新建諸羅署記〉論縣署在佳里興段。
+
+### 1721　朱一貴事件
+
+- **時期**：清領時期　**審閱狀態**：approved
+- <https://daap.ly.gov.tw/tw/daap/125-5937.html>  
+  立法院民主議政園區〈朱一貴事件 1721年〉，見羅漢門起事及府城失守段。
+
+### 1874　石門之役
+
+- **時期**：清領時期　**審閱狀態**：approved
+- <https://nchdb.boch.gov.tw/assets/overview/historicSite/20230928000001>  
+  文化部文化資產局〈石門古戰場〉「相關事件背景」及登錄理由。
 
 ### 1876　通商港與新式海防
 
@@ -447,6 +624,14 @@
 - <https://www.taroko.gov.tw/ch/planlist/research-reports/335>  
   太魯閣國家公園〈太魯閣國家公園合歡古道西段調查與步道規劃〉，摘要 1914 年開路經合歡山段。
 
+### 1930　嘉南大圳與霧社事件
+
+- **時期**：日治時期　**審閱狀態**：approved
+- <https://collections.nmth.gov.tw/CollectionContent.aspx?RNO=2017.025.0168&a=132>  
+  國立臺灣歷史博物館，館藏號 2017.025.0168，見藏品描述的事件日期、六社與軍警鎮壓。
+- <https://www.th.gov.tw/CP/218/243/>  
+  國史館臺灣文獻館〈嘉南大圳之父〉，見烏山頭水庫 1930 年完工記錄。
+
 ### 1945　戰爭結束與接收
 
 - **時期**：戰後初期　**審閱狀態**：approved
@@ -454,6 +639,20 @@
   檔案管理局〈台灣光復案專輯〉，檔號 0034/002.6/4010.2/2/045，1945 年 10 月 26 日陳儀呈報受降典禮電文。
 - <https://art.archives.gov.tw/tw/art/836-15199.html>  
   檔案管理局〈高雄港現況〉，檔號 B5018230601/0035/140.2/4010，事件年 1946 與圖件說明。
+
+### 1947　二二八事件
+
+- **時期**：戰後臺灣　**審閱狀態**：approved
+- <https://the.nmth.gov.tw/nmth/zh-tw/Special/SpecialItemDetail/42f8ed69-c17c-4528-9f0c-e83c84a07c2a?exhibitionId=cb023922-dac6-479e-ba8c-0078b8ae86a4>  
+  國立臺灣歷史博物館〈中央通訊社發刊電報稿（1947年2月28日）〉，見 27 日緝菸及 28 日遊行、公署衛兵開槍段。
+
+### 1979　高雄的人權日集會
+
+- **時期**：戰後臺灣　**審閱狀態**：approved
+- <https://nchdb.boch.gov.tw/assets/overview/historicalBuilding/20040409000005>  
+  文化部文化資產局〈美麗島雜誌社高雄市服務處原址〉，見登錄理由與地址。
+- <https://www.drnh.gov.tw/p/404-1003-15330.php?Lang=zh-tw>  
+  國史館《美麗島事件史料彙編（四）》出版簡介，見事件日期與後續逮捕。
 
 ### 1987　解除戒嚴
 
@@ -475,9 +674,61 @@
 - <https://www.th.gov.tw/Epaper_Content/238/9126/>  
   國史館臺灣文獻館〈臺灣首次總統就職典禮〉，1996 年為擴大民眾參與而至桃園舉行慶祝大會段。
 
+### 1999　九二一地震
+
+- **時期**：戰後臺灣　**審閱狀態**：approved
+- <https://www.wufeng.taichung.gov.tw/980992/981034/981044/3403060>  
+  臺中市霧峰區公所〈介紹本區921地震教育園區〉，見光復國中與斷層通過校區段。
+- <https://www.wra.gov.tw/epaper/Article_Detail.aspx?n=30173&s=2448>  
+  水利署電子報，見集集震央與 9 月 25 日總統發布緊急命令。
+
+### 2000　首次政黨輪替
+
+- **時期**：民主與公民社會　**審閱狀態**：approved
+- <https://ws.mac.gov.tw/001/Upload/OldFile/public/Attachment/971393304.pdf>  
+  行政院大陸委員會《政府大陸政策重要文件》，見 2000 年 5 月 20 日就職慶祝大會段。
+- <https://art.archives.gov.tw/tw/art/1295.html>  
+  國家檔案大事年表，民國 89 年 3 月 18 日總統選舉條。
+
+### 2014　三一八運動
+
+- **時期**：民主與公民社會　**審閱狀態**：approved
+- <https://www.cy.gov.tw/News_Content.aspx?n=124&s=7292>  
+  監察院院新聞稿，見立法院服貿審查背景及 3 月 18 日至 4 月 10 日的記載。
+
+### 2019　同性婚姻法制上路
+
+- **時期**：民主與公民社會　**審閱狀態**：approved
+- <https://www.ey.gov.tw/Goals/60F82C802498E92D>  
+  行政院施政成果，見施行法三讀、公布及施行日期。
+
+### 2021　太魯閣號事故
+
+- **時期**：當代臺灣　**審閱狀態**：approved
+- <https://www.ttsb.gov.tw/1243/22450/29476/post>  
+  運安會事故個案頁，見事故日期、位置、調查結果與改善建議。
+
+### 2024　第十六任總統、副總統就職
+
+- **時期**：民主與公民社會　**審閱狀態**：approved
+- <https://db.cec.gov.tw/Visual>  
+  中選會選舉資料庫，第 16 任總統副總統選舉結果。
+- <https://www.president.gov.tw/NEWS/28424>  
+  總統府第 16 任總統、副總統宣誓就職報導，見典禮日期及地點。
+
 ## 3. 歷史行政據點
 
 據點座標為聚落或市街概位，非官署精確位置。
+
+### 1604　沈有容赴澎湖
+
+1604 年，荷蘭東印度公司船隊抵達澎湖，尋求通商。明廷派沈有容前往交涉，船隊其後撤離。
+
+審閱狀態：approved
+
+| 據點 | 來源 |
+|---|---|
+| 明・沈有容赴澎湖 | <https://taiwangods.moi.gov.tw/html/Cultural/3_0011.aspx?i=22> |
 
 ### 1624　大員商館與西拉雅村社
 
@@ -490,6 +741,26 @@
 | 東印度公司・大員 | <https://archives.ith.sinica.edu.tw/collections_con.php?no=150> |
 | 西拉雅・新港社 | <https://www.ntl.edu.tw/public/Attachment/451716533944.pdf> |
 
+### 1626　西班牙人抵達社寮島
+
+西班牙遠征隊自呂宋出發，抵達今基隆和平島。北部出現西班牙的築城據點。
+
+審閱狀態：approved
+
+| 據點 | 來源 |
+|---|---|
+| 西班牙・聖薩爾瓦多城 | <https://klgreat.klcg.gov.tw/News_Photo_Content.aspx?n=8105&s=8711> |
+
+### 1636　新港的教會學校
+
+傳教士在西拉雅的新港社辦學，以羅馬字拼寫當地語言，作為讀寫與傳教的一部分。
+
+審閱狀態：approved
+
+| 據點 | 來源 |
+|---|---|
+| 西拉雅・新港社 | <https://women.nmth.gov.tw/?p=1957> |
+
 ### 1662　鄭氏府治與中部村社
 
 1662 年鄭氏接收熱蘭遮城，承天府府治設在赤崁的普羅民遮城。中部以今臺中大肚市街標示大肚社的活動地區。
@@ -501,6 +772,16 @@
 | 鄭氏・承天府 | <https://www.tainan.gov.tw/cp.aspx?n=13291> |
 | 大肚社 | <https://www.taichung.gov.tw/media/270401/551110255171.pdf> |
 
+### 1683　澎湖之戰與鄭氏投降
+
+清軍水師在澎湖擊敗鄭軍。鄭克塽其後投降，臺灣的鄭氏政權告終。
+
+審閱狀態：approved
+
+| 據點 | 來源 |
+|---|---|
+| 鄭軍・澎湖防守區 | <https://www.penghu.gov.tw/ch/home.jsp?id=10174> |
+
 ### 1684　臺灣府與澎湖巡檢司
 
 清廷在今臺南設臺灣府，並在澎湖設隸屬臺灣縣的巡檢司。署址有紅羅罩與暗澳（文澳）等說法，澎湖點位只標示澎湖本島。
@@ -511,6 +792,26 @@
 |---|---|
 | 臺灣府治 | <https://archives.ith.sinica.edu.tw/collections_con.php?no=150> |
 | 澎湖巡檢司 | <https://penghu.info/OB3A3F364BA357F73353> |
+
+### 1721　朱一貴事件
+
+羅漢門起事後，朱一貴及杜君英等人的隊伍攻入臺灣府城，官員一度退往澎湖。
+
+審閱狀態：approved
+
+| 據點 | 來源 |
+|---|---|
+| 臺灣府城・一度失守 | <https://daap.ly.gov.tw/tw/daap/125-5937.html> |
+
+### 1874　石門之役
+
+日本藉琉球漂民事件出兵恆春半島。在石門，牡丹社及高士佛社排灣族人抵抗日軍入侵。
+
+審閱狀態：approved
+
+| 據點 | 來源 |
+|---|---|
+| 牡丹社、高士佛社・石門抵抗 | <https://nchdb.boch.gov.tw/assets/overview/historicSite/20230928000001> |
 
 ### 1876　府治與興建中的恆春縣城
 
@@ -597,6 +898,16 @@
 | 花蓮港廳 | <https://dl.ndl.go.jp/pid/974279/1/37> |
 | 澎湖廳 | <https://dl.ndl.go.jp/pid/974279/1/37> |
 
+### 1930　嘉南大圳與霧社事件
+
+嘉南大圳工程在這年完成。同年 10 月，霧社的賽德克族六社發動抗日行動，殖民政府隨後派軍警鎮壓。
+
+審閱狀態：approved
+
+| 據點 | 來源 |
+|---|---|
+| 能高郡・霧社 | <https://www.mnd.gov.tw/en/File/43033> |
+
 ### 1945　行政長官公署與九個省轄市
 
 1945 年 10 月，臺灣省行政長官公署在臺北開始辦公，主要辦公地點為原臺北市役所。圖中九市依 12 月公布的省轄市組織規程標示。
@@ -614,6 +925,26 @@
 | 臺南市 | <https://art.archives.gov.tw/tw/art/1759.html> |
 | 高雄市 | <https://art.archives.gov.tw/tw/art/1759.html> |
 | 屏東市 | <https://art.archives.gov.tw/tw/art/1759.html> |
+
+### 1947　二二八事件
+
+臺北大稻埕的緝菸衝突引發抗議。翌日，群眾前往專賣局及行政長官公署等處，事件隨後擴及各地。
+
+審閱狀態：approved
+
+| 據點 | 來源 |
+|---|---|
+| 臺灣省行政長官公署 | <https://the.nmth.gov.tw/nmth/zh-tw/Special/SpecialItemDetail/42f8ed69-c17c-4528-9f0c-e83c84a07c2a?exhibitionId=cb023922-dac6-479e-ba8c-0078b8ae86a4> |
+
+### 1979　高雄的人權日集會
+
+12 月 10 日，黨外人士在高雄舉行世界人權日活動，與軍警發生衝突。當局其後逮捕並審判多名相關人士。
+
+審閱狀態：approved
+
+| 據點 | 來源 |
+|---|---|
+| 高雄・人權日集會區 | <https://takao.kcg.gov.tw/article/1777> |
 
 ### 1987　解嚴與金馬戰地政務
 
@@ -637,6 +968,66 @@
 |---|---|
 | 臺北・總統府宣誓就職 | <https://www.president.gov.tw/NEWS/22082> |
 | 桃園・就職慶祝會場 | <https://www.th.gov.tw/Epaper_Content/238/9126/> |
+
+### 1999　九二一地震
+
+9 月 21 日凌晨，集集地震造成臺灣中部嚴重災害。霧峰光復國中保存了車籠埔斷層通過校園的地貌及損壞校舍。
+
+審閱狀態：approved
+
+| 據點 | 來源 |
+|---|---|
+| 總統府・震災緊急命令 | <https://www.wra.gov.tw/epaper/Article_Detail.aspx?n=30173&s=2448> |
+
+### 2000　首次政黨輪替
+
+3 月 18 日，陳水扁與呂秀蓮當選總統、副總統。兩人在 5 月 20 日就職，完成首次政黨輪替。
+
+審閱狀態：approved
+
+| 據點 | 來源 |
+|---|---|
+| 總統府・政權交接 | <https://ws.mac.gov.tw/001/Upload/OldFile/public/Attachment/971393304.pdf> |
+
+### 2014　三一八運動
+
+立法院審查兩岸服務貿易協議引發爭議。學生與民間團體自 3 月 18 日起在立法院內外行動，至 4 月 10 日退出議場。
+
+審閱狀態：approved
+
+| 據點 | 來源 |
+|---|---|
+| 立法院・服貿審查 | <https://www.cy.gov.tw/News_Content.aspx?n=124&s=7292> |
+
+### 2019　同性婚姻法制上路
+
+立法院於 5 月 17 日三讀通過司法院釋字第七四八號解釋施行法，5 月 24 日起依法辦理同性結婚登記。
+
+審閱狀態：approved
+
+| 據點 | 來源 |
+|---|---|
+| 立法院・施行法三讀 | <https://www.ey.gov.tw/Goals/60F82C802498E92D> |
+
+### 2021　事故調查
+
+運安會調查太魯閣號事故並公布報告。點位標示運安會在新店大坪林的機關概位，事故位置另見清水隧道地點卡。
+
+審閱狀態：approved
+
+| 據點 | 來源 |
+|---|---|
+| 新店・國家運輸安全調查委員會 | <https://www.ttsb.gov.tw/1133/1134/22557/22559/post> |
+
+### 2024　總統府就職典禮
+
+第 16 任總統及副總統在總統府三樓大禮堂宣誓就職。
+
+審閱狀態：approved
+
+| 據點 | 來源 |
+|---|---|
+| 總統府・宣誓就職 | <https://www.president.gov.tw/NEWS/28424> |
 
 ## 4. 歷史圖幅
 
@@ -665,7 +1056,7 @@
 
 ## 6. 來源索引
 
-共 97 個不重複網址，來自 64 個網站，依網站分組。
+共 120 個不重複網址，來自 77 個網站，依網站分組。
 
 ### afrch.forest.gov.tw
 
@@ -679,6 +1070,8 @@
 
 ### art.archives.gov.tw
 
+- <https://art.archives.gov.tw/tw/art/1295.html>  
+  引用於：地點 總統府前廣場、2000 年代導讀
 - <https://art.archives.gov.tw/tw/art/1506-13185.html>  
   引用於：1987 歷史據點
 - <https://art.archives.gov.tw/tw/art/1586.html>  
@@ -711,6 +1104,8 @@
 
 - <https://collections.nmth.gov.tw/CollectionContent.aspx?RNO=2003.010.0096&a=132>  
   引用於：1895 歷史據點
+- <https://collections.nmth.gov.tw/CollectionContent.aspx?RNO=2017.025.0168&a=132>  
+  引用於：地點 霧社、1930 年代導讀
 - <https://collections.nmth.gov.tw/CollectionContent.aspx?a=132&rno=2001.008.0876>  
   引用於：地點 臺中公園湖心亭
 - <https://collections.nmth.gov.tw/CollectionContent.aspx?a=132&rno=2002.007.0267>  
@@ -727,11 +1122,18 @@
 
 - <https://daap.ly.gov.tw/tw/daap/125-4003.html>  
   引用於：地點 赤崁樓
+- <https://daap.ly.gov.tw/tw/daap/125-5937.html>  
+  引用於：地點 內門、1721 年代導讀、1721 歷史據點
 
 ### data.gov.tw
 
 - <https://data.gov.tw/dataset/35430>  
   引用於：底圖・山岳地形
+
+### db.cec.gov.tw
+
+- <https://db.cec.gov.tw/Visual>  
+  引用於：地點 總統府大禮堂、2024 年代導讀
 
 ### dict.th.gov.tw
 
@@ -805,6 +1207,11 @@
 - <https://iptt.sinica.edu.tw/shares/1121>  
   引用於：歷史圖幅使用條件
 
+### klgreat.klcg.gov.tw
+
+- <https://klgreat.klcg.gov.tw/News_Photo_Content.aspx?n=8105&s=8711>  
+  引用於：地點 基隆和平島、1626 年代導讀、1626 歷史據點
+
 ### law.mnd.gov.tw
 
 - <https://law.mnd.gov.tw/scp/Query1R.aspx?lawno=2&media=1&no=1A012705604&tblname=FHLAMEND>  
@@ -814,6 +1221,10 @@
 
 - <https://nchdb.boch.gov.tw/assets/advanceSearch/monument/19850819000083>  
   引用於：地點 左營舊城（鳳山縣舊城）
+- <https://nchdb.boch.gov.tw/assets/overview/historicSite/20230928000001>  
+  引用於：地點 石門古戰場、1874 年代導讀、1874 歷史據點
+- <https://nchdb.boch.gov.tw/assets/overview/historicalBuilding/20040409000005>  
+  引用於：地點 美麗島雜誌社高雄服務處原址、1979 年代導讀
 
 ### newtaipei.travel
 
@@ -846,12 +1257,19 @@
 
 - <https://taiwangods.moi.gov.tw/html/Cultural/3_0011.aspx?i=107>  
   引用於：地點 臺南孔子廟
+- <https://taiwangods.moi.gov.tw/html/Cultural/3_0011.aspx?i=22>  
+  引用於：地點 澎湖天后宮、1604 年代導讀、1604 歷史據點
 - <https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=10>  
   引用於：地點 鹿港龍山寺
 - <https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=127>  
   引用於：地點 八卦山、1895 年代導讀
 - <https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=152>  
   引用於：地點 文澳城隍廟
+
+### takao.kcg.gov.tw
+
+- <https://takao.kcg.gov.tw/article/1777>  
+  引用於：1979 歷史據點
 
 ### tcmb.culture.tw
 
@@ -875,6 +1293,11 @@
   引用於：地點 左營舊城（鳳山縣舊城）
 - <https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Place&id=475676>  
   引用於：地點 臺北府城北門（承恩門）
+
+### the.nmth.gov.tw
+
+- <https://the.nmth.gov.tw/nmth/zh-tw/Special/SpecialItemDetail/42f8ed69-c17c-4528-9f0c-e83c84a07c2a?exhibitionId=cb023922-dac6-479e-ba8c-0078b8ae86a4>  
+  引用於：地點 天馬茶房舊址一帶、1947 年代導讀、1947 歷史據點
 
 ### tmach-culture.tainan.gov.tw
 
@@ -901,6 +1324,16 @@
 - <https://web.tainan.gov.tw/tnanping/cp.aspx?n=20609&s=7242>  
   引用於：地點 原英商德記洋行
 
+### women.nmth.gov.tw
+
+- <https://women.nmth.gov.tw/?p=1957>  
+  引用於：地點 新港社舊址一帶、1636 年代導讀、1636 歷史據點
+
+### ws.mac.gov.tw
+
+- <https://ws.mac.gov.tw/001/Upload/OldFile/public/Attachment/971393304.pdf>  
+  引用於：地點 總統府前廣場、2000 年代導讀、2000 歷史據點
+
 ### ws.moi.gov.tw
 
 - <https://ws.moi.gov.tw/Download.ashx?icon=..pdf&n=MjAxMzExMjYxNTU2NTIxMDUyMDIucGRm&u=LzAwMS9VcGxvYWQvT2xkRmlsZV9USk5QL0ZpbGVVcGxvYWRMaXN0LzIwMTMxMTI2MTU1NjUyMTA1MjAyLnBkZg%3D%3D>  
@@ -918,10 +1351,20 @@
 - <https://www.cip.gov.tw/data/news/202208/T-40369462.pdf?c=3FD58C8AA667F0161C2997999E49C980&fn=14F9D2A98598996F494C73DF3195AA8564F474DD9478577F&s=2AFF5C90ECEA3EC7D0636733C6861689>  
   引用於：地點 立霧溪谷
 
+### www.cy.gov.tw
+
+- <https://www.cy.gov.tw/News_Content.aspx?n=124&s=7292>  
+  引用於：地點 立法院、2014 年代導讀、2014 歷史據點
+
 ### www.dorts.gov.taipei
 
 - <https://www.dorts.gov.taipei/cp.aspx?n=DBAC040496EFAB94&s=864CDD262C4C443D>  
   引用於：地點 捷運動物園站
+
+### www.drnh.gov.tw
+
+- <https://www.drnh.gov.tw/p/404-1003-15330.php?Lang=zh-tw>  
+  引用於：地點 美麗島雜誌社高雄服務處原址、1979 年代導讀
 
 ### www.ey.gov.tw
 
@@ -929,6 +1372,8 @@
   引用於：地點 行政院
 - <https://www.ey.gov.tw/File/DAE5B7972E56AF7C>  
   引用於：地點 新竹火車站
+- <https://www.ey.gov.tw/Goals/60F82C802498E92D>  
+  引用於：地點 立法院、2019 年代導讀、2019 歷史據點
 
 ### www.gov.taipei
 
@@ -955,6 +1400,11 @@
 - <https://www.miaoli.gov.tw/News_Content2.aspx?n=285&s=825993>  
   引用於：地點 龍騰斷橋
 
+### www.mnd.gov.tw
+
+- <https://www.mnd.gov.tw/en/File/43033>  
+  引用於：1930 歷史據點
+
 ### www.npm.gov.tw
 
 - <https://www.npm.gov.tw/NewChineseArtDownload.ashx?bid=5213>  
@@ -972,12 +1422,19 @@
 - <https://www.ntm.gov.tw/cp.aspx?n=5437>  
   引用於：地點 國立臺灣博物館
 
+### www.penghu.gov.tw
+
+- <https://www.penghu.gov.tw/ch/home.jsp?id=10174>  
+  引用於：地點 澎湖媽宮外海、1683 年代導讀、1683 歷史據點
+
 ### www.president.gov.tw
 
 - <https://www.president.gov.tw/NEWS/22071>  
   引用於：地點 桃園市立綜合體育館
 - <https://www.president.gov.tw/NEWS/22082>  
   引用於：地點 總統府、1996 年代導讀、1996 歷史據點
+- <https://www.president.gov.tw/NEWS/28424>  
+  引用於：地點 總統府大禮堂、2024 年代導讀、2024 歷史據點
 - <https://www.president.gov.tw/Page/294/37460>  
   引用於：地點 總統府、1987 年代導讀、1987 歷史據點
 
@@ -1023,6 +1480,8 @@
 
 ### www.th.gov.tw
 
+- <https://www.th.gov.tw/CP/218/243/>  
+  引用於：地點 烏山頭水庫、地點 霧社、1930 年代導讀
 - <https://www.th.gov.tw/Epaper_Content/238/6568/>  
   引用於：地點 六堆客家聯軍抗日紀念公園
 - <https://www.th.gov.tw/Epaper_Content/238/9126/>  
@@ -1038,6 +1497,13 @@
 - <https://www.tshs.ntpc.gov.tw/xmdoc/cont?sid=0K258535376150560462&xsmsid=0K255571641497878724>  
   引用於：地點 淡水河口、1884 年代導讀
 
+### www.ttsb.gov.tw
+
+- <https://www.ttsb.gov.tw/1133/1134/22557/22559/post>  
+  引用於：2021 歷史據點
+- <https://www.ttsb.gov.tw/1243/22450/29476/post>  
+  引用於：地點 清水隧道一帶、2021 年代導讀
+
 ### www.twport.com.tw
 
 - <https://www.twport.com.tw/business/PortInfo?a=512>  
@@ -1047,6 +1513,16 @@
 
 - <https://www.twreporter.org/a/refinery-protesters>  
   引用於：地點 中油高雄煉油廠舊址西門
+
+### www.wra.gov.tw
+
+- <https://www.wra.gov.tw/epaper/Article_Detail.aspx?n=30173&s=2448>  
+  引用於：地點 九二一地震教育園區、1999 年代導讀、1999 歷史據點
+
+### www.wufeng.taichung.gov.tw
+
+- <https://www.wufeng.taichung.gov.tw/980992/981034/981044/3403060>  
+  引用於：地點 九二一地震教育園區、1999 年代導讀
 
 ### www.ysnp.gov.tw
 

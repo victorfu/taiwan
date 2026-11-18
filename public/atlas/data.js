@@ -93,7 +93,23 @@ export const events = [
   [1987, 'houjin', '後勁反五輕運動'],
   [1996, 'presidentoffice', '首任直選正副總統宣誓就職'],
   [1996, 'taoyuanarena', '桃園舉行就職慶祝大會'],
-  [1996, 'zoostation', '臺北捷運木柵線通車']
+  [1996, 'zoostation', '臺北捷運木柵線通車'],
+  [1604, "mazutemple", "沈有容諭退荷蘭船隊"],
+  [1626, "hepingisland", "西班牙人在社寮島築城"],
+  [1636, "sinkang", "新港社設立教會學校"],
+  [1683, "penghubattle", "澎湖海戰"],
+  [1721, "neimen", "朱一貴於羅漢門起事"],
+  [1874, "shimenbattlefield", "牡丹社事件・石門之役"],
+  [1930, "wushe", "霧社事件"],
+  [1930, "wushantou", "嘉南大圳完工"],
+  [1947, "tianmacafe", "天馬茶房前的緝菸事件"],
+  [1979, "formosaoffice", "美麗島事件"],
+  [1999, "quake921", "九二一大地震"],
+  [2000, "presidentplaza", "首次政黨輪替"],
+  [2014, "legislativeyuan", "三一八運動"],
+  [2019, "legislativeyuan", "同性婚姻施行法三讀"],
+  [2021, 'qingshuitunnel', '臺鐵太魯閣號清水隧道事故'],
+  [2024, 'presidenthall', '第十六任總統、副總統宣誓就職']
 ];
 
 /** @param {string} text */
@@ -119,7 +135,7 @@ export function search(term) {
 }
 /** @param {URLSearchParams} params */
 export function parse(params){
-  const year = years.find(value => String(value) === params.get('year')) ?? years[0];
+  const year = years.find(value => String(value) === params.get('year')) ?? 1624;
   const id = params.get('place');
   return { year, id: places.some(p => p.id === id) ? id : null, events: params.get('events') !== '0' };
 }
