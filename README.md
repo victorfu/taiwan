@@ -1,6 +1,7 @@
 # 臺灣時序 Taiwan Through Time
 
 [![Atlas checks](https://github.com/victorfu/taiwan/actions/workflows/atlas.yml/badge.svg)](https://github.com/victorfu/taiwan/actions/workflows/atlas.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 以互動地圖探索臺灣與澎湖自 1624 至 1996 年的地方沿革。地圖以現代地形、海岸與河川為定位參照，逐年代繪出歷史地名、行政據點與事件，每筆記錄皆附史料出處。
 
@@ -22,6 +23,7 @@
 - [建置與發布](#建置與發布)
 - [參考文獻](#參考文獻)
 - [底圖來源與授權](#底圖來源與授權)
+- [授權](#授權)
 
 ---
 
@@ -227,4 +229,8 @@ CI 於每次 push 與 pull request 在 Windows 上執行 `npm test`、`npm run b
 
 完整說明見應用程式內的「底圖來源」頁（`public/atlas/map-sources.html`）。
 
-本專案程式碼尚未指定授權條款。
+## 授權
+
+本專案以 [MIT License](LICENSE) 授權。
+
+MIT 授權涵蓋本專案的程式碼與自行撰寫的內容。第三方圖資（地形、海岸、離島、河川、歷史圖幅）依上表各自的授權條款使用；引用的史料與典藏品著作權屬原權利人，請依 [docs/references.md](docs/references.md) 所列來源的使用規範引用。
