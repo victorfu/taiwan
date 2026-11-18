@@ -6,3 +6,4 @@ artifacts/
 .npm-cache/
 dist-demo/
 dist-local/
+.vscode/chrome-profile/

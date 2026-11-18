@@ -1,0 +1,84 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Dev: Vite server + Chrome",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "cwd": "${workspaceFolder}",
+      "serverReadyAction": {
+        "pattern": "Local:\\s+(https?://\\S+)",
+        "uriFormat": "%s",
+        "action": "startDebugging",
+        "name": "Chrome: dev server"
+      }
+    },
+    {
+      "name": "Chrome: dev server",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://127.0.0.1:5173",
+      "webRoot": "${workspaceFolder}",
+      "pathMapping": {
+        "/atlas/": "${workspaceFolder}/public/atlas/"
+      },
+      "userDataDir": "${workspaceFolder}/.vscode/chrome-profile"
+    },
+    {
+      "name": "Tests: unit (all)",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeArgs": ["--test", "tests/*.test.mjs"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Tests: unit (current file)",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeArgs": ["--test", "${file}"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Tests: browser (Firefox)",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/tests/browser.mjs",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Scripts: validate data",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/scripts/validate.mjs",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Scripts: validate data (release)",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/scripts/validate.mjs",
+      "args": ["--release"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Node: current file",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}
